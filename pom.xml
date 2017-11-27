@@ -286,6 +286,7 @@
         <module>cms</module>
         <module>site</module>
         <module>essentials</module>
+        <module>cms-deb</module>
       </modules>
     </profile>
 

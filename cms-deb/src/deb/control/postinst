@@ -1,0 +1,11 @@
+#!/bin/sh
+
+adduser \
+  --quiet \
+  --system \
+  --home /opt/cms \
+  --no-create-home \
+  --shell /bin/bash \
+  --group \
+  --gecos "cms" \
+  cms
