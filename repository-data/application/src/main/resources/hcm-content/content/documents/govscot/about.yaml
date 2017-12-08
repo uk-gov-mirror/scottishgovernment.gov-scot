@@ -1,17 +1,17 @@
-/content/documents/govscot/about-section:
+/content/documents/govscot/about:
   jcr:primaryType: hippostd:folder
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
-  jcr:uuid: 98292afb-736a-4699-9c04-4b1c4cdb3a12
-  hippo:name: About Section
+  jcr:uuid: bd28365c-ebb6-4c1a-9207-467c9ff17ffe
+  hippo:name: About
   hippostd:foldertype: [new-translated-folder, new-document]
-  hippotranslation:id: c4e288fc-4eae-4659-b605-51eafc7ddd35
+  hippotranslation:id: e5078ffa-e0e4-414a-b3b4-3eeba02e7de3
   hippotranslation:locale: en
-  /about-the-scottish-government:
+  /index:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
     jcr:uuid: a294fee4-71ab-4a62-9cad-d6efc0755539
     hippo:name: About the Scottish Government
-    /about-the-scottish-government[1]:
+    /index[1]:
       jcr:primaryType: govscot:articledocument
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 72912b35-9b08-46d1-89c2-3d4c72abb583
@@ -44,7 +44,7 @@
       /govscot:additional:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-    /about-the-scottish-government[2]:
+    /index[2]:
       jcr:primaryType: govscot:articledocument
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: 93e84b01-23fb-416b-9749-0aeeda1d1be8
@@ -77,7 +77,7 @@
       /govscot:additional:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-    /about-the-scottish-government[3]:
+    /index[3]:
       jcr:primaryType: govscot:articledocument
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: cb450a5e-35f9-4aaa-bf20-c0e3aa92419a
@@ -90,7 +90,7 @@
       hippostdpubwf:creationDate: 2017-11-22T15:51:16.672Z
       hippostdpubwf:lastModificationDate: 2017-11-27T09:49:15.456Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2017-11-27T09:49:18.629Z
+      hippostdpubwf:publicationDate: 2017-12-08T10:48:48.413Z
       hippotranslation:id: 1cd88140-edda-44ea-9c40-22826510ce80
       hippotranslation:locale: en
       /govscot:content:
@@ -111,12 +111,12 @@
       /govscot:additional:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-  /what-the-scottish-government-does:
+  /what-the-government-does:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
     jcr:uuid: 1ee17f9c-01d6-454c-915e-38923e2b1114
     hippo:name: What the Scottish Government does
-    /what-the-scottish-government-does[1]:
+    /what-the-government-does[1]:
       jcr:primaryType: govscot:articledocument
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 184d6aff-0e78-40cc-92f7-72a377bd7d9b
@@ -180,7 +180,7 @@
       /govscot:additional:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-    /what-the-scottish-government-does[2]:
+    /what-the-government-does[2]:
       jcr:primaryType: govscot:articledocument
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: 36f6f985-81b6-4606-8f60-cf11e5259274
@@ -244,7 +244,7 @@
       /govscot:additional:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-    /what-the-scottish-government-does[3]:
+    /what-the-government-does[3]:
       jcr:primaryType: govscot:articledocument
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: e44ed07c-e1c8-4442-b6a9-cc7e48a1cf58
@@ -256,7 +256,7 @@
       hippostdpubwf:creationDate: 2017-11-22T15:59:31.504Z
       hippostdpubwf:lastModificationDate: 2017-11-27T09:51:13.119Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2017-11-27T09:51:15.920Z
+      hippostdpubwf:publicationDate: 2017-12-08T10:51:35.969Z
       hippotranslation:id: 76509319-4e41-46f0-b0b1-2911ee4115f9
       hippotranslation:locale: en
       /govscot:content:
@@ -440,7 +440,7 @@
       hippostdpubwf:creationDate: 2017-11-22T16:02:52.161Z
       hippostdpubwf:lastModificationDate: 2017-11-27T09:58:53.795Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2017-11-27T09:58:57.311Z
+      hippostdpubwf:publicationDate: 2017-12-08T10:48:48.466Z
       hippotranslation:id: 29ae89db-f2f2-445f-b03f-85d8e79d9b7e
       hippotranslation:locale: en
       /govscot:content:

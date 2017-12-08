@@ -23,17 +23,23 @@ definitions:
           hst:relativecontentpath: ${parent}/${1}
         /_any_:
           jcr:primaryType: hst:sitemapitem
-          hst:componentconfigurationid: hst:pages/contentlist
-          hst:relativecontentpath: ${parent}/${1}
-      /about-section:
+          hst:componentconfigurationid: hst:pages/contentpage
+          hst:relativecontentpath: ${parent}/${1}/index
+      /about:
         jcr:primaryType: hst:sitemapitem
-        hst:componentconfigurationid: hst:pages/contentlist
-        hst:relativecontentpath: about-section
-        /_any_.html:
+        hst:componentconfigurationid: hst:pages/contentpage
+        hst:relativecontentpath: about
+        /_index_:
           jcr:primaryType: hst:sitemapitem
           hst:componentconfigurationid: hst:pages/contentpage
-          hst:relativecontentpath: ${parent}/${1}
+          hst:relativecontentpath: ${parent}/index
         /_any_:
           jcr:primaryType: hst:sitemapitem
-          hst:componentconfigurationid: hst:pages/contentlist
+          hst:componentconfigurationid: hst:pages/contentpage
+          hst:componentconfigurationmappingnames: ['govscot:articledocument', 'govscot:role']
+          hst:componentconfigurationmappingvalues: ['hst:pages/contentpage', 'hst:pages/contentlist']
           hst:relativecontentpath: ${parent}/${1}
+          /_index_:
+            jcr:primaryType: hst:sitemapitem
+            hst:componentconfigurationid: hst:pages/contentpage
+            hst:relativecontentpath: ${parent}/index

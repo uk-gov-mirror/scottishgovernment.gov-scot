@@ -5,7 +5,6 @@
   hst:label: Content list
   hst:parameternames: [documentTypes, sortField, sortOrder, includeSubtypes, showPagination,
     path, pageSize]
-  hst:parametervalues: ['govscot:contentdocument', '', desc, 'off', 'on', '',
-    '10']
+  hst:parametervalues: ['govscot:role', '', desc, 'off', 'on', '', '10']
   hst:template: contentlist-main-contentlist
   hst:xtype: hst.item

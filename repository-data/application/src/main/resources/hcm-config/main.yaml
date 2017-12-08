@@ -2,7 +2,7 @@ definitions:
   namespace:
     govscot:
       uri: http://www.onehippo.org/govscot/nt/1.0
-      cnd: namespaces/gov-scot.cnd
+      cnd: namespaces/govscot.cnd
   config:
     /hippo:configuration/hippo:modules/webfiles/hippo:moduleconfig:
       watchedModules: [repository-data/webfiles]

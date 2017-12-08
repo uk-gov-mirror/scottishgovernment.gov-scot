@@ -1,14 +1,17 @@
 /hst:hst/hst:configurations/govscot/hst:workspace/hst:pages/about-contentpage:
   jcr:primaryType: hst:component
   jcr:uuid: 7ae8496c-b1e3-4c06-a53f-51536834ef8d
+  hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
   hst:lastmodified: 2017-11-20T12:26:49.499Z
   hst:referencecomponent: hst:abstractpages/twocolumns
   /main:
     jcr:primaryType: hst:component
     jcr:uuid: 8a71fe46-4786-4b7f-bc77-92c7426c08a0
+    hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
     /primary:
       jcr:primaryType: hst:containercomponent
       jcr:uuid: e0c77f6e-20ca-46cd-a108-8474ae2300fc
+      hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
       hst:xtype: hst.vbox
       /simplecontent:
         jcr:primaryType: hst:containeritemcomponent
