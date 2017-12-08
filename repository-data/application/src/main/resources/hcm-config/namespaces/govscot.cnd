@@ -10,8 +10,9 @@
 [govscot:simpledocument] > govscot:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[govscot:articledocument] > govscot:simpledocument, hippostd:relaxed, hippotranslation:translated
+[govscot:policy] > govscot:simpledocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
-
+[govscot:articledocument] > govscot:simpledocument, hippostd:relaxed, hippotranslation:translated
+  orderable
 
