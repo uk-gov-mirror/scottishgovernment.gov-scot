@@ -1,0 +1,1513 @@
+/content/documents/govscot/policies:
+  .meta:order-before: directorates
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: a5a8d7bd-4d80-409c-80fc-f47522f672de
+  hippo:name: Policies
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 3281db91-5b7f-4535-aa59-dbc2e9e471a3
+  hippotranslation:locale: en
+  /digital:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: d4cbb6db-d710-48cc-ae22-e417cd0f3746
+    hippo:name: Digital
+    hippostd:foldertype: [new-translated-folder, new-document]
+    hippotranslation:id: ae9b0f1f-2df6-460a-b8cf-d620e556417a
+    hippotranslation:locale: en
+    /index:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: cec7be65-e27f-4e66-8c3d-b68c65bb89bc
+      hippo:name: Overview
+      /index[1]:
+        jcr:primaryType: govscot:policy
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 1bbad9b7-8261-4c7b-84d3-b6b6b9b06ec4
+        govscot:summary: overview
+        govscot:title: Overview
+        hippo:availability: []
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:51:49.256Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:51:49.258Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 3b4bf4a4-a8db-467b-964c-cb4bb2ebf438
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Our digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, sets out how we will make sure that digital is at the heart of everything we do – how we deliver economic growth, reform our public services, and prepare our children for the workplace of the future.</p>
+
+            <p>We have also published&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-strategy-evidence-discussion-paper/">an evidence paper to accompany our digital strategy</a>. It summarises the links between digital, economic productivity and inclusion. The paper also analyses Scotland's digital performance over time and in an international context.</p>
+
+            <h3>Actions</h3>
+
+            <p>We are implementing our digital strategy by:</p>
+
+            <ul>
+             <li>offering&nbsp;<a href="https://beta.gov.scot/policies/digital/digital-support-for-businesses/">digital support for businesses</a>&nbsp;to help them become internationally competitive</li>
+             <li>supporting&nbsp;<a href="https://beta.gov.scot/policies/digital/digital-transformation/">digital transformation</a>&nbsp;by delivering public services that meet the needs of the public</li>
+             <li>making sure we are well positioned to support change and innovation through the&nbsp;<a href="https://beta.gov.scot/policies/digital/data/">effective use of data</a></li>
+             <li>developing&nbsp;<a href="https://beta.gov.scot/policies/digital/standards-and-assurance/">standards and assurances</a>&nbsp;that will help others meet digital best practice standards</li>
+             <li>improving and extending our&nbsp;<a href="https://beta.gov.scot/policies/digital/broadband-and-mobile/">broadband and mobile networks</a>&nbsp;to benefit communities and businesses across Scotland</li>
+             <li>increasing&nbsp;<a href="https://beta.gov.scot/policies/digital/digital-participation/">digital participation</a>&nbsp;by helping communities develop digital skills and confidence</li>
+             <li>making sure Scotland is a world leader in&nbsp;<a href="https://beta.gov.scot/policies/cyber-resilience/">cyber resilience</a>, with a global reputation for being a secure place to work, learn and do business</li>
+            </ul>
+
+            <h3>Background</h3>
+
+            <p><a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland’s full potential in a digital world</a>&nbsp;replaces&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-strategy-scotland/">Scotland's digital future: a strategy for Scotland</a>. It was originally published in 2011 based on the recommendations in the:</p>
+
+            <ul>
+             <li><a href="https://beta.gov.scot/publications/review-ict-infrastructure-public-sector-scotland/">McClelland Review of Public Sector ICT</a></li>
+             <li><a href="https://beta.gov.scot/publications/commission-future-delivery-public-services/">Christie Commission report on public sector reform</a></li>
+            </ul>
+
+            <h3>Bills and legislation</h3>
+
+            <p>The&nbsp;<a href="http://resources.mygov.scot/standards/legislation-regulation/">Legislation and Regulation Catalogue</a>&nbsp;provides guidance on legislation that applies to the delivery of digital services and is regularly reviewed and updated.</p>
+
+            <h3>Contact</h3>
+
+            <p>For general enquiries please contact:&nbsp;<a href="mailto:digitalscotland@gov.scot">digitalscotland@gov.scot</a></p>
+
+            <p><a href="https://twitter.com/digitalscots">Follow us on Twitter</a></p>
+
+            <p>For enquiries relating to broadband, please complete the online form at:&nbsp;<a href="https://www.scotlandsuperfast.com/contact/">superfast broadband enquiries</a></p>
+        /govscot:directorates:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /index[2]:
+        jcr:primaryType: govscot:policy
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 207a2517-f717-4857-9ae1-5c25e0e58c63
+        govscot:summary: overview
+        govscot:title: Overview
+        hippo:availability: [preview]
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:51:49.256Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:52:19.262Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 3b4bf4a4-a8db-467b-964c-cb4bb2ebf438
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Our digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, sets out how we will make sure that digital is at the heart of everything we do – how we deliver economic growth, reform our public services, and prepare our children for the workplace of the future.</p>
+
+            <p>We have also published&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-strategy-evidence-discussion-paper/">an evidence paper to accompany our digital strategy</a>. It summarises the links between digital, economic productivity and inclusion. The paper also analyses Scotland's digital performance over time and in an international context.</p>
+
+            <h3>Actions</h3>
+
+            <p>We are implementing our digital strategy by:</p>
+
+            <ul>
+             <li>offering&nbsp;<a href="https://beta.gov.scot/policies/digital/digital-support-for-businesses/">digital support for businesses</a>&nbsp;to help them become internationally competitive</li>
+             <li>supporting&nbsp;<a href="https://beta.gov.scot/policies/digital/digital-transformation/">digital transformation</a>&nbsp;by delivering public services that meet the needs of the public</li>
+             <li>making sure we are well positioned to support change and innovation through the&nbsp;<a href="https://beta.gov.scot/policies/digital/data/">effective use of data</a></li>
+             <li>developing&nbsp;<a href="https://beta.gov.scot/policies/digital/standards-and-assurance/">standards and assurances</a>&nbsp;that will help others meet digital best practice standards</li>
+             <li>improving and extending our&nbsp;<a href="https://beta.gov.scot/policies/digital/broadband-and-mobile/">broadband and mobile networks</a>&nbsp;to benefit communities and businesses across Scotland</li>
+             <li>increasing&nbsp;<a href="https://beta.gov.scot/policies/digital/digital-participation/">digital participation</a>&nbsp;by helping communities develop digital skills and confidence</li>
+             <li>making sure Scotland is a world leader in&nbsp;<a href="https://beta.gov.scot/policies/cyber-resilience/">cyber resilience</a>, with a global reputation for being a secure place to work, learn and do business</li>
+            </ul>
+
+            <h3>Background</h3>
+
+            <p><a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland’s full potential in a digital world</a>&nbsp;replaces&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-strategy-scotland/">Scotland's digital future: a strategy for Scotland</a>. It was originally published in 2011 based on the recommendations in the:</p>
+
+            <ul>
+             <li><a href="https://beta.gov.scot/publications/review-ict-infrastructure-public-sector-scotland/">McClelland Review of Public Sector ICT</a></li>
+             <li><a href="https://beta.gov.scot/publications/commission-future-delivery-public-services/">Christie Commission report on public sector reform</a></li>
+            </ul>
+
+            <h3>Bills and legislation</h3>
+
+            <p>The&nbsp;<a href="http://resources.mygov.scot/standards/legislation-regulation/">Legislation and Regulation Catalogue</a>&nbsp;provides guidance on legislation that applies to the delivery of digital services and is regularly reviewed and updated.</p>
+
+            <h3>Contact</h3>
+
+            <p>For general enquiries please contact:&nbsp;<a href="mailto:digitalscotland@gov.scot">digitalscotland@gov.scot</a></p>
+
+            <p><a href="https://twitter.com/digitalscots">Follow us on Twitter</a></p>
+
+            <p>For enquiries relating to broadband, please complete the online form at:&nbsp;<a href="https://www.scotlandsuperfast.com/contact/">superfast broadband enquiries</a></p>
+        /govscot:directorates:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /index[3]:
+        jcr:primaryType: govscot:policy
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 622d3b43-8cbf-4025-b55c-84d4a2b95c6f
+        govscot:summary: overview
+        govscot:title: Overview
+        hippo:availability: [live]
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:51:49.256Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:52:19.262Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2017-12-08T14:55:39.020Z
+        hippotranslation:id: 3b4bf4a4-a8db-467b-964c-cb4bb2ebf438
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Our digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, sets out how we will make sure that digital is at the heart of everything we do – how we deliver economic growth, reform our public services, and prepare our children for the workplace of the future.</p>
+
+            <p>We have also published&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-strategy-evidence-discussion-paper/">an evidence paper to accompany our digital strategy</a>. It summarises the links between digital, economic productivity and inclusion. The paper also analyses Scotland's digital performance over time and in an international context.</p>
+
+            <h3>Actions</h3>
+
+            <p>We are implementing our digital strategy by:</p>
+
+            <ul>
+             <li>offering&nbsp;<a href="https://beta.gov.scot/policies/digital/digital-support-for-businesses/">digital support for businesses</a>&nbsp;to help them become internationally competitive</li>
+             <li>supporting&nbsp;<a href="https://beta.gov.scot/policies/digital/digital-transformation/">digital transformation</a>&nbsp;by delivering public services that meet the needs of the public</li>
+             <li>making sure we are well positioned to support change and innovation through the&nbsp;<a href="https://beta.gov.scot/policies/digital/data/">effective use of data</a></li>
+             <li>developing&nbsp;<a href="https://beta.gov.scot/policies/digital/standards-and-assurance/">standards and assurances</a>&nbsp;that will help others meet digital best practice standards</li>
+             <li>improving and extending our&nbsp;<a href="https://beta.gov.scot/policies/digital/broadband-and-mobile/">broadband and mobile networks</a>&nbsp;to benefit communities and businesses across Scotland</li>
+             <li>increasing&nbsp;<a href="https://beta.gov.scot/policies/digital/digital-participation/">digital participation</a>&nbsp;by helping communities develop digital skills and confidence</li>
+             <li>making sure Scotland is a world leader in&nbsp;<a href="https://beta.gov.scot/policies/cyber-resilience/">cyber resilience</a>, with a global reputation for being a secure place to work, learn and do business</li>
+            </ul>
+
+            <h3>Background</h3>
+
+            <p><a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland’s full potential in a digital world</a>&nbsp;replaces&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-strategy-scotland/">Scotland's digital future: a strategy for Scotland</a>. It was originally published in 2011 based on the recommendations in the:</p>
+
+            <ul>
+             <li><a href="https://beta.gov.scot/publications/review-ict-infrastructure-public-sector-scotland/">McClelland Review of Public Sector ICT</a></li>
+             <li><a href="https://beta.gov.scot/publications/commission-future-delivery-public-services/">Christie Commission report on public sector reform</a></li>
+            </ul>
+
+            <h3>Bills and legislation</h3>
+
+            <p>The&nbsp;<a href="http://resources.mygov.scot/standards/legislation-regulation/">Legislation and Regulation Catalogue</a>&nbsp;provides guidance on legislation that applies to the delivery of digital services and is regularly reviewed and updated.</p>
+
+            <h3>Contact</h3>
+
+            <p>For general enquiries please contact:&nbsp;<a href="mailto:digitalscotland@gov.scot">digitalscotland@gov.scot</a></p>
+
+            <p><a href="https://twitter.com/digitalscots">Follow us on Twitter</a></p>
+
+            <p>For enquiries relating to broadband, please complete the online form at:&nbsp;<a href="https://www.scotlandsuperfast.com/contact/">superfast broadband enquiries</a></p>
+        /govscot:directorates:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /digital-support-for-businesses:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 026de671-0cdd-4128-93ae-06d1bd15ad56
+      hippo:name: Digital support for businesses
+      /digital-support-for-businesses[1]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 344b6688-d6c9-4ad7-88b2-fdd6a04f73ae
+        govscot:summary: Digital support for businesses
+        govscot:title: Digital support for businesses
+        hippo:availability: []
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:28:39.558Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:28:39.558Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 227cc423-6551-45cb-89d8-407b2951a8b0
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <h2>Digital support for businesses</h2>
+
+            <p>We want to help businesses across Scotland use digital technologies effectively to grow and compete internationally.</p>
+
+            <p>Embracing digital technology offers many benefits for businesses, including the ability to engage with customers directly, to develop new processes and products, and to sell these products to a global market, 24 hours a day at relatively low cost.</p>
+
+            <p>In our digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, we set out to:</p>
+
+            <ul>
+             <li>launch a new Digital Growth Fund to address the current lack of people with the necessary digital skills</li>
+             <li>extend our Digital Boost programme to give advice and support that improves the level of digital maturity amongst businesses in every part of Scotland</li>
+             <li>create the conditions in which our digital technologies industries can thrive, working with industry to meet a shared objective to employ 150,000 people in digital technology roles over the next 5 years</li>
+            </ul>
+
+            <p>We are committed to improving the digital skill levels of the people in Scotland, and increase the number of people employed in the digital sector to 150,000 over the next five years.</p>
+
+            <p>We are also committed to offering digital support for businesses to help them become internationally competitive.</p>
+
+            <p>To do this we have developed the following programmes.</p>
+
+            <h3>Digital Scotland Business Excellence Partnership (DSBEP)</h3>
+
+            <p>The DSBEP is a partnership of public and private sector bodies. Through it we have invested £15.5 million in delivering initiatives designed to help Scottish businesses of all sizes increase their digital awareness, use and capability. These include:</p>
+
+            <ul>
+             <li><a href="http://www.bgateway.com/driving-growth/digitalboost">DigitalBoost</a>, our national digital engagement programme delivered in partnership with Business Gateway and Highlands and Islands Enterprise</li>
+             <li><a href="http://www.scottish-enterprise.com/services/develop-your-organisation/digital-tourism-scotland/overview">Digital Tourism Scotland</a>, delivered by Scottish Enterprise</li>
+             <li><a href="http://hellodigital.scot/">#Hellodigital</a>, a digital excellence and demonstration centre at the University of Highlands and Islands Inverness campus, delivered by Highlands and Islands Enterprise</li>
+             <li>a&nbsp;<a href="https://beta.gov.scot/publications/digital-economy-survey/">Digital Economy Business Survey 2014</a>&nbsp;to help us assess where Scotland's businesses stand in terms of harnessing the power of digital</li>
+            </ul>
+
+            <h3>Digital Growth Fund</h3>
+
+            <p>Announced in March 2017, the&nbsp;<a href="https://beta.gov.scot/news/increased-funding-for-digital-skills/">Digital Growth Fund</a>&nbsp;will provide loans to companies to provide training for their staff in digital skills such as cyber security, data analytics and software engineering. Involving up to £36 million of loans over the next three years, this will enable up to an estimated 6,000 people to be trained in each of the next three years.</p>
+
+            <h3>Digital skills</h3>
+
+            <p>We have provided £8.5 million to Skills Development Scotland (SDS) to run a digital skills programme designed to meet the digital skills challenges facing Scotland's economy. The programme is built around our&nbsp;<a href="https://www.skillsdevelopmentscotland.co.uk/media/35682/ict___digital_technologies_sector_skills_investment_plan.pdf">Skills Investment Plan</a>.</p>
+
+            <p>This programme has given support to:</p>
+
+            <ul>
+             <li><a href="https://codeclan.com/">CodeClan</a>, an industry-led digital skills academy which opened in Edinburgh in 2015</li>
+             <li><a href="https://www.digitalworld.net/">Digital World</a>, a multi-media marketing campaign aimed at raising awareness about digital skills, qualifications and the many diverse career opportunities these can lead to</li>
+             <li><a href="https://www.skillsdevelopmentscotland.co.uk/news-events/2016/august/digital-dozen-awarded-funding-to-get-young-people-into-tech/">Digital Xtra</a>, which has awarded £400,000 to a number of extra-curricular clubs and activities designed to increase digital skills and interest among young people across Scotland</li>
+            </ul>
+      /digital-support-for-businesses[2]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 49c3fd65-49ba-4748-8216-5deca94d92a2
+        govscot:summary: Digital support for businesses
+        govscot:title: Digital support for businesses
+        hippo:availability: [preview]
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:28:39.558Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:28:55.480Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 227cc423-6551-45cb-89d8-407b2951a8b0
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <h2>Digital support for businesses</h2>
+
+            <p>We want to help businesses across Scotland use digital technologies effectively to grow and compete internationally.</p>
+
+            <p>Embracing digital technology offers many benefits for businesses, including the ability to engage with customers directly, to develop new processes and products, and to sell these products to a global market, 24 hours a day at relatively low cost.</p>
+
+            <p>In our digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, we set out to:</p>
+
+            <ul>
+             <li>launch a new Digital Growth Fund to address the current lack of people with the necessary digital skills</li>
+             <li>extend our Digital Boost programme to give advice and support that improves the level of digital maturity amongst businesses in every part of Scotland</li>
+             <li>create the conditions in which our digital technologies industries can thrive, working with industry to meet a shared objective to employ 150,000 people in digital technology roles over the next 5 years</li>
+            </ul>
+
+            <p>We are committed to improving the digital skill levels of the people in Scotland, and increase the number of people employed in the digital sector to 150,000 over the next five years.</p>
+
+            <p>We are also committed to offering digital support for businesses to help them become internationally competitive.</p>
+
+            <p>To do this we have developed the following programmes.</p>
+
+            <h3>Digital Scotland Business Excellence Partnership (DSBEP)</h3>
+
+            <p>The DSBEP is a partnership of public and private sector bodies. Through it we have invested £15.5 million in delivering initiatives designed to help Scottish businesses of all sizes increase their digital awareness, use and capability. These include:</p>
+
+            <ul>
+             <li><a href="http://www.bgateway.com/driving-growth/digitalboost">DigitalBoost</a>, our national digital engagement programme delivered in partnership with Business Gateway and Highlands and Islands Enterprise</li>
+             <li><a href="http://www.scottish-enterprise.com/services/develop-your-organisation/digital-tourism-scotland/overview">Digital Tourism Scotland</a>, delivered by Scottish Enterprise</li>
+             <li><a href="http://hellodigital.scot/">#Hellodigital</a>, a digital excellence and demonstration centre at the University of Highlands and Islands Inverness campus, delivered by Highlands and Islands Enterprise</li>
+             <li>a&nbsp;<a href="https://beta.gov.scot/publications/digital-economy-survey/">Digital Economy Business Survey 2014</a>&nbsp;to help us assess where Scotland's businesses stand in terms of harnessing the power of digital</li>
+            </ul>
+
+            <h3>Digital Growth Fund</h3>
+
+            <p>Announced in March 2017, the&nbsp;<a href="https://beta.gov.scot/news/increased-funding-for-digital-skills/">Digital Growth Fund</a>&nbsp;will provide loans to companies to provide training for their staff in digital skills such as cyber security, data analytics and software engineering. Involving up to £36 million of loans over the next three years, this will enable up to an estimated 6,000 people to be trained in each of the next three years.</p>
+
+            <h3>Digital skills</h3>
+
+            <p>We have provided £8.5 million to Skills Development Scotland (SDS) to run a digital skills programme designed to meet the digital skills challenges facing Scotland's economy. The programme is built around our&nbsp;<a href="https://www.skillsdevelopmentscotland.co.uk/media/35682/ict___digital_technologies_sector_skills_investment_plan.pdf">Skills Investment Plan</a>.</p>
+
+            <p>This programme has given support to:</p>
+
+            <ul>
+             <li><a href="https://codeclan.com/">CodeClan</a>, an industry-led digital skills academy which opened in Edinburgh in 2015</li>
+             <li><a href="https://www.digitalworld.net/">Digital World</a>, a multi-media marketing campaign aimed at raising awareness about digital skills, qualifications and the many diverse career opportunities these can lead to</li>
+             <li><a href="https://www.skillsdevelopmentscotland.co.uk/news-events/2016/august/digital-dozen-awarded-funding-to-get-young-people-into-tech/">Digital Xtra</a>, which has awarded £400,000 to a number of extra-curricular clubs and activities designed to increase digital skills and interest among young people across Scotland</li>
+            </ul>
+      /digital-support-for-businesses[3]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 33440541-e329-4cee-b4af-a94a98ddcea1
+        govscot:summary: Digital support for businesses
+        govscot:title: Digital support for businesses
+        hippo:availability: [live]
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:28:39.558Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:28:55.480Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2017-12-08T14:30:25.769Z
+        hippotranslation:id: 227cc423-6551-45cb-89d8-407b2951a8b0
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <h2>Digital support for businesses</h2>
+
+            <p>We want to help businesses across Scotland use digital technologies effectively to grow and compete internationally.</p>
+
+            <p>Embracing digital technology offers many benefits for businesses, including the ability to engage with customers directly, to develop new processes and products, and to sell these products to a global market, 24 hours a day at relatively low cost.</p>
+
+            <p>In our digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, we set out to:</p>
+
+            <ul>
+             <li>launch a new Digital Growth Fund to address the current lack of people with the necessary digital skills</li>
+             <li>extend our Digital Boost programme to give advice and support that improves the level of digital maturity amongst businesses in every part of Scotland</li>
+             <li>create the conditions in which our digital technologies industries can thrive, working with industry to meet a shared objective to employ 150,000 people in digital technology roles over the next 5 years</li>
+            </ul>
+
+            <p>We are committed to improving the digital skill levels of the people in Scotland, and increase the number of people employed in the digital sector to 150,000 over the next five years.</p>
+
+            <p>We are also committed to offering digital support for businesses to help them become internationally competitive.</p>
+
+            <p>To do this we have developed the following programmes.</p>
+
+            <h3>Digital Scotland Business Excellence Partnership (DSBEP)</h3>
+
+            <p>The DSBEP is a partnership of public and private sector bodies. Through it we have invested £15.5 million in delivering initiatives designed to help Scottish businesses of all sizes increase their digital awareness, use and capability. These include:</p>
+
+            <ul>
+             <li><a href="http://www.bgateway.com/driving-growth/digitalboost">DigitalBoost</a>, our national digital engagement programme delivered in partnership with Business Gateway and Highlands and Islands Enterprise</li>
+             <li><a href="http://www.scottish-enterprise.com/services/develop-your-organisation/digital-tourism-scotland/overview">Digital Tourism Scotland</a>, delivered by Scottish Enterprise</li>
+             <li><a href="http://hellodigital.scot/">#Hellodigital</a>, a digital excellence and demonstration centre at the University of Highlands and Islands Inverness campus, delivered by Highlands and Islands Enterprise</li>
+             <li>a&nbsp;<a href="https://beta.gov.scot/publications/digital-economy-survey/">Digital Economy Business Survey 2014</a>&nbsp;to help us assess where Scotland's businesses stand in terms of harnessing the power of digital</li>
+            </ul>
+
+            <h3>Digital Growth Fund</h3>
+
+            <p>Announced in March 2017, the&nbsp;<a href="https://beta.gov.scot/news/increased-funding-for-digital-skills/">Digital Growth Fund</a>&nbsp;will provide loans to companies to provide training for their staff in digital skills such as cyber security, data analytics and software engineering. Involving up to £36 million of loans over the next three years, this will enable up to an estimated 6,000 people to be trained in each of the next three years.</p>
+
+            <h3>Digital skills</h3>
+
+            <p>We have provided £8.5 million to Skills Development Scotland (SDS) to run a digital skills programme designed to meet the digital skills challenges facing Scotland's economy. The programme is built around our&nbsp;<a href="https://www.skillsdevelopmentscotland.co.uk/media/35682/ict___digital_technologies_sector_skills_investment_plan.pdf">Skills Investment Plan</a>.</p>
+
+            <p>This programme has given support to:</p>
+
+            <ul>
+             <li><a href="https://codeclan.com/">CodeClan</a>, an industry-led digital skills academy which opened in Edinburgh in 2015</li>
+             <li><a href="https://www.digitalworld.net/">Digital World</a>, a multi-media marketing campaign aimed at raising awareness about digital skills, qualifications and the many diverse career opportunities these can lead to</li>
+             <li><a href="https://www.skillsdevelopmentscotland.co.uk/news-events/2016/august/digital-dozen-awarded-funding-to-get-young-people-into-tech/">Digital Xtra</a>, which has awarded £400,000 to a number of extra-curricular clubs and activities designed to increase digital skills and interest among young people across Scotland</li>
+            </ul>
+    /digital-transformation:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: c34c68c2-9246-4553-af96-ac48da4d2410
+      hippo:name: Digital transformation
+      /digital-transformation[1]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 209eb15f-f7ff-4503-aea5-7829faee58b2
+        govscot:summary: Digital transformation
+        govscot:title: Digital transformation
+        hippo:availability: []
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:29:20.810Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:29:20.810Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: aca8f468-6e1c-4288-b750-771e45340352
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <h2>Digital transformation</h2>
+
+            <p>We are making sure that Scotland's digital public services are high-quality, continually improving and responsive to citizens' needs.</p>
+
+            <p>In our national digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, we aim to:</p>
+
+            <ul>
+             <li>introduce shared technology platforms as a core part of the process of public service reform</li>
+             <li>establish all new government organisations as digital businesses and ensure that all digital services developed by Scottish Government meet our&nbsp;<a href="https://resources.mygov.scot/standards/digital-first/">Digital First Service Standard</a></li>
+             <li>design key public services in areas such health and social care, justice and social security around users' needs</li>
+             <li>put in place tough new assurance processes for Central Government projects, so we have the power to stop projects that do not meet user needs or represent good value for money</li>
+            </ul>
+
+            <h3>Guiding principles</h3>
+
+            <p>We are committed to delivering digital public services that meet the needs of the public. We do this by:</p>
+
+            <ul>
+             <li>working with citizens to design and deliver digital public services.</li>
+             <li>developing shared infrastructure – the networks, systems and computers we depend on every day – services and standards in collaboration with our public sector partners, to reduce costs and enable resources to be focused on front-line services.</li>
+             <li>using data more effectively to support the design of public services and encouraging public sector data owners to open up non-personal data for use across the public sector and beyond.</li>
+             <li>ensuring the public sector has access to the digital skills and leadership required to achieve our shared goals.</li>
+            </ul>
+
+            <h3>Digital public sector assets</h3>
+
+            <ul>
+             <li><a href="https://www.scottishwan.com/">Scottish Wide Area Network (SWAN)</a>&nbsp;provides a common digital infrastructure for more than 5,000 public sector sites and has generated savings of over £30 million</li>
+             <li><a href="http://www.mygov.scot/">mygov.scot</a>&nbsp;is evolving as a central point of access for simple and accessible public services and information, based on user needs</li>
+             <li><a href="http://www.beta.gov.scot/">beta.gov.scot</a>&nbsp;is the test version of the new corporate website</li>
+             <li>Rubric is the name of our purpose-built publishing platform, which powers&nbsp;<a href="http://www.mygov.scot/">mygov.scot</a>&nbsp;and&nbsp;<a href="http://beta.gov.scot/">beta.gov.scot</a></li>
+             <li><a href="https://signin.mygovscot.org/home/">myaccount</a>&nbsp;is a single sign-in solution for secure and easy access to online local government and health services in Scotland. More than 130,000 individuals have now set up a myaccount online</li>
+            </ul>
+
+            <h3>Central Government Digital Transformation Service</h3>
+
+            <p>We established the&nbsp;<a href="https://resources.mygov.scot/services/digital-transformation-service/">Central Government Digital Transformation Service</a>(CGDTS) to help central government organisations develop their digital capabilities. The CGDTS promotes the core principles of reuse and collaboration in technology and skills. Functions of the CGDTS include:</p>
+
+            <ul>
+             <li>developing digital strategies or reviewing existing digital strategies</li>
+             <li>developing digital business cases, often as an outcome of developing a digital strategy</li>
+             <li>supporting organisations in recruiting and growing digital talent</li>
+            </ul>
+
+            <p>For more information contact the CGDTS at&nbsp;<a href="mailto:cgdts@gov.scot">cgdts@gov.scot</a>&nbsp;or on 0141 242 5912.</p>
+
+            <h3>Standards and guidance</h3>
+
+            <p>We created the&nbsp;<a href="https://resources.mygov.scot/standards/digital-first/">Digital First Service Standard</a>&nbsp;to help organisations meet the minimum standard required when transforming their citizen-facing services.</p>
+
+            <p>The&nbsp;<a href="https://beta.gov.scot/publications/open-data-strategy/">Open Data Strategy</a>&nbsp;and&nbsp;<a href="https://beta.gov.scot/publications/open-data-resource-pack-9781786524034/">Open Data Resource Pack</a>&nbsp;support public sector organisations in making their non-personal data accessible.</p>
+
+            <p>Our&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-data-hosting-data-centre-strategy-scottish-public/">Data Hosting and Data Centre Strategy</a>&nbsp;sets out our vision for Scotland's public sector data hosting to be cost-effective, carbon-neutral and, where appropriate, cloud-based.</p>
+
+            <p>We offer additional guidance for organisations on&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-scottish-public-sector-cloud-computing-guidance/">cloud computing</a>,&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-scottish-public-sector-data-centre-virtualisation-guidance/">virtualisation</a>and&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-data-centre-colocation-scottish-public-sector/">colocation</a>.</p>
+
+            <p>Our&nbsp;<a href="https://beta.gov.scot/publications/scotland-s-digital-future-scottish-public-sector-green-ict-strategy/">Green Digital Strategy</a>&nbsp;provides guidance to help organisations achieve a cost-effective, sustainable and energy-efficient digital network.</p>
+
+            <h3>Digital leadership</h3>
+
+            <p>We launched the&nbsp;<a href="https://beta.gov.scot/groups/digital-champions/">Digital Champions Programme</a>, a cross-sector development programme for Scottish public sector leaders, in October 2013.</p>
+
+            <p>The programme is designed to give public sector leaders the knowledge, skills and confidence to champion digital technology within their organisations and to encourage innovative use of digital technology across public services in Scotland.</p>
+
+            <p>More than 120 public sector Directors and Chief Executives have participated in the programme in the first three years.</p>
+
+            <h3>Digital innovation</h3>
+
+            <p>We aim to drive digital innovation in the Scottish public sector. An example of this is the&nbsp;<a href="https://civtech.atlassian.net/wiki">CivTech® pilot</a>&nbsp;which is harnessing and applying the talents of indigenous digital tech companies to specific public sector challenges.</p>
+
+            <p>This aims to deliver better experiences for citizens and highlights to entrepreneurs that Scotland is a premier destination to set up and grow – in turn increasing the digital capability and reputation of Scotland.</p>
+      /digital-transformation[2]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 2b068465-e78d-471f-9ee9-1cdd939c3088
+        govscot:summary: Digital transformation
+        govscot:title: Digital transformation
+        hippo:availability: [preview]
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:29:20.810Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:29:36.371Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: aca8f468-6e1c-4288-b750-771e45340352
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <h2>Digital transformation</h2>
+
+            <p>We are making sure that Scotland's digital public services are high-quality, continually improving and responsive to citizens' needs.</p>
+
+            <p>In our national digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, we aim to:</p>
+
+            <ul>
+             <li>introduce shared technology platforms as a core part of the process of public service reform</li>
+             <li>establish all new government organisations as digital businesses and ensure that all digital services developed by Scottish Government meet our&nbsp;<a href="https://resources.mygov.scot/standards/digital-first/">Digital First Service Standard</a></li>
+             <li>design key public services in areas such health and social care, justice and social security around users' needs</li>
+             <li>put in place tough new assurance processes for Central Government projects, so we have the power to stop projects that do not meet user needs or represent good value for money</li>
+            </ul>
+
+            <h3>Guiding principles</h3>
+
+            <p>We are committed to delivering digital public services that meet the needs of the public. We do this by:</p>
+
+            <ul>
+             <li>working with citizens to design and deliver digital public services.</li>
+             <li>developing shared infrastructure – the networks, systems and computers we depend on every day – services and standards in collaboration with our public sector partners, to reduce costs and enable resources to be focused on front-line services.</li>
+             <li>using data more effectively to support the design of public services and encouraging public sector data owners to open up non-personal data for use across the public sector and beyond.</li>
+             <li>ensuring the public sector has access to the digital skills and leadership required to achieve our shared goals.</li>
+            </ul>
+
+            <h3>Digital public sector assets</h3>
+
+            <ul>
+             <li><a href="https://www.scottishwan.com/">Scottish Wide Area Network (SWAN)</a>&nbsp;provides a common digital infrastructure for more than 5,000 public sector sites and has generated savings of over £30 million</li>
+             <li><a href="http://www.mygov.scot/">mygov.scot</a>&nbsp;is evolving as a central point of access for simple and accessible public services and information, based on user needs</li>
+             <li><a href="http://www.beta.gov.scot/">beta.gov.scot</a>&nbsp;is the test version of the new corporate website</li>
+             <li>Rubric is the name of our purpose-built publishing platform, which powers&nbsp;<a href="http://www.mygov.scot/">mygov.scot</a>&nbsp;and&nbsp;<a href="http://beta.gov.scot/">beta.gov.scot</a></li>
+             <li><a href="https://signin.mygovscot.org/home/">myaccount</a>&nbsp;is a single sign-in solution for secure and easy access to online local government and health services in Scotland. More than 130,000 individuals have now set up a myaccount online</li>
+            </ul>
+
+            <h3>Central Government Digital Transformation Service</h3>
+
+            <p>We established the&nbsp;<a href="https://resources.mygov.scot/services/digital-transformation-service/">Central Government Digital Transformation Service</a>(CGDTS) to help central government organisations develop their digital capabilities. The CGDTS promotes the core principles of reuse and collaboration in technology and skills. Functions of the CGDTS include:</p>
+
+            <ul>
+             <li>developing digital strategies or reviewing existing digital strategies</li>
+             <li>developing digital business cases, often as an outcome of developing a digital strategy</li>
+             <li>supporting organisations in recruiting and growing digital talent</li>
+            </ul>
+
+            <p>For more information contact the CGDTS at&nbsp;<a href="mailto:cgdts@gov.scot">cgdts@gov.scot</a>&nbsp;or on 0141 242 5912.</p>
+
+            <h3>Standards and guidance</h3>
+
+            <p>We created the&nbsp;<a href="https://resources.mygov.scot/standards/digital-first/">Digital First Service Standard</a>&nbsp;to help organisations meet the minimum standard required when transforming their citizen-facing services.</p>
+
+            <p>The&nbsp;<a href="https://beta.gov.scot/publications/open-data-strategy/">Open Data Strategy</a>&nbsp;and&nbsp;<a href="https://beta.gov.scot/publications/open-data-resource-pack-9781786524034/">Open Data Resource Pack</a>&nbsp;support public sector organisations in making their non-personal data accessible.</p>
+
+            <p>Our&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-data-hosting-data-centre-strategy-scottish-public/">Data Hosting and Data Centre Strategy</a>&nbsp;sets out our vision for Scotland's public sector data hosting to be cost-effective, carbon-neutral and, where appropriate, cloud-based.</p>
+
+            <p>We offer additional guidance for organisations on&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-scottish-public-sector-cloud-computing-guidance/">cloud computing</a>,&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-scottish-public-sector-data-centre-virtualisation-guidance/">virtualisation</a>and&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-data-centre-colocation-scottish-public-sector/">colocation</a>.</p>
+
+            <p>Our&nbsp;<a href="https://beta.gov.scot/publications/scotland-s-digital-future-scottish-public-sector-green-ict-strategy/">Green Digital Strategy</a>&nbsp;provides guidance to help organisations achieve a cost-effective, sustainable and energy-efficient digital network.</p>
+
+            <h3>Digital leadership</h3>
+
+            <p>We launched the&nbsp;<a href="https://beta.gov.scot/groups/digital-champions/">Digital Champions Programme</a>, a cross-sector development programme for Scottish public sector leaders, in October 2013.</p>
+
+            <p>The programme is designed to give public sector leaders the knowledge, skills and confidence to champion digital technology within their organisations and to encourage innovative use of digital technology across public services in Scotland.</p>
+
+            <p>More than 120 public sector Directors and Chief Executives have participated in the programme in the first three years.</p>
+
+            <h3>Digital innovation</h3>
+
+            <p>We aim to drive digital innovation in the Scottish public sector. An example of this is the&nbsp;<a href="https://civtech.atlassian.net/wiki">CivTech® pilot</a>&nbsp;which is harnessing and applying the talents of indigenous digital tech companies to specific public sector challenges.</p>
+
+            <p>This aims to deliver better experiences for citizens and highlights to entrepreneurs that Scotland is a premier destination to set up and grow – in turn increasing the digital capability and reputation of Scotland.</p>
+      /digital-transformation[3]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: e8ddb304-d13f-4126-8d5e-77b5672caaad
+        govscot:summary: Digital transformation
+        govscot:title: Digital transformation
+        hippo:availability: [live]
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:29:20.810Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:29:36.371Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2017-12-08T14:30:25.458Z
+        hippotranslation:id: aca8f468-6e1c-4288-b750-771e45340352
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <h2>Digital transformation</h2>
+
+            <p>We are making sure that Scotland's digital public services are high-quality, continually improving and responsive to citizens' needs.</p>
+
+            <p>In our national digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, we aim to:</p>
+
+            <ul>
+             <li>introduce shared technology platforms as a core part of the process of public service reform</li>
+             <li>establish all new government organisations as digital businesses and ensure that all digital services developed by Scottish Government meet our&nbsp;<a href="https://resources.mygov.scot/standards/digital-first/">Digital First Service Standard</a></li>
+             <li>design key public services in areas such health and social care, justice and social security around users' needs</li>
+             <li>put in place tough new assurance processes for Central Government projects, so we have the power to stop projects that do not meet user needs or represent good value for money</li>
+            </ul>
+
+            <h3>Guiding principles</h3>
+
+            <p>We are committed to delivering digital public services that meet the needs of the public. We do this by:</p>
+
+            <ul>
+             <li>working with citizens to design and deliver digital public services.</li>
+             <li>developing shared infrastructure – the networks, systems and computers we depend on every day – services and standards in collaboration with our public sector partners, to reduce costs and enable resources to be focused on front-line services.</li>
+             <li>using data more effectively to support the design of public services and encouraging public sector data owners to open up non-personal data for use across the public sector and beyond.</li>
+             <li>ensuring the public sector has access to the digital skills and leadership required to achieve our shared goals.</li>
+            </ul>
+
+            <h3>Digital public sector assets</h3>
+
+            <ul>
+             <li><a href="https://www.scottishwan.com/">Scottish Wide Area Network (SWAN)</a>&nbsp;provides a common digital infrastructure for more than 5,000 public sector sites and has generated savings of over £30 million</li>
+             <li><a href="http://www.mygov.scot/">mygov.scot</a>&nbsp;is evolving as a central point of access for simple and accessible public services and information, based on user needs</li>
+             <li><a href="http://www.beta.gov.scot/">beta.gov.scot</a>&nbsp;is the test version of the new corporate website</li>
+             <li>Rubric is the name of our purpose-built publishing platform, which powers&nbsp;<a href="http://www.mygov.scot/">mygov.scot</a>&nbsp;and&nbsp;<a href="http://beta.gov.scot/">beta.gov.scot</a></li>
+             <li><a href="https://signin.mygovscot.org/home/">myaccount</a>&nbsp;is a single sign-in solution for secure and easy access to online local government and health services in Scotland. More than 130,000 individuals have now set up a myaccount online</li>
+            </ul>
+
+            <h3>Central Government Digital Transformation Service</h3>
+
+            <p>We established the&nbsp;<a href="https://resources.mygov.scot/services/digital-transformation-service/">Central Government Digital Transformation Service</a>(CGDTS) to help central government organisations develop their digital capabilities. The CGDTS promotes the core principles of reuse and collaboration in technology and skills. Functions of the CGDTS include:</p>
+
+            <ul>
+             <li>developing digital strategies or reviewing existing digital strategies</li>
+             <li>developing digital business cases, often as an outcome of developing a digital strategy</li>
+             <li>supporting organisations in recruiting and growing digital talent</li>
+            </ul>
+
+            <p>For more information contact the CGDTS at&nbsp;<a href="mailto:cgdts@gov.scot">cgdts@gov.scot</a>&nbsp;or on 0141 242 5912.</p>
+
+            <h3>Standards and guidance</h3>
+
+            <p>We created the&nbsp;<a href="https://resources.mygov.scot/standards/digital-first/">Digital First Service Standard</a>&nbsp;to help organisations meet the minimum standard required when transforming their citizen-facing services.</p>
+
+            <p>The&nbsp;<a href="https://beta.gov.scot/publications/open-data-strategy/">Open Data Strategy</a>&nbsp;and&nbsp;<a href="https://beta.gov.scot/publications/open-data-resource-pack-9781786524034/">Open Data Resource Pack</a>&nbsp;support public sector organisations in making their non-personal data accessible.</p>
+
+            <p>Our&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-data-hosting-data-centre-strategy-scottish-public/">Data Hosting and Data Centre Strategy</a>&nbsp;sets out our vision for Scotland's public sector data hosting to be cost-effective, carbon-neutral and, where appropriate, cloud-based.</p>
+
+            <p>We offer additional guidance for organisations on&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-scottish-public-sector-cloud-computing-guidance/">cloud computing</a>,&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-scottish-public-sector-data-centre-virtualisation-guidance/">virtualisation</a>and&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-data-centre-colocation-scottish-public-sector/">colocation</a>.</p>
+
+            <p>Our&nbsp;<a href="https://beta.gov.scot/publications/scotland-s-digital-future-scottish-public-sector-green-ict-strategy/">Green Digital Strategy</a>&nbsp;provides guidance to help organisations achieve a cost-effective, sustainable and energy-efficient digital network.</p>
+
+            <h3>Digital leadership</h3>
+
+            <p>We launched the&nbsp;<a href="https://beta.gov.scot/groups/digital-champions/">Digital Champions Programme</a>, a cross-sector development programme for Scottish public sector leaders, in October 2013.</p>
+
+            <p>The programme is designed to give public sector leaders the knowledge, skills and confidence to champion digital technology within their organisations and to encourage innovative use of digital technology across public services in Scotland.</p>
+
+            <p>More than 120 public sector Directors and Chief Executives have participated in the programme in the first three years.</p>
+
+            <h3>Digital innovation</h3>
+
+            <p>We aim to drive digital innovation in the Scottish public sector. An example of this is the&nbsp;<a href="https://civtech.atlassian.net/wiki">CivTech® pilot</a>&nbsp;which is harnessing and applying the talents of indigenous digital tech companies to specific public sector challenges.</p>
+
+            <p>This aims to deliver better experiences for citizens and highlights to entrepreneurs that Scotland is a premier destination to set up and grow – in turn increasing the digital capability and reputation of Scotland.</p>
+    /using-data-effectively:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 9430dda1-e00c-437f-acb5-5c6c69944dac
+      hippo:name: Using data effectively
+      /using-data-effectively[1]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: a5d7b7dd-b680-4878-9df9-075f7a529660
+        govscot:summary: Using data effectively
+        govscot:title: Using data effectively
+        hippo:availability: []
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:29:53.367Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:29:53.367Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: ba1ce194-fd0b-4695-87c6-73b6efab114c
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Data can be facts and statistics or lists of information collected together for reference or analysis.</p>
+
+            <p>We are making sure that Scotland is well positioned to support change and innovation through the effective use of data.</p>
+
+            <p>In our national digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, one of our aims is to engage with the public to build an understanding of:</p>
+
+            <ul>
+             <li>how their data is being used for the public benefit</li>
+             <li>the arrangements in place to guarantee the security of their data</li>
+            </ul>
+
+            <p>We want to make non-personal data about people and businesses in Scotland easier to access and use.</p>
+
+            <p>We will achieve this by publishing the data behind all official statistics on&nbsp;<a href="http://statistics.gov.scot/">statistics.gov.scot</a>.</p>
+
+            <p>We also set out guidance and codes of practice for public services on how to manage data in line with privacy legislation and to protect the public.</p>
+
+            <h3>Open Data Strategy</h3>
+
+            <p>Better data sharing can generate new insights, stimulate new ideas and deliver potential savings to the public sector.&nbsp;<a href="https://policyexchange.org.uk/publication/the-big-data-opportunity-making-government-faster-smarter-and-more-personal/">The Policy Exchange</a>&nbsp;estimated that making public sector data more open could save the UK more than £16 billion.</p>
+
+            <p>Our&nbsp;<a href="https://beta.gov.scot/publications/open-data-strategy/">Open Data Strategy</a>&nbsp;sets out our ambition for making data held by the public sector more available for others to use and reuse.</p>
+
+            <h3>Investing in research and innovation</h3>
+
+            <p>Our open data platform will help Scotland become recognised as an attractive place to use data for research and innovation.</p>
+
+            <p>We are delivering a series of projects and a skills programme with&nbsp;<a href="http://www.thedatalab.com/">Datalab</a>, which will develop the existing workforce's data analytics skills and&nbsp;<a href="http://www.thedatalab.com/what-we-do/skills-and-training/the-data-lab-msc">increase the number of new data scientists</a>.</p>
+
+            <p>Datalab were set up with a £11.3 million grant from the&nbsp;<a href="http://www.sfc.ac.uk/">Scottish Funding Council</a>.</p>
+
+            <p>There has been significant investment in data research across Scotland, including:</p>
+
+            <ul>
+             <li><a href="http://www.farrinstitute.org/">the Farr Institute</a>, a research institute supported by 10 funders, led by&nbsp;<a href="https://www.mrc.ac.uk/research/">the Medical Research Council</a>&nbsp;who initially invested £20 million in the project</li>
+             <li><a href="http://ubdc.ac.uk/">the Urban Big Data Centre</a>&nbsp;and&nbsp;<a href="https://adrn.ac.uk/about/network/scotland/">the Administrative Data Research Centre</a>, funded by&nbsp;<a href="http://www.esrc.ac.uk/research/our-research/urban-big-data/">the Economic and Social Research Council</a></li>
+            </ul>
+
+            <h3>Protecting public data</h3>
+
+            <p>We want to make sure that data is used for public benefit. We are a member of&nbsp;<a href="http://www.datalinkagescotland.co.uk/">the Scottish Informatics and Linkage Collaboration</a>, which places public trust at the heart of its work.</p>
+
+            <p>We are working to improve governance around data sharing, by assessing all security, legal and ethical considerations. We will use the insights gained from&nbsp;<a href="https://www.gov.uk/government/collections/digital-economy-bill-2016">the UK Government's Digital Economy Bill</a>&nbsp;to further support Scotland's data ambitions.</p>
+
+            <h3>Data Management</h3>
+
+            <p>The&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-delivery-public-services/">Scotland's Digital Future: Delivery of Public Services</a>&nbsp;strategy sets a number of objectives for the effective use and management of public sector data, to improve service delivery and promote economic growth. A Data Management Board was established to make sure a consistent approach is taken across Scotland.</p>
+
+            <p>The Data Management Board provides strategic direction and overview across the various data work streams.</p>
+
+            <h3>Geographic Information Service</h3>
+
+            <p>Geographic, or spatial information is any physical, map-based, address and text-based data that can be used to describe and characterise places in Scotland, and the people who live there.</p>
+
+            <p>The Geographic Information service takes forward the actions of the&nbsp;<a href="http://www.gov.scot/Publications/2005/08/31114408/44113">Geographic Information Strategy</a>.</p>
+
+            <p>It's working to develop a more systematic and effective approach to using geographic information in the development and delivery of policy and services to the benefit of the people of Scotland.</p>
+
+            <p>The Spatial Information Board makes sure we make the most of Scotland's spatial data, helps to support innovative and effective public services and promotes economic growth.</p>
+
+            <h3>Identity Management and Privacy</h3>
+
+            <p>The Scottish Government's Identity Management and Privacy Principles aim to raise confidence in personal data management. The Identity Management and Privacy Principles should be adopted by all Public Service Organisations delivering Scottish public services.</p>
+
+            <p>They include:</p>
+
+            <ul>
+             <li>proving identity or entitlement</li>
+             <li>governance and accountability</li>
+             <li>risk management</li>
+             <li>data and data sharing</li>
+             <li>data use for research and statistics</li>
+             <li>education and engagement</li>
+            </ul>
+
+            <p>The&nbsp;<a href="http://www.gov.scot/Topics/Economy/digital/digitalservices/datamanagement/IdentityandPrivacy/IdentityManagementandPrivacyPrinciplesV2">Identity Management and Privacy Principles</a>&nbsp;are now in their second version. It was originally published in 2010. The Principles allow public service organisations and policy makers to comply with legislative requirements and achieve good practice. They apply to systems, either new or those being redesigned or redeveloped, which involve identity management.</p>
+
+            <h3>Data sharing code of practice (statutory)</h3>
+
+            <p>The Information Commissioner's Office (ICO)&nbsp;<a href="https://ico.org.uk/media/for-organisations/documents/1068/data_sharing_code_of_practice.pdf">data sharing code of practice</a>&nbsp;is a statutory code (required by law) which explains how the Data Protection Act applies to the sharing of personal data. It provides practical advice to all organisations, whether public, private or third sector, that share personal data and covers systematic data sharing arrangements as well as ad hoc or one off requests to share personal data.</p>
+      /using-data-effectively[2]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 8dbac484-c393-4bb8-9b98-813c3f26b870
+        govscot:summary: Using data effectively
+        govscot:title: Using data effectively
+        hippo:availability: [preview]
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:29:53.367Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:30:16.329Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: ba1ce194-fd0b-4695-87c6-73b6efab114c
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Data can be facts and statistics or lists of information collected together for reference or analysis.</p>
+
+            <p>We are making sure that Scotland is well positioned to support change and innovation through the effective use of data.</p>
+
+            <p>In our national digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, one of our aims is to engage with the public to build an understanding of:</p>
+
+            <ul>
+             <li>how their data is being used for the public benefit</li>
+             <li>the arrangements in place to guarantee the security of their data</li>
+            </ul>
+
+            <p>We want to make non-personal data about people and businesses in Scotland easier to access and use.</p>
+
+            <p>We will achieve this by publishing the data behind all official statistics on&nbsp;<a href="http://statistics.gov.scot/">statistics.gov.scot</a>.</p>
+
+            <p>We also set out guidance and codes of practice for public services on how to manage data in line with privacy legislation and to protect the public.</p>
+
+            <h3>Open Data Strategy</h3>
+
+            <p>Better data sharing can generate new insights, stimulate new ideas and deliver potential savings to the public sector.&nbsp;<a href="https://policyexchange.org.uk/publication/the-big-data-opportunity-making-government-faster-smarter-and-more-personal/">The Policy Exchange</a>&nbsp;estimated that making public sector data more open could save the UK more than £16 billion.</p>
+
+            <p>Our&nbsp;<a href="https://beta.gov.scot/publications/open-data-strategy/">Open Data Strategy</a>&nbsp;sets out our ambition for making data held by the public sector more available for others to use and reuse.</p>
+
+            <h3>Investing in research and innovation</h3>
+
+            <p>Our open data platform will help Scotland become recognised as an attractive place to use data for research and innovation.</p>
+
+            <p>We are delivering a series of projects and a skills programme with&nbsp;<a href="http://www.thedatalab.com/">Datalab</a>, which will develop the existing workforce's data analytics skills and&nbsp;<a href="http://www.thedatalab.com/what-we-do/skills-and-training/the-data-lab-msc">increase the number of new data scientists</a>.</p>
+
+            <p>Datalab were set up with a £11.3 million grant from the&nbsp;<a href="http://www.sfc.ac.uk/">Scottish Funding Council</a>.</p>
+
+            <p>There has been significant investment in data research across Scotland, including:</p>
+
+            <ul>
+             <li><a href="http://www.farrinstitute.org/">the Farr Institute</a>, a research institute supported by 10 funders, led by&nbsp;<a href="https://www.mrc.ac.uk/research/">the Medical Research Council</a>&nbsp;who initially invested £20 million in the project</li>
+             <li><a href="http://ubdc.ac.uk/">the Urban Big Data Centre</a>&nbsp;and&nbsp;<a href="https://adrn.ac.uk/about/network/scotland/">the Administrative Data Research Centre</a>, funded by&nbsp;<a href="http://www.esrc.ac.uk/research/our-research/urban-big-data/">the Economic and Social Research Council</a></li>
+            </ul>
+
+            <h3>Protecting public data</h3>
+
+            <p>We want to make sure that data is used for public benefit. We are a member of&nbsp;<a href="http://www.datalinkagescotland.co.uk/">the Scottish Informatics and Linkage Collaboration</a>, which places public trust at the heart of its work.</p>
+
+            <p>We are working to improve governance around data sharing, by assessing all security, legal and ethical considerations. We will use the insights gained from&nbsp;<a href="https://www.gov.uk/government/collections/digital-economy-bill-2016">the UK Government's Digital Economy Bill</a>&nbsp;to further support Scotland's data ambitions.</p>
+
+            <h3>Data Management</h3>
+
+            <p>The&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-delivery-public-services/">Scotland's Digital Future: Delivery of Public Services</a>&nbsp;strategy sets a number of objectives for the effective use and management of public sector data, to improve service delivery and promote economic growth. A Data Management Board was established to make sure a consistent approach is taken across Scotland.</p>
+
+            <p>The Data Management Board provides strategic direction and overview across the various data work streams.</p>
+
+            <h3>Geographic Information Service</h3>
+
+            <p>Geographic, or spatial information is any physical, map-based, address and text-based data that can be used to describe and characterise places in Scotland, and the people who live there.</p>
+
+            <p>The Geographic Information service takes forward the actions of the&nbsp;<a href="http://www.gov.scot/Publications/2005/08/31114408/44113">Geographic Information Strategy</a>.</p>
+
+            <p>It's working to develop a more systematic and effective approach to using geographic information in the development and delivery of policy and services to the benefit of the people of Scotland.</p>
+
+            <p>The Spatial Information Board makes sure we make the most of Scotland's spatial data, helps to support innovative and effective public services and promotes economic growth.</p>
+
+            <h3>Identity Management and Privacy</h3>
+
+            <p>The Scottish Government's Identity Management and Privacy Principles aim to raise confidence in personal data management. The Identity Management and Privacy Principles should be adopted by all Public Service Organisations delivering Scottish public services.</p>
+
+            <p>They include:</p>
+
+            <ul>
+             <li>proving identity or entitlement</li>
+             <li>governance and accountability</li>
+             <li>risk management</li>
+             <li>data and data sharing</li>
+             <li>data use for research and statistics</li>
+             <li>education and engagement</li>
+            </ul>
+
+            <p>The&nbsp;<a href="http://www.gov.scot/Topics/Economy/digital/digitalservices/datamanagement/IdentityandPrivacy/IdentityManagementandPrivacyPrinciplesV2">Identity Management and Privacy Principles</a>&nbsp;are now in their second version. It was originally published in 2010. The Principles allow public service organisations and policy makers to comply with legislative requirements and achieve good practice. They apply to systems, either new or those being redesigned or redeveloped, which involve identity management.</p>
+
+            <h3>Data sharing code of practice (statutory)</h3>
+
+            <p>The Information Commissioner's Office (ICO)&nbsp;<a href="https://ico.org.uk/media/for-organisations/documents/1068/data_sharing_code_of_practice.pdf">data sharing code of practice</a>&nbsp;is a statutory code (required by law) which explains how the Data Protection Act applies to the sharing of personal data. It provides practical advice to all organisations, whether public, private or third sector, that share personal data and covers systematic data sharing arrangements as well as ad hoc or one off requests to share personal data.</p>
+      /using-data-effectively[3]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: ee6d4fbe-c0cc-4634-b1d8-92e631469e9c
+        govscot:summary: Using data effectively
+        govscot:title: Using data effectively
+        hippo:availability: [live]
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:29:53.367Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:30:16.329Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2017-12-08T14:30:25.669Z
+        hippotranslation:id: ba1ce194-fd0b-4695-87c6-73b6efab114c
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Data can be facts and statistics or lists of information collected together for reference or analysis.</p>
+
+            <p>We are making sure that Scotland is well positioned to support change and innovation through the effective use of data.</p>
+
+            <p>In our national digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, one of our aims is to engage with the public to build an understanding of:</p>
+
+            <ul>
+             <li>how their data is being used for the public benefit</li>
+             <li>the arrangements in place to guarantee the security of their data</li>
+            </ul>
+
+            <p>We want to make non-personal data about people and businesses in Scotland easier to access and use.</p>
+
+            <p>We will achieve this by publishing the data behind all official statistics on&nbsp;<a href="http://statistics.gov.scot/">statistics.gov.scot</a>.</p>
+
+            <p>We also set out guidance and codes of practice for public services on how to manage data in line with privacy legislation and to protect the public.</p>
+
+            <h3>Open Data Strategy</h3>
+
+            <p>Better data sharing can generate new insights, stimulate new ideas and deliver potential savings to the public sector.&nbsp;<a href="https://policyexchange.org.uk/publication/the-big-data-opportunity-making-government-faster-smarter-and-more-personal/">The Policy Exchange</a>&nbsp;estimated that making public sector data more open could save the UK more than £16 billion.</p>
+
+            <p>Our&nbsp;<a href="https://beta.gov.scot/publications/open-data-strategy/">Open Data Strategy</a>&nbsp;sets out our ambition for making data held by the public sector more available for others to use and reuse.</p>
+
+            <h3>Investing in research and innovation</h3>
+
+            <p>Our open data platform will help Scotland become recognised as an attractive place to use data for research and innovation.</p>
+
+            <p>We are delivering a series of projects and a skills programme with&nbsp;<a href="http://www.thedatalab.com/">Datalab</a>, which will develop the existing workforce's data analytics skills and&nbsp;<a href="http://www.thedatalab.com/what-we-do/skills-and-training/the-data-lab-msc">increase the number of new data scientists</a>.</p>
+
+            <p>Datalab were set up with a £11.3 million grant from the&nbsp;<a href="http://www.sfc.ac.uk/">Scottish Funding Council</a>.</p>
+
+            <p>There has been significant investment in data research across Scotland, including:</p>
+
+            <ul>
+             <li><a href="http://www.farrinstitute.org/">the Farr Institute</a>, a research institute supported by 10 funders, led by&nbsp;<a href="https://www.mrc.ac.uk/research/">the Medical Research Council</a>&nbsp;who initially invested £20 million in the project</li>
+             <li><a href="http://ubdc.ac.uk/">the Urban Big Data Centre</a>&nbsp;and&nbsp;<a href="https://adrn.ac.uk/about/network/scotland/">the Administrative Data Research Centre</a>, funded by&nbsp;<a href="http://www.esrc.ac.uk/research/our-research/urban-big-data/">the Economic and Social Research Council</a></li>
+            </ul>
+
+            <h3>Protecting public data</h3>
+
+            <p>We want to make sure that data is used for public benefit. We are a member of&nbsp;<a href="http://www.datalinkagescotland.co.uk/">the Scottish Informatics and Linkage Collaboration</a>, which places public trust at the heart of its work.</p>
+
+            <p>We are working to improve governance around data sharing, by assessing all security, legal and ethical considerations. We will use the insights gained from&nbsp;<a href="https://www.gov.uk/government/collections/digital-economy-bill-2016">the UK Government's Digital Economy Bill</a>&nbsp;to further support Scotland's data ambitions.</p>
+
+            <h3>Data Management</h3>
+
+            <p>The&nbsp;<a href="https://beta.gov.scot/publications/scotlands-digital-future-delivery-public-services/">Scotland's Digital Future: Delivery of Public Services</a>&nbsp;strategy sets a number of objectives for the effective use and management of public sector data, to improve service delivery and promote economic growth. A Data Management Board was established to make sure a consistent approach is taken across Scotland.</p>
+
+            <p>The Data Management Board provides strategic direction and overview across the various data work streams.</p>
+
+            <h3>Geographic Information Service</h3>
+
+            <p>Geographic, or spatial information is any physical, map-based, address and text-based data that can be used to describe and characterise places in Scotland, and the people who live there.</p>
+
+            <p>The Geographic Information service takes forward the actions of the&nbsp;<a href="http://www.gov.scot/Publications/2005/08/31114408/44113">Geographic Information Strategy</a>.</p>
+
+            <p>It's working to develop a more systematic and effective approach to using geographic information in the development and delivery of policy and services to the benefit of the people of Scotland.</p>
+
+            <p>The Spatial Information Board makes sure we make the most of Scotland's spatial data, helps to support innovative and effective public services and promotes economic growth.</p>
+
+            <h3>Identity Management and Privacy</h3>
+
+            <p>The Scottish Government's Identity Management and Privacy Principles aim to raise confidence in personal data management. The Identity Management and Privacy Principles should be adopted by all Public Service Organisations delivering Scottish public services.</p>
+
+            <p>They include:</p>
+
+            <ul>
+             <li>proving identity or entitlement</li>
+             <li>governance and accountability</li>
+             <li>risk management</li>
+             <li>data and data sharing</li>
+             <li>data use for research and statistics</li>
+             <li>education and engagement</li>
+            </ul>
+
+            <p>The&nbsp;<a href="http://www.gov.scot/Topics/Economy/digital/digitalservices/datamanagement/IdentityandPrivacy/IdentityManagementandPrivacyPrinciplesV2">Identity Management and Privacy Principles</a>&nbsp;are now in their second version. It was originally published in 2010. The Principles allow public service organisations and policy makers to comply with legislative requirements and achieve good practice. They apply to systems, either new or those being redesigned or redeveloped, which involve identity management.</p>
+
+            <h3>Data sharing code of practice (statutory)</h3>
+
+            <p>The Information Commissioner's Office (ICO)&nbsp;<a href="https://ico.org.uk/media/for-organisations/documents/1068/data_sharing_code_of_practice.pdf">data sharing code of practice</a>&nbsp;is a statutory code (required by law) which explains how the Data Protection Act applies to the sharing of personal data. It provides practical advice to all organisations, whether public, private or third sector, that share personal data and covers systematic data sharing arrangements as well as ad hoc or one off requests to share personal data.</p>
+  /colleges:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: efcc5cb5-8026-4dbe-a3f6-a4cf2d0ee207
+    hippo:name: Colleges
+    hippostd:foldertype: [new-translated-folder, new-document]
+    hippotranslation:id: c40a83b6-c4f3-45f8-8d52-1ee118c135a1
+    hippotranslation:locale: en
+    /index:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 5eb9ddae-fe4d-4493-9f42-ac9364a26b4b
+      hippo:name: Overview
+      /index[1]:
+        jcr:primaryType: govscot:policy
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: e07fdab1-e508-47b9-a70e-15fbade4c3d5
+        govscot:summary: overview
+        govscot:title: Overview
+        hippo:availability: []
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:55:02.001Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:55:02.002Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 20944975-d195-4ac1-a879-01c35621087f
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Colleges are vital to our economic growth and success, providing students with skills to help them into jobs and creating the highly-trained workforce that employers need. They are also a major employer in their own right.</p>
+
+            <h3>Actions</h3>
+
+            <p>We are:</p>
+
+            <ul>
+             <li>committed to protecting 116,000 full-time equivalent college places</li>
+             <li><a href="https://beta.gov.scot/policies/colleges/governance/">strengthening college governance</a>&nbsp;and making boards more accountable</li>
+             <li>running a national programme to improve&nbsp;<a href="https://beta.gov.scot/policies/colleges/student-attainment/">student attainment</a>&nbsp;and retention rates</li>
+             <li>providing&nbsp;<a href="https://beta.gov.scot/policies/universities/student-financial-support/">financial support to students</a>, particularly those who need it most, as well as carrying out a review of the support system to ensure it is fair and effective</li>
+             <li>developing a £500,000 innovation fund to support colleges to work with businesses on innovation activity</li>
+             <li>examining how we might improve the college application process as part of a&nbsp;<a href="https://beta.gov.scot/publications/enterprise-skills-review-report-phase-2-15-24-learner-journey/">wider review of the 15 to 24 learner journey</a></li>
+            </ul>
+
+            <h3>Background</h3>
+
+            <p>We provide overall strategic direction to Scotland's colleges, which are classed as public bodies and grouped into 13 regions.</p>
+
+            <p>Ministerial priorities are set out in an&nbsp;<a href="http://www.sfc.ac.uk/about-sfc/letter-guidance/letter-guidance.aspx">annual letter of guidance for colleges</a>. This includes placing greater emphasis on college courses that lead to employment.</p>
+
+            <p>Funding is distributed by the Scottish Funding Council and each college region must produce an&nbsp;<a href="http://www.sfc.ac.uk/funding/outcome-agreements/outcome-agreements.aspx">outcome agreement</a>&nbsp;setting out what it plans to deliver in return for this.</p>
+
+            <h3>Bills and legislation</h3>
+
+            <p>The&nbsp;<a href="http://www.legislation.gov.uk/asp/2013/12/contents/enacted">Post-16 Education (Scotland) Act 2013</a>&nbsp;put in place a number of measures to change the way colleges are governed and structured and create better job chances for students.</p>
+
+            <h3>Archive content</h3>
+
+            <p>To access information that was on the previous website see the&nbsp;<a href="https://www.webarchive.org.uk/wayback/archive/20170701122406/http://www.gov.scot/Topics/Education/UniversitiesColleges/17135">archive of colleges content</a>.</p>
+
+            <h3>Contact</h3>
+
+            <p>Email:&nbsp;<a href="mailto:ceu@gov.scot">ceu@gov.scot</a></p>
+
+            <p>Telephone: 0300 244 4000</p>
+
+            <p>Post:<br />
+            Scottish Government<br />
+            Advanced Learning and Science Directorate<br />
+            5 Atlantic Quay<br />
+            150 Broomielaw<br />
+            Glasgow<br />
+            G2 8LU<br />
+            EH1 3DG</p>
+        /govscot:directorates:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /index[2]:
+        jcr:primaryType: govscot:policy
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: b3dfdc71-182b-4a39-8433-e0cafb764c64
+        govscot:summary: overview
+        govscot:title: Overview
+        hippo:availability: [preview]
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:55:02.001Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:55:29.292Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 20944975-d195-4ac1-a879-01c35621087f
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Colleges are vital to our economic growth and success, providing students with skills to help them into jobs and creating the highly-trained workforce that employers need. They are also a major employer in their own right.</p>
+
+            <h3>Actions</h3>
+
+            <p>We are:</p>
+
+            <ul>
+             <li>committed to protecting 116,000 full-time equivalent college places</li>
+             <li><a href="https://beta.gov.scot/policies/colleges/governance/">strengthening college governance</a>&nbsp;and making boards more accountable</li>
+             <li>running a national programme to improve&nbsp;<a href="https://beta.gov.scot/policies/colleges/student-attainment/">student attainment</a>&nbsp;and retention rates</li>
+             <li>providing&nbsp;<a href="https://beta.gov.scot/policies/universities/student-financial-support/">financial support to students</a>, particularly those who need it most, as well as carrying out a review of the support system to ensure it is fair and effective</li>
+             <li>developing a £500,000 innovation fund to support colleges to work with businesses on innovation activity</li>
+             <li>examining how we might improve the college application process as part of a&nbsp;<a href="https://beta.gov.scot/publications/enterprise-skills-review-report-phase-2-15-24-learner-journey/">wider review of the 15 to 24 learner journey</a></li>
+            </ul>
+
+            <h3>Background</h3>
+
+            <p>We provide overall strategic direction to Scotland's colleges, which are classed as public bodies and grouped into 13 regions.</p>
+
+            <p>Ministerial priorities are set out in an&nbsp;<a href="http://www.sfc.ac.uk/about-sfc/letter-guidance/letter-guidance.aspx">annual letter of guidance for colleges</a>. This includes placing greater emphasis on college courses that lead to employment.</p>
+
+            <p>Funding is distributed by the Scottish Funding Council and each college region must produce an&nbsp;<a href="http://www.sfc.ac.uk/funding/outcome-agreements/outcome-agreements.aspx">outcome agreement</a>&nbsp;setting out what it plans to deliver in return for this.</p>
+
+            <h3>Bills and legislation</h3>
+
+            <p>The&nbsp;<a href="http://www.legislation.gov.uk/asp/2013/12/contents/enacted">Post-16 Education (Scotland) Act 2013</a>&nbsp;put in place a number of measures to change the way colleges are governed and structured and create better job chances for students.</p>
+
+            <h3>Archive content</h3>
+
+            <p>To access information that was on the previous website see the&nbsp;<a href="https://www.webarchive.org.uk/wayback/archive/20170701122406/http://www.gov.scot/Topics/Education/UniversitiesColleges/17135">archive of colleges content</a>.</p>
+
+            <h3>Contact</h3>
+
+            <p>Email:&nbsp;<a href="mailto:ceu@gov.scot">ceu@gov.scot</a></p>
+
+            <p>Telephone: 0300 244 4000</p>
+
+            <p>Post:<br />
+            Scottish Government<br />
+            Advanced Learning and Science Directorate<br />
+            5 Atlantic Quay<br />
+            150 Broomielaw<br />
+            Glasgow<br />
+            G2 8LU<br />
+            EH1 3DG</p>
+        /govscot:directorates:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /index[3]:
+        jcr:primaryType: govscot:policy
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 627da696-b772-4744-a07f-b047533a809a
+        govscot:summary: overview
+        govscot:title: Overview
+        hippo:availability: [live]
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:55:02.001Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:55:29.292Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2017-12-08T14:55:38.900Z
+        hippotranslation:id: 20944975-d195-4ac1-a879-01c35621087f
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Colleges are vital to our economic growth and success, providing students with skills to help them into jobs and creating the highly-trained workforce that employers need. They are also a major employer in their own right.</p>
+
+            <h3>Actions</h3>
+
+            <p>We are:</p>
+
+            <ul>
+             <li>committed to protecting 116,000 full-time equivalent college places</li>
+             <li><a href="https://beta.gov.scot/policies/colleges/governance/">strengthening college governance</a>&nbsp;and making boards more accountable</li>
+             <li>running a national programme to improve&nbsp;<a href="https://beta.gov.scot/policies/colleges/student-attainment/">student attainment</a>&nbsp;and retention rates</li>
+             <li>providing&nbsp;<a href="https://beta.gov.scot/policies/universities/student-financial-support/">financial support to students</a>, particularly those who need it most, as well as carrying out a review of the support system to ensure it is fair and effective</li>
+             <li>developing a £500,000 innovation fund to support colleges to work with businesses on innovation activity</li>
+             <li>examining how we might improve the college application process as part of a&nbsp;<a href="https://beta.gov.scot/publications/enterprise-skills-review-report-phase-2-15-24-learner-journey/">wider review of the 15 to 24 learner journey</a></li>
+            </ul>
+
+            <h3>Background</h3>
+
+            <p>We provide overall strategic direction to Scotland's colleges, which are classed as public bodies and grouped into 13 regions.</p>
+
+            <p>Ministerial priorities are set out in an&nbsp;<a href="http://www.sfc.ac.uk/about-sfc/letter-guidance/letter-guidance.aspx">annual letter of guidance for colleges</a>. This includes placing greater emphasis on college courses that lead to employment.</p>
+
+            <p>Funding is distributed by the Scottish Funding Council and each college region must produce an&nbsp;<a href="http://www.sfc.ac.uk/funding/outcome-agreements/outcome-agreements.aspx">outcome agreement</a>&nbsp;setting out what it plans to deliver in return for this.</p>
+
+            <h3>Bills and legislation</h3>
+
+            <p>The&nbsp;<a href="http://www.legislation.gov.uk/asp/2013/12/contents/enacted">Post-16 Education (Scotland) Act 2013</a>&nbsp;put in place a number of measures to change the way colleges are governed and structured and create better job chances for students.</p>
+
+            <h3>Archive content</h3>
+
+            <p>To access information that was on the previous website see the&nbsp;<a href="https://www.webarchive.org.uk/wayback/archive/20170701122406/http://www.gov.scot/Topics/Education/UniversitiesColleges/17135">archive of colleges content</a>.</p>
+
+            <h3>Contact</h3>
+
+            <p>Email:&nbsp;<a href="mailto:ceu@gov.scot">ceu@gov.scot</a></p>
+
+            <p>Telephone: 0300 244 4000</p>
+
+            <p>Post:<br />
+            Scottish Government<br />
+            Advanced Learning and Science Directorate<br />
+            5 Atlantic Quay<br />
+            150 Broomielaw<br />
+            Glasgow<br />
+            G2 8LU<br />
+            EH1 3DG</p>
+        /govscot:directorates:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /governance:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 1adea6c1-f73c-4838-b3aa-c5dec64583c6
+      hippo:name: Governance
+      /governance[1]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: aa817f1d-621c-4d55-a793-49cfedb30c2a
+        govscot:summary: governance summary
+        govscot:title: Governance
+        hippo:availability: []
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:42:26.262Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:42:26.262Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 962ab4d7-2109-448d-8087-042b3ae1fc30
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <h2>College governance</h2>
+
+            <p>Every college in Scotland is governed by a board of management which is responsible for the planning and delivery of learning, and for value for money.</p>
+
+            <p>Measures to improve how colleges are managed, and to increase their accountability and effectiveness, were put in place by the Post-16 Education (Scotland) Act 2013, including:</p>
+
+            <ul>
+             <li>more students on college boards, doubled from one to two</li>
+             <li>open and competitive board appointment processes</li>
+             <li>regional college chairs appointed by ministers through an open, regulated process</li>
+             <li>guidance to ensure other college board appointments are open and transparent</li>
+            </ul>
+
+            <h3>College Good Governance Task Group</h3>
+
+            <p>The College Good Governance Task Group was set up in 2015 to consider what further measures could be put in place to make governance in the sector more effective.</p>
+
+            <p>The group, chaired by the then Cabinet Secretary for Education and Lifelong Learning, published its recommendations in March 2016:</p>
+
+            <ul>
+             <li><a href="https://beta.gov.scot/publications/college-governance-task-group-final-report/">Good College Governance Task Group: final report</a></li>
+            </ul>
+
+            <h3>Good college governance consultation</h3>
+
+            <p>In April 2017 we consulted on two of the recommendations in the good governance task group report:</p>
+
+            <ul>
+             <li>recommendation 1: better arrangements are put in place to improve board member recruitment</li>
+             <li>recommendation 9: more sanctions are considered so that a wider range of measures is available, if necessary</li>
+            </ul>
+
+            <p>We are currently analysing the responses and these will be used to guide further improvements to governance arrangements.</p>
+
+            <h3>Guidance for colleges on good governance</h3>
+
+            <p>We have produced guidance for college boards to help members meet their responsibilities:</p>
+
+            <ul>
+             <li><a href="https://beta.gov.scot/publications/college-board-appointments-guidance/">college sector board appointments: ministerial guidance</a></li>
+            </ul>
+
+            <p>This guidance:</p>
+
+            <ul>
+             <li>identifies the skills, knowledge and experience and attributes of college board members</li>
+             <li>outlines, in general terms, the process by which appointments should be made or extended to support a robust, effective and transparent system</li>
+            </ul>
+
+            <p>It has been designed to complement the&nbsp;<a href="http://collegesscotland.ac.uk/briefings-and-publications/publications/792-code-of-good-governance-for-scotland-s-colleges-august-2016/file">Code of Good Governance for Scotland's Colleges</a></p>
+
+            <h3>Archive content</h3>
+
+            <p>To access information that was on the previous website see the&nbsp;<a href="https://www.webarchive.org.uk/wayback/archive/20170701122406/http://www.gov.scot/Topics/Education/UniversitiesColleges/17135">archive of colleges content</a></p>
+      /governance[2]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: a4b6fc14-3998-4c28-9c01-2774b87f46ba
+        govscot:summary: governance summary
+        govscot:title: Governance
+        hippo:availability: [preview]
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:42:26.262Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:42:44.785Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 962ab4d7-2109-448d-8087-042b3ae1fc30
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <h2>College governance</h2>
+
+            <p>Every college in Scotland is governed by a board of management which is responsible for the planning and delivery of learning, and for value for money.</p>
+
+            <p>Measures to improve how colleges are managed, and to increase their accountability and effectiveness, were put in place by the Post-16 Education (Scotland) Act 2013, including:</p>
+
+            <ul>
+             <li>more students on college boards, doubled from one to two</li>
+             <li>open and competitive board appointment processes</li>
+             <li>regional college chairs appointed by ministers through an open, regulated process</li>
+             <li>guidance to ensure other college board appointments are open and transparent</li>
+            </ul>
+
+            <h3>College Good Governance Task Group</h3>
+
+            <p>The College Good Governance Task Group was set up in 2015 to consider what further measures could be put in place to make governance in the sector more effective.</p>
+
+            <p>The group, chaired by the then Cabinet Secretary for Education and Lifelong Learning, published its recommendations in March 2016:</p>
+
+            <ul>
+             <li><a href="https://beta.gov.scot/publications/college-governance-task-group-final-report/">Good College Governance Task Group: final report</a></li>
+            </ul>
+
+            <h3>Good college governance consultation</h3>
+
+            <p>In April 2017 we consulted on two of the recommendations in the good governance task group report:</p>
+
+            <ul>
+             <li>recommendation 1: better arrangements are put in place to improve board member recruitment</li>
+             <li>recommendation 9: more sanctions are considered so that a wider range of measures is available, if necessary</li>
+            </ul>
+
+            <p>We are currently analysing the responses and these will be used to guide further improvements to governance arrangements.</p>
+
+            <h3>Guidance for colleges on good governance</h3>
+
+            <p>We have produced guidance for college boards to help members meet their responsibilities:</p>
+
+            <ul>
+             <li><a href="https://beta.gov.scot/publications/college-board-appointments-guidance/">college sector board appointments: ministerial guidance</a></li>
+            </ul>
+
+            <p>This guidance:</p>
+
+            <ul>
+             <li>identifies the skills, knowledge and experience and attributes of college board members</li>
+             <li>outlines, in general terms, the process by which appointments should be made or extended to support a robust, effective and transparent system</li>
+            </ul>
+
+            <p>It has been designed to complement the&nbsp;<a href="http://collegesscotland.ac.uk/briefings-and-publications/publications/792-code-of-good-governance-for-scotland-s-colleges-august-2016/file">Code of Good Governance for Scotland's Colleges</a></p>
+
+            <h3>Archive content</h3>
+
+            <p>To access information that was on the previous website see the&nbsp;<a href="https://www.webarchive.org.uk/wayback/archive/20170701122406/http://www.gov.scot/Topics/Education/UniversitiesColleges/17135">archive of colleges content</a></p>
+      /governance[3]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: de07a136-6bc6-4a8b-998e-b73d62f5f437
+        govscot:summary: governance summary
+        govscot:title: Governance
+        hippo:availability: [live]
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:42:26.262Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:42:44.785Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2017-12-08T14:43:25.626Z
+        hippotranslation:id: 962ab4d7-2109-448d-8087-042b3ae1fc30
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <h2>College governance</h2>
+
+            <p>Every college in Scotland is governed by a board of management which is responsible for the planning and delivery of learning, and for value for money.</p>
+
+            <p>Measures to improve how colleges are managed, and to increase their accountability and effectiveness, were put in place by the Post-16 Education (Scotland) Act 2013, including:</p>
+
+            <ul>
+             <li>more students on college boards, doubled from one to two</li>
+             <li>open and competitive board appointment processes</li>
+             <li>regional college chairs appointed by ministers through an open, regulated process</li>
+             <li>guidance to ensure other college board appointments are open and transparent</li>
+            </ul>
+
+            <h3>College Good Governance Task Group</h3>
+
+            <p>The College Good Governance Task Group was set up in 2015 to consider what further measures could be put in place to make governance in the sector more effective.</p>
+
+            <p>The group, chaired by the then Cabinet Secretary for Education and Lifelong Learning, published its recommendations in March 2016:</p>
+
+            <ul>
+             <li><a href="https://beta.gov.scot/publications/college-governance-task-group-final-report/">Good College Governance Task Group: final report</a></li>
+            </ul>
+
+            <h3>Good college governance consultation</h3>
+
+            <p>In April 2017 we consulted on two of the recommendations in the good governance task group report:</p>
+
+            <ul>
+             <li>recommendation 1: better arrangements are put in place to improve board member recruitment</li>
+             <li>recommendation 9: more sanctions are considered so that a wider range of measures is available, if necessary</li>
+            </ul>
+
+            <p>We are currently analysing the responses and these will be used to guide further improvements to governance arrangements.</p>
+
+            <h3>Guidance for colleges on good governance</h3>
+
+            <p>We have produced guidance for college boards to help members meet their responsibilities:</p>
+
+            <ul>
+             <li><a href="https://beta.gov.scot/publications/college-board-appointments-guidance/">college sector board appointments: ministerial guidance</a></li>
+            </ul>
+
+            <p>This guidance:</p>
+
+            <ul>
+             <li>identifies the skills, knowledge and experience and attributes of college board members</li>
+             <li>outlines, in general terms, the process by which appointments should be made or extended to support a robust, effective and transparent system</li>
+            </ul>
+
+            <p>It has been designed to complement the&nbsp;<a href="http://collegesscotland.ac.uk/briefings-and-publications/publications/792-code-of-good-governance-for-scotland-s-colleges-august-2016/file">Code of Good Governance for Scotland's Colleges</a></p>
+
+            <h3>Archive content</h3>
+
+            <p>To access information that was on the previous website see the&nbsp;<a href="https://www.webarchive.org.uk/wayback/archive/20170701122406/http://www.gov.scot/Topics/Education/UniversitiesColleges/17135">archive of colleges content</a></p>
+    /college-student-attainment:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 61f6d230-4d65-4710-9596-573b19c88b5f
+      hippo:name: College student attainment
+      /college-student-attainment[1]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 17c06821-59a6-4ba4-a12e-d0605ebed0b4
+        govscot:summary: College student attainment summary
+        govscot:title: College student attainment
+        hippo:availability: []
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:43:02.245Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:43:02.245Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 7654469f-b30a-4038-8198-ff00edb55245
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Gaining a college qualification pays off so we want to ensure that all students have the support they need to successfully complete their course.</p>
+
+            <p>We have set up a national improvement programme to look at the issues and challenges that can contribute to students not gaining a qualification, or dropping out.</p>
+
+            <p>The project will run over the academic years 2017 to 2018 and 2018 to 2019.</p>
+
+            <p>Five colleges will take part in the first phase:</p>
+
+            <ul>
+             <li>Dundee and Angus College</li>
+             <li>Edinburgh College</li>
+             <li>Inverness College – UHI</li>
+             <li>New College Lanarkshire</li>
+             <li>West College Scotland</li>
+            </ul>
+
+            <p>Improvement work will take place simultaneously in each college, led by college-based improvement teams.</p>
+
+            <p>The overall aim is to explore what is already working well and what more the further education sector can do to ensure college students stay on and gain the full benefits of attending college.</p>
+
+            <h3>Archive content</h3>
+
+            <p>To access information that was on the previous website see the&nbsp;<a href="https://www.webarchive.org.uk/wayback/archive/20170701122406/http://www.gov.scot/Topics/Education/UniversitiesColleges/17135">archive of colleges content</a></p>
+      /college-student-attainment[2]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 48deaa1f-77b6-4db7-8ebd-d30932dbde46
+        govscot:summary: College student attainment summary
+        govscot:title: College student attainment
+        hippo:availability: [preview]
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:43:02.245Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:43:16.076Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 7654469f-b30a-4038-8198-ff00edb55245
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Gaining a college qualification pays off so we want to ensure that all students have the support they need to successfully complete their course.</p>
+
+            <p>We have set up a national improvement programme to look at the issues and challenges that can contribute to students not gaining a qualification, or dropping out.</p>
+
+            <p>The project will run over the academic years 2017 to 2018 and 2018 to 2019.</p>
+
+            <p>Five colleges will take part in the first phase:</p>
+
+            <ul>
+             <li>Dundee and Angus College</li>
+             <li>Edinburgh College</li>
+             <li>Inverness College – UHI</li>
+             <li>New College Lanarkshire</li>
+             <li>West College Scotland</li>
+            </ul>
+
+            <p>Improvement work will take place simultaneously in each college, led by college-based improvement teams.</p>
+
+            <p>The overall aim is to explore what is already working well and what more the further education sector can do to ensure college students stay on and gain the full benefits of attending college.</p>
+
+            <h3>Archive content</h3>
+
+            <p>To access information that was on the previous website see the&nbsp;<a href="https://www.webarchive.org.uk/wayback/archive/20170701122406/http://www.gov.scot/Topics/Education/UniversitiesColleges/17135">archive of colleges content</a></p>
+      /college-student-attainment[3]:
+        jcr:primaryType: govscot:simpledocument
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: e695f330-bd8a-4030-80f4-a2a103960199
+        govscot:summary: College student attainment summary
+        govscot:title: College student attainment
+        hippo:availability: [live]
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2017-12-08T14:43:02.245Z
+        hippostdpubwf:lastModificationDate: 2017-12-08T14:43:16.076Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2017-12-08T14:43:25.802Z
+        hippotranslation:id: 7654469f-b30a-4038-8198-ff00edb55245
+        hippotranslation:locale: en
+        /govscot:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Gaining a college qualification pays off so we want to ensure that all students have the support they need to successfully complete their course.</p>
+
+            <p>We have set up a national improvement programme to look at the issues and challenges that can contribute to students not gaining a qualification, or dropping out.</p>
+
+            <p>The project will run over the academic years 2017 to 2018 and 2018 to 2019.</p>
+
+            <p>Five colleges will take part in the first phase:</p>
+
+            <ul>
+             <li>Dundee and Angus College</li>
+             <li>Edinburgh College</li>
+             <li>Inverness College – UHI</li>
+             <li>New College Lanarkshire</li>
+             <li>West College Scotland</li>
+            </ul>
+
+            <p>Improvement work will take place simultaneously in each college, led by college-based improvement teams.</p>
+
+            <p>The overall aim is to explore what is already working well and what more the further education sector can do to ensure college students stay on and gain the full benefits of attending college.</p>
+
+            <h3>Archive content</h3>
+
+            <p>To access information that was on the previous website see the&nbsp;<a href="https://www.webarchive.org.uk/wayback/archive/20170701122406/http://www.gov.scot/Topics/Education/UniversitiesColleges/17135">archive of colleges content</a></p>
