@@ -1,0 +1,116 @@
+/content/documents/govscot/directorates:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: f68a3c24-671c-4a72-b979-7b7014a5c084
+  hippo:name: Directorates
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: c6573f19-eb7d-4246-9f40-a321654c1d15
+  hippotranslation:locale: en
+  /digital-directorate:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: 9d722382-5991-4f29-9cad-7a494f22174e
+    hippo:name: Digital Directorate
+    /digital-directorate[1]:
+      jcr:primaryType: govscot:directorate
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 948da790-5c1e-4d0c-93bf-88f5c15256be
+      govscot:summary: Digital Directorate
+      govscot:title: Digital Directorate
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2017-12-08T15:55:09.903Z
+      hippostdpubwf:lastModificationDate: 2017-12-11T09:08:51.797Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: fc2bddd8-8cf2-4fd4-b1b3-2609fbb4cf59
+      hippotranslation:locale: en
+      /govscot:socialmedia:
+        jcr:primaryType: govscot:socialmedia
+        govscot:flickr: ''
+        govscot:twitter: ''
+      /govscot:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <h2>What we do</h2>
+
+          <p>We work to make Scotland a leading digital nation, and provide leadership on all digital matters affecting the public sector.</p>
+
+          <p>We are responsible for:</p>
+
+          <ul>
+           <li>developing and implementing the Scottish Government's digital strategy</li>
+           <li>delivering broadband connectivity</li>
+           <li>providing a foundation for the digital delivery of public services</li>
+           <li>raising levels of digital participation amongst individuals and businesses</li>
+           <li>transforming Scotland's digital economy</li>
+          </ul>
+    /digital-directorate[2]:
+      jcr:primaryType: govscot:directorate
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: a3d7447a-8a62-4a57-8f21-c267b8c974df
+      govscot:summary: Digital Directorate
+      govscot:title: Digital Directorate
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2017-12-08T15:55:09.903Z
+      hippostdpubwf:lastModificationDate: 2017-12-08T15:55:58.670Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: fc2bddd8-8cf2-4fd4-b1b3-2609fbb4cf59
+      hippotranslation:locale: en
+      /govscot:socialmedia:
+        jcr:primaryType: govscot:socialmedia
+        govscot:flickr: ''
+        govscot:twitter: ''
+      /govscot:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <h2>What we do</h2>
+
+          <p>We work to make Scotland a leading digital nation, and provide leadership on all digital matters affecting the public sector.</p>
+
+          <p>We are responsible for:</p>
+
+          <ul>
+           <li>developing and implementing the Scottish Government's digital strategy</li>
+           <li>delivering broadband connectivity</li>
+           <li>providing a foundation for the digital delivery of public services</li>
+           <li>raising levels of digital participation amongst individuals and businesses</li>
+           <li>transforming Scotland's digital economy</li>
+          </ul>
+    /digital-directorate[3]:
+      jcr:primaryType: govscot:directorate
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 444286ff-5a00-45b3-9f2c-484bda43bf6b
+      govscot:summary: Digital Directorate
+      govscot:title: Digital Directorate
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2017-12-08T15:55:09.903Z
+      hippostdpubwf:lastModificationDate: 2017-12-08T15:55:58.670Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2017-12-08T16:32:58.926Z
+      hippotranslation:id: fc2bddd8-8cf2-4fd4-b1b3-2609fbb4cf59
+      hippotranslation:locale: en
+      /govscot:socialmedia:
+        jcr:primaryType: govscot:socialmedia
+        govscot:flickr: ''
+        govscot:twitter: ''
+      /govscot:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <h2>What we do</h2>
+
+          <p>We work to make Scotland a leading digital nation, and provide leadership on all digital matters affecting the public sector.</p>
+
+          <p>We are responsible for:</p>
+
+          <ul>
+           <li>developing and implementing the Scottish Government's digital strategy</li>
+           <li>delivering broadband connectivity</li>
+           <li>providing a foundation for the digital delivery of public services</li>
+           <li>raising levels of digital participation amongst individuals and businesses</li>
+           <li>transforming Scotland's digital economy</li>
+          </ul>

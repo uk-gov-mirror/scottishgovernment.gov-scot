@@ -1,32 +1,32 @@
 definitions:
   config:
-    /hippo:namespaces/govscot/policy:
+    /hippo:namespaces/govscot/directorate:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: f38c2832-6e57-4a3e-91ab-cc7db6a04e03
+      jcr:uuid: 8ccb8cfe-aef3-4d19-805e-55039c03b038
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 8812a4e7-2fb3-46e0-8f9a-9a7ee9ecb2a6
+        jcr:uuid: 737f7b3c-8900-49a6-ad74-e68ecb775151
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a9514e0e-d418-4502-aee3-8478f9c49b99
+          jcr:uuid: 2ccbe9da-23e8-424b-98bd-ec3a94e63c7a
           hipposysedit:node: true
           hipposysedit:supertype: ['govscot:simpledocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.onehippo.org/govscot/nt/1.0
-          /directorates:
+          /socialmedia:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
-            hipposysedit:multiple: true
+            hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: govscot:directorates
+            hipposysedit:path: govscot:socialmedia
             hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
+            hipposysedit:type: govscot:socialmedia
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: govscot:policy
+          jcr:primaryType: govscot:directorate
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -34,17 +34,18 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 301c2a2b-5907-4e08-9eed-048bb4565f5b
+          hippostdpubwf:lastModificationDate: 2017-12-08T15:38:37.269Z
+          hippostdpubwf:creationDate: 2017-12-08T15:38:37.269Z
           govscot:summary: ''
           govscot:title: ''
-          jcr:uuid: ae96bc68-791c-48ac-9ce6-59639cb62a37
-          hippostdpubwf:lastModificationDate: 2017-12-08T14:51:12.717Z
-          hippostdpubwf:creationDate: 2017-12-08T14:51:12.717Z
+          /govscot:socialmedia:
+            jcr:primaryType: govscot:socialmedia
+            govscot:flickr: ''
+            govscot:twitter: ''
           /govscot:content:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
-          /govscot:directorates:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -82,16 +83,12 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /directorates:
+          /socialmedia:
             jcr:primaryType: frontend:plugin
-            caption: Directorates
-            field: directorates
-            hint: ''
+            caption: socialmedia
+            field: socialmedia
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['govscot:directorate']
-              base.path: /content/documents/govscot/directorates
-              last.visited.enabled: 'false'
-              last.visited.nodetypes: []
