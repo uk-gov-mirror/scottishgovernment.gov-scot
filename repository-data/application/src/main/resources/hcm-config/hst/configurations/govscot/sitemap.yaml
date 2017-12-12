@@ -53,11 +53,11 @@ definitions:
           hst:relativecontentpath: ${parent}/${1}
           /_default_:
             jcr:primaryType: hst:sitemapitem
-            hst:componentconfigurationid: hst:pages/contentpage
+            hst:componentconfigurationid: hst:pages/policypage
             hst:relativecontentpath: ${parent}/${2}
           /_index_:
             jcr:primaryType: hst:sitemapitem
-            hst:componentconfigurationid: hst:pages/contentpage
+            hst:componentconfigurationid: hst:pages/policypage
             hst:relativecontentpath: ${parent}/index
       /directorates:
         jcr:primaryType: hst:sitemapitem

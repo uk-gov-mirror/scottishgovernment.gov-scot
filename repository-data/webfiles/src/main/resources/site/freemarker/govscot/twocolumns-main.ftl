@@ -1,5 +1,6 @@
 <#include "../include/imports.ftl">
 
+two columns main
 <div id="page-content">
     <div class="grid"><!--
         --><div class="grid__item medium--nine-twelfths large--seven-twelfths push--medium--three-twelfths">

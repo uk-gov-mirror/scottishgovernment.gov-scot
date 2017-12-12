@@ -1,5 +1,6 @@
 <#include "../include/imports.ftl">
 
+two columns secondary
 <#if menu??>
 <aside class="page-group page-group--section-nav page-grouppage-subnav--tablet">
     <ul class="page-group__list">

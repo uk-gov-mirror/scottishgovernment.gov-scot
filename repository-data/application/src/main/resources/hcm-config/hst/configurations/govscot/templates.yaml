@@ -26,3 +26,6 @@ definitions:
       /twocolumns-secondary-menu:
         jcr:primaryType: hst:template
         hst:renderpath: webfile:/freemarker/govscot/twocolumns-secondary-menu.ftl
+      /twocolumns-policy-menu:
+        jcr:primaryType: hst:template
+        hst:renderpath: webfile:/freemarker/govscot/twocolumns-policy-menu.ftl
