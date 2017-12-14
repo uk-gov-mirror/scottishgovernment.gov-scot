@@ -10,7 +10,7 @@ definitions:
           hst:referencecomponent: contentpage/main/primary
         /secondary:
           jcr:primaryType: hst:component
-          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsMenuComponent
+          hst:componentclassname: scot.gov.www.components.SiblingsComponent
           hst:parameternames: [menu]
           hst:parametervalues: [main]
           hst:template: twocolumns-policy-menu

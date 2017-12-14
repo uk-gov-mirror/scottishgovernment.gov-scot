@@ -27,7 +27,6 @@
         govscot:summary: overview
         govscot:title: Overview
         hippo:availability: []
-        hippostd:holder: admin
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2017-12-08T14:51:49.256Z
@@ -98,7 +97,7 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2017-12-08T14:51:49.256Z
-        hippostdpubwf:lastModificationDate: 2017-12-08T16:35:31.791Z
+        hippostdpubwf:lastModificationDate: 2017-12-12T15:51:07.226Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 3b4bf4a4-a8db-467b-964c-cb4bb2ebf438
         hippotranslation:locale: en
@@ -143,7 +142,16 @@
             <p><a href="https://twitter.com/digitalscots">Follow us on Twitter</a></p>
 
             <p>For enquiries relating to broadband, please complete the online form at:&nbsp;<a href="https://www.scotlandsuperfast.com/contact/">superfast broadband enquiries</a></p>
-        /govscot:directorates:
+        /govscot:directorates[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9d722382-5991-4f29-9cad-7a494f22174e
+        /govscot:directorates[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /govscot:directorates[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /govscot:directorates[4]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 9d722382-5991-4f29-9cad-7a494f22174e
       /index[3]:
@@ -156,9 +164,9 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2017-12-08T14:51:49.256Z
-        hippostdpubwf:lastModificationDate: 2017-12-08T16:35:31.791Z
+        hippostdpubwf:lastModificationDate: 2017-12-12T15:51:07.226Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2017-12-08T16:36:01.491Z
+        hippostdpubwf:publicationDate: 2017-12-12T15:51:15.463Z
         hippotranslation:id: 3b4bf4a4-a8db-467b-964c-cb4bb2ebf438
         hippotranslation:locale: en
         /govscot:content:
@@ -202,7 +210,16 @@
             <p><a href="https://twitter.com/digitalscots">Follow us on Twitter</a></p>
 
             <p>For enquiries relating to broadband, please complete the online form at:&nbsp;<a href="https://www.scotlandsuperfast.com/contact/">superfast broadband enquiries</a></p>
-        /govscot:directorates:
+        /govscot:directorates[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9d722382-5991-4f29-9cad-7a494f22174e
+        /govscot:directorates[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /govscot:directorates[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /govscot:directorates[4]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 9d722382-5991-4f29-9cad-7a494f22174e
     /digital-support-for-businesses:
@@ -220,15 +237,13 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2017-12-08T14:28:39.558Z
-        hippostdpubwf:lastModificationDate: 2017-12-08T14:28:39.558Z
+        hippostdpubwf:lastModificationDate: 2017-12-12T15:51:49.232Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 227cc423-6551-45cb-89d8-407b2951a8b0
         hippotranslation:locale: en
         /govscot:content:
           jcr:primaryType: hippostd:html
           hippostd:content: |-
-            <h2>Digital support for businesses</h2>
-
             <p>We want to help businesses across Scotland use digital technologies effectively to grow and compete internationally.</p>
 
             <p>Embracing digital technology offers many benefits for businesses, including the ability to engage with customers directly, to develop new processes and products, and to sell these products to a global market, 24 hours a day at relatively low cost.</p>
@@ -283,15 +298,13 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2017-12-08T14:28:39.558Z
-        hippostdpubwf:lastModificationDate: 2017-12-08T14:28:55.480Z
+        hippostdpubwf:lastModificationDate: 2017-12-12T15:50:22.717Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 227cc423-6551-45cb-89d8-407b2951a8b0
         hippotranslation:locale: en
         /govscot:content:
           jcr:primaryType: hippostd:html
           hippostd:content: |-
-            <h2>Digital support for businesses</h2>
-
             <p>We want to help businesses across Scotland use digital technologies effectively to grow and compete internationally.</p>
 
             <p>Embracing digital technology offers many benefits for businesses, including the ability to engage with customers directly, to develop new processes and products, and to sell these products to a global market, 24 hours a day at relatively low cost.</p>
@@ -346,16 +359,14 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2017-12-08T14:28:39.558Z
-        hippostdpubwf:lastModificationDate: 2017-12-08T14:28:55.480Z
+        hippostdpubwf:lastModificationDate: 2017-12-12T15:50:22.717Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2017-12-08T14:30:25.769Z
+        hippostdpubwf:publicationDate: 2017-12-12T15:51:58.480Z
         hippotranslation:id: 227cc423-6551-45cb-89d8-407b2951a8b0
         hippotranslation:locale: en
         /govscot:content:
           jcr:primaryType: hippostd:html
           hippostd:content: |-
-            <h2>Digital support for businesses</h2>
-
             <p>We want to help businesses across Scotland use digital technologies effectively to grow and compete internationally.</p>
 
             <p>Embracing digital technology offers many benefits for businesses, including the ability to engage with customers directly, to develop new processes and products, and to sell these products to a global market, 24 hours a day at relatively low cost.</p>
@@ -415,15 +426,13 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2017-12-08T14:29:20.810Z
-        hippostdpubwf:lastModificationDate: 2017-12-08T14:29:20.810Z
+        hippostdpubwf:lastModificationDate: 2017-12-12T15:51:45.453Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: aca8f468-6e1c-4288-b750-771e45340352
         hippotranslation:locale: en
         /govscot:content:
           jcr:primaryType: hippostd:html
           hippostd:content: |-
-            <h2>Digital transformation</h2>
-
             <p>We are making sure that Scotland's digital public services are high-quality, continually improving and responsive to citizens' needs.</p>
 
             <p>In our national digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, we aim to:</p>
@@ -503,15 +512,13 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2017-12-08T14:29:20.810Z
-        hippostdpubwf:lastModificationDate: 2017-12-08T14:29:36.371Z
+        hippostdpubwf:lastModificationDate: 2017-12-12T15:50:33.614Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: aca8f468-6e1c-4288-b750-771e45340352
         hippotranslation:locale: en
         /govscot:content:
           jcr:primaryType: hippostd:html
           hippostd:content: |-
-            <h2>Digital transformation</h2>
-
             <p>We are making sure that Scotland's digital public services are high-quality, continually improving and responsive to citizens' needs.</p>
 
             <p>In our national digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, we aim to:</p>
@@ -591,16 +598,14 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2017-12-08T14:29:20.810Z
-        hippostdpubwf:lastModificationDate: 2017-12-08T14:29:36.371Z
+        hippostdpubwf:lastModificationDate: 2017-12-12T15:50:33.614Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2017-12-08T14:30:25.458Z
+        hippostdpubwf:publicationDate: 2017-12-12T15:52:03.398Z
         hippotranslation:id: aca8f468-6e1c-4288-b750-771e45340352
         hippotranslation:locale: en
         /govscot:content:
           jcr:primaryType: hippostd:html
           hippostd:content: |-
-            <h2>Digital transformation</h2>
-
             <p>We are making sure that Scotland's digital public services are high-quality, continually improving and responsive to citizens' needs.</p>
 
             <p>In our national digital strategy,&nbsp;<a href="https://beta.gov.scot/publications/realising-scotlands-full-potential-digital-world-digital-strategy-scotland/">Realising Scotland's full potential in a digital world</a>, we aim to:</p>
@@ -1195,15 +1200,13 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2017-12-08T14:42:26.262Z
-        hippostdpubwf:lastModificationDate: 2017-12-08T14:42:26.262Z
+        hippostdpubwf:lastModificationDate: 2017-12-12T15:50:53.336Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 962ab4d7-2109-448d-8087-042b3ae1fc30
         hippotranslation:locale: en
         /govscot:content:
           jcr:primaryType: hippostd:html
           hippostd:content: |-
-            <h2>College governance</h2>
-
             <p>Every college in Scotland is governed by a board of management which is responsible for the planning and delivery of learning, and for value for money.</p>
 
             <p>Measures to improve how colleges are managed, and to increase their accountability and effectiveness, were put in place by the Post-16 Education (Scotland) Act 2013, including:</p>
@@ -1266,15 +1269,13 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2017-12-08T14:42:26.262Z
-        hippostdpubwf:lastModificationDate: 2017-12-08T14:42:44.785Z
+        hippostdpubwf:lastModificationDate: 2017-12-12T15:50:53.287Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 962ab4d7-2109-448d-8087-042b3ae1fc30
         hippotranslation:locale: en
         /govscot:content:
           jcr:primaryType: hippostd:html
           hippostd:content: |-
-            <h2>College governance</h2>
-
             <p>Every college in Scotland is governed by a board of management which is responsible for the planning and delivery of learning, and for value for money.</p>
 
             <p>Measures to improve how colleges are managed, and to increase their accountability and effectiveness, were put in place by the Post-16 Education (Scotland) Act 2013, including:</p>
@@ -1337,16 +1338,14 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2017-12-08T14:42:26.262Z
-        hippostdpubwf:lastModificationDate: 2017-12-08T14:42:44.785Z
+        hippostdpubwf:lastModificationDate: 2017-12-12T15:50:53.287Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2017-12-08T14:43:25.626Z
+        hippostdpubwf:publicationDate: 2017-12-12T15:52:09.563Z
         hippotranslation:id: 962ab4d7-2109-448d-8087-042b3ae1fc30
         hippotranslation:locale: en
         /govscot:content:
           jcr:primaryType: hippostd:html
           hippostd:content: |-
-            <h2>College governance</h2>
-
             <p>Every college in Scotland is governed by a board of management which is responsible for the planning and delivery of learning, and for value for money.</p>
 
             <p>Measures to improve how colleges are managed, and to increase their accountability and effectiveness, were put in place by the Post-16 Education (Scotland) Act 2013, including:</p>
@@ -1411,10 +1410,11 @@
         govscot:summary: College student attainment summary
         govscot:title: College student attainment
         hippo:availability: []
+        hippostd:holder: admin
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2017-12-08T14:43:02.245Z
-        hippostdpubwf:lastModificationDate: 2017-12-08T14:43:02.245Z
+        hippostdpubwf:lastModificationDate: 2017-12-12T15:13:33.360Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 7654469f-b30a-4038-8198-ff00edb55245
         hippotranslation:locale: en

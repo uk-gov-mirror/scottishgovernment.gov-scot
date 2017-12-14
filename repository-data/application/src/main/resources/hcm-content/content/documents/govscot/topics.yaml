@@ -1,0 +1,122 @@
+/content/documents/govscot/topics:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: f78254d0-8e72-4628-a985-dc28dd515e4f
+  hippo:name: Topics
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: c1dd14ea-77c1-4882-9b16-27db04160ea5
+  hippotranslation:locale: en
+  /arts-culture-and-sport:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: ffdb7372-4536-4272-bd09-73f2c6272ca2
+    hippo:name: Arts, culture and sport
+    /arts-culture-and-sport[1]:
+      jcr:primaryType: govscot:topic
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 87f5123d-9bb1-440a-84fa-499c712c14c9
+      govscot:summary: Arts, culture and sport summary
+      govscot:title: Arts, culture and sport
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2017-12-13T11:45:35.865Z
+      hippostdpubwf:lastModificationDate: 2017-12-13T11:45:35.865Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: c9e3ec10-357d-428c-8a71-b8faea252269
+      hippotranslation:locale: en
+      /govscot:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Arts, culture and sport content</p>
+    /arts-culture-and-sport[2]:
+      jcr:primaryType: govscot:topic
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: a221c4f3-70bd-4b4d-945a-1babf6c79cb9
+      govscot:summary: Arts, culture and sport summary
+      govscot:title: Arts, culture and sport
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2017-12-13T11:45:35.865Z
+      hippostdpubwf:lastModificationDate: 2017-12-13T11:45:59.618Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: c9e3ec10-357d-428c-8a71-b8faea252269
+      hippotranslation:locale: en
+      /govscot:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Arts, culture and sport content</p>
+    /arts-culture-and-sport[3]:
+      jcr:primaryType: govscot:topic
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: ddd75ed1-8e0f-4d3f-963b-766b8eb1c941
+      govscot:summary: Arts, culture and sport summary
+      govscot:title: Arts, culture and sport
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2017-12-13T11:45:35.865Z
+      hippostdpubwf:lastModificationDate: 2017-12-13T11:45:59.618Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2017-12-13T11:46:05.328Z
+      hippotranslation:id: c9e3ec10-357d-428c-8a71-b8faea252269
+      hippotranslation:locale: en
+      /govscot:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Arts, culture and sport content</p>
+  /economy:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: 8f6acbb3-02c3-47f6-8665-99f27ea5a656
+    hippo:name: Economy
+    /economy[1]:
+      jcr:primaryType: govscot:topic
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 6c0dedfe-b496-4326-9580-115446638e8c
+      govscot:summary: Economy summary
+      govscot:title: Economy
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2017-12-13T11:46:36.702Z
+      hippostdpubwf:lastModificationDate: 2017-12-13T11:46:51.505Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 7fb387ec-7905-470d-a7de-cd680e8ccae6
+      hippotranslation:locale: en
+      /govscot:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Economy content</p>
+    /economy[2]:
+      jcr:primaryType: govscot:topic
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: c41e8cb0-1fb4-4f3a-a69c-ec376ff4eb33
+      govscot:summary: Economy summary
+      govscot:title: Economy
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2017-12-13T11:46:36.702Z
+      hippostdpubwf:lastModificationDate: 2017-12-13T11:46:51.441Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 7fb387ec-7905-470d-a7de-cd680e8ccae6
+      hippotranslation:locale: en
+      /govscot:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Economy content</p>
+    /economy[3]:
+      jcr:primaryType: govscot:topic
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 77b0f754-8a47-4de6-8fd6-6bad0486fde0
+      govscot:summary: Economy summary
+      govscot:title: Economy
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2017-12-13T11:46:36.702Z
+      hippostdpubwf:lastModificationDate: 2017-12-13T11:46:51.441Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2017-12-13T11:46:56.305Z
+      hippotranslation:id: 7fb387ec-7905-470d-a7de-cd680e8ccae6
+      hippotranslation:locale: en
+      /govscot:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Economy content</p>

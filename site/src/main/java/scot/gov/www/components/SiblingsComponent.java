@@ -1,12 +1,23 @@
 package scot.gov.www.components;
 
 import org.hippoecm.hst.component.support.bean.BaseHstComponent;
+import org.hippoecm.hst.content.beans.query.HstQuery;
+import org.hippoecm.hst.content.beans.query.HstQueryResult;
+import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
+import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
-import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
+import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.request.HstRequestContext;
+
+import scot.gov.www.beans.Policy;
+import scot.gov.www.beans.SimpleDocument;
+import scot.gov.www.beans.Topic;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SiblingsComponent  extends BaseHstComponent {
 
@@ -15,29 +26,14 @@ public class SiblingsComponent  extends BaseHstComponent {
                                final HstResponse response) throws HstComponentException {
 
         HstRequestContext ctx = request.getRequestContext();
-
-        // get the content bean for the current resolved sitemap item and
-        // set it on the request to make it available for
-        // the renderer like jsp or freemarker
         HippoBean documentBean = ctx.getContentBean();
+        request.setAttribute("document", documentBean);
+        HippoBean parent = documentBean.getParentBean();
+        request.setAttribute("policypages", parent.getChildBeans(SimpleDocument.class));
 
-//        request.setAttribute("document", documentBean);
-//
-//        documentBean.getParentBean()
-//        // get the content bean for the root of the current (sub)site and set
-//        // it on the request to make it available for
-//        // the renderer like jsp or freemarker
-//        HippoBean  rootBean = ctx.getSiteContentBaseBean();
-//        request.setAttribute("root",rootBean);
-//
-//        // get the base bean where all assets are stored, for example to use
-//        // in a HstQuery
-//        HippoFolderBean assetBaseBean = getAssetBaseBean(request);
-//
-//        assetBaseBean.
-//        // get the base bean where all gallery items are stored, for example
-//        // to use in a HstQuery
-//        HippoFolderBean galleryBaseBean = getGalleryBaseBean(request);
+        List<Policy> policies = parent.getChildBeans(Policy.class);
+        if (policies.size() == 1) {
+            request.setAttribute("overview", policies.get(0));
+        }
     }
-
 }

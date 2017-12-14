@@ -67,3 +67,19 @@ definitions:
           jcr:primaryType: hst:sitemapitem
           hst:componentconfigurationid: hst:pages/contentpage
           hst:relativecontentpath: ${parent}/${1}
+      /topics:
+        jcr:primaryType: hst:sitemapitem
+        hst:componentconfigurationid: hst:pages/contentpage
+        hst:relativecontentpath: topics
+        /_index_:
+          jcr:primaryType: hst:sitemapitem
+          hst:componentconfigurationid: hst:pages/contentpage
+          hst:relativecontentpath: ${parent}/index
+        /_any_:
+          jcr:primaryType: hst:sitemapitem
+          hst:componentconfigurationid: hst:pages/contentpage
+          hst:relativecontentpath: ${parent}/${1}
+          /_index_:
+            jcr:primaryType: hst:sitemapitem
+            hst:componentconfigurationid: hst:pages/contentpage
+            hst:relativecontentpath: ${parent}/index

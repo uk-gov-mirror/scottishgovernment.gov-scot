@@ -10,15 +10,18 @@
 [govscot:simpledocument] > govscot:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[govscot:directorate] > govscot:simpledocument, hippostd:relaxed, hippotranslation:translated
+[govscot:articledocument] > govscot:simpledocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[govscot:articledocument] > govscot:simpledocument, hippostd:relaxed, hippotranslation:translated
+[govscot:directorate] > govscot:simpledocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [govscot:policy] > govscot:simpledocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [govscot:socialmedia] > hippo:compound, hippostd:relaxed
+  orderable
+
+[govscot:topic] > govscot:simpledocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
