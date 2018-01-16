@@ -9,3 +9,7 @@ adduser \
   --group \
   --gecos "cms" \
   cms
+
+systemctl daemon-reload
+systemctl enable cms
+systemctl start cms

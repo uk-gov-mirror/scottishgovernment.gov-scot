@@ -1,0 +1,23 @@
+#!/bin/sh
+set -eu
+
+CATALINA_BASE=/opt/cms
+
+MAX_HEAP=512
+MIN_HEAP=512
+CLUSTER_ID=rubric
+BOOTSTRAP_OPTS="-Drepo.bootstrap=true" #-Drepo.bootstrap.modules=\"/vagrant/hippo/website-tutorial/repository-data/content\""
+REP_OPTS="-Drepo.config=file:${CATALINA_BASE}/conf/repository.xml"
+JVM_OPTS="-server -Xmx${MAX_HEAP}m -Xms${MIN_HEAP}m -XX:+UseG1GC -Djava.util.Arrays.useLegacyMergeSort=true"
+DMP_OPTS="-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/opt/cms/heapdumps"
+RMI_OPTS="-Djava.rmi.server.hostname=127.0.0.1"
+JRC_OPTS="-Dorg.apache.jackrabbit.core.cluster.node_id=${CLUSTER_ID}"
+L4J_OPTS="-Dlog4j.configurationFile=file://${CATALINA_BASE}/conf/log4j2.xml -DLog4jContextSelector=org.apache.logging.log4j.core.selector.BasicContextSelector"
+VGC_OPTS="-verbosegc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:${CATALINA_BASE}/logs/gc.log -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=2048k"
+
+JVM_OPTS="-XX:+UseParallelGC -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40 -XX:GCTimeRatio=10 -XX:AdaptiveSizePolicyWeight=90 -Djava.util.Arrays.useLegacyMergeSort=true"
+
+CATALINA_OPTS="${JVM_OPTS} ${VGC_OPTS} ${BOOTSTRAP_OPTS} ${REP_OPTS} ${DMP_OPTS} ${RMI_OPTS} ${L4J_OPTS} ${JRC_OPTS}"
+
+export CATALINA_BASE CATALINA_OPTS
+exec /usr/share/tomcat8/bin/catalina.sh run 2>&1

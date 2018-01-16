@@ -1,0 +1,13 @@
+[Unit]
+Description=CMS
+After=network.target
+
+[Service]
+User=cms
+WorkingDirectory=/opt/cms
+ExecStart=/opt/cms/run
+SuccessExitStatus=143
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

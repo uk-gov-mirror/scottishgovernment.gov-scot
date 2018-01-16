@@ -57,12 +57,29 @@
         <configuration>
           <dataSet>
             <data>
+              <src>${basedir}/src/cms.service</src>
+              <type>file</type>
+              <mapper>
+                <type>perm</type>
+                <prefix>/lib/systemd/system</prefix>
+              </mapper>
+            </data>
+            <data>
               <src>${project.build.directory}/dependency/gov-scot-cms.war</src>
               <dst>cms.war</dst>
               <type>file</type>
               <mapper>
                 <type>perm</type>
                 <prefix>${install.path}/webapps</prefix>
+              </mapper>
+            </data>
+            <data>
+              <src>${basedir}/src/run</src>
+              <type>file</type>
+              <mapper>
+                <type>perm</type>
+                <prefix>${install.path}</prefix>
+                <filemode>755</filemode>
               </mapper>
             </data>
           </dataSet>
