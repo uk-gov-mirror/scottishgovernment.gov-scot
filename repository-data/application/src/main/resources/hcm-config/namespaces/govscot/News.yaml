@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 8bdd4b9a-cfee-4fd7-9b2e-dc84e3480df7
+          jcr:uuid: f1fbad1f-41e7-4e21-91b2-bb6a46426c71
           hipposysedit:node: true
           hipposysedit:supertype: ['govscot:AttributableContent', 'hippostd:relaxed',
             'hippotranslation:translated']
@@ -40,6 +40,31 @@ definitions:
             hipposysedit:path: govscot:attachments
             hipposysedit:primary: false
             hipposysedit:type: govscot:ExternalLink
+          /publishedDate:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: govscot:publishedDate
+            hipposysedit:primary: false
+            hipposysedit:type: Date
+          /string:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: govscot:string
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [non-empty, required]
+          /updatedDate:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: govscot:updatedDate
+            hipposysedit:primary: false
+            hipposysedit:type: Date
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -55,9 +80,12 @@ definitions:
           govscot:summary: ''
           govscot:title: ''
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 06d1a851-7d7f-4694-8cc0-240401589ff6
+          jcr:uuid: e7ba4436-5956-4c98-8f3b-38e2ed6a8058
           hippostdpubwf:lastModificationDate: 2018-01-26T13:27:12.677Z
           hippostdpubwf:creationDate: 2018-01-26T13:27:12.677Z
+          govscot:string: ''
+          govscot:updatedDate: 0001-01-01T12:00:00Z
+          govscot:publishedDate: 0001-01-01T12:00:00Z
           /govscot:content:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
@@ -88,6 +116,15 @@ definitions:
             caption: Title
             field: title
             hint: Enter a title for this document
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /publishedDate:
+            jcr:primaryType: frontend:plugin
+            caption: Published Date
+            field: publishedDate
+            hint: The date/time the document should be published to the website
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
@@ -155,7 +192,9 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              base.path: ''
+              base.path: /content/documents/govscot/topics/
+              last.visited.enabled: 'false'
+              nodetypes: ['govscot:Topic']
           /background:
             jcr:primaryType: frontend:plugin
             caption: Background
@@ -180,6 +219,25 @@ definitions:
             field: attachments
             hint: The title and URL of any attachments from the news importer
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /string:
+            jcr:primaryType: frontend:plugin
+            caption: External ID
+            field: string
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: The ID from the external news importer
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /updatedDate:
+            jcr:primaryType: frontend:plugin
+            caption: Updated Date
+            field: updatedDate
+            hint: The last time the document was updated in the news importer. Used
+              to identify when a document needs to be updated
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
