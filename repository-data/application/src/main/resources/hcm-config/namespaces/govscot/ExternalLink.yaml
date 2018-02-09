@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ec9f4a28-0270-40b1-9d86-f32063d05810
+          jcr:uuid: 002a1f73-88b2-4d00-aff6-1dfac1ea288d
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.onehippo.org/govscot/nt/1.0
@@ -28,7 +28,7 @@ definitions:
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: govscot:string
+            hipposysedit:path: govscot:url
             hipposysedit:primary: false
             hipposysedit:type: String
       /hipposysedit:prototypes:
@@ -36,7 +36,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: govscot:ExternalLink
           govscot:title: ''
-          govscot:string: ''
+          govscot:url: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -57,12 +57,12 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /string:
+          /url:
             jcr:primaryType: frontend:plugin
             caption: URL
             field: string
+            hint: The URL of the external link
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: The URL of the external link
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
