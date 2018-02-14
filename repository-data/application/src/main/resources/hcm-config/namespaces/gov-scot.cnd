@@ -22,10 +22,16 @@
 [govscot:ExternalLink] > hippo:compound, hippostd:relaxed
   orderable
 
+[govscot:Group] > govscot:AttributableContent, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [govscot:Migration] > govscot:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [govscot:News] > govscot:AttributableContent, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[govscot:Person] > govscot:SimpleContent, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [govscot:Policy] > govscot:AttributableContent, hippostd:relaxed, hippotranslation:translated

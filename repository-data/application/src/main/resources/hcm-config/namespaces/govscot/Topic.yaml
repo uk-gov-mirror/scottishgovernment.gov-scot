@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 8f568148-f48d-459a-a379-e6602b397007
+          jcr:uuid: 526cd74b-c0de-4fb4-b5b0-792951d2069b
           hipposysedit:node: true
           hipposysedit:supertype: ['govscot:SimpleContent', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.onehippo.org/govscot/nt/1.0
@@ -30,10 +30,13 @@ definitions:
           govscot:summary: ''
           govscot:title: ''
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 6f473041-dcab-4a53-a137-25fcce184edd
+          jcr:uuid: 08f0a20b-f44f-4487-b555-02d09bc85f33
           hippostdpubwf:lastModificationDate: 2018-01-26T11:27:44.600Z
           hippostdpubwf:creationDate: 2018-01-26T11:27:44.600Z
           /govscot:content:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /govscot:responsibilities:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
       /editor:templates:
