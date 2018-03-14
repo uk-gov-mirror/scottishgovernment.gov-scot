@@ -35,3 +35,6 @@ definitions:
       /policy-content:
         jcr:primaryType: hst:template
         hst:renderpath: webfile:/freemarker/govscot/policy-content.ftl
+      /news-landing-main:
+        jcr:primaryType: hst:template
+        hst:renderpath: webfile:/freemarker/govscot/news-landing.ftl
