@@ -29,25 +29,13 @@ public class AboutMenu extends BaseHstComponent {
 
             if (item != null && item.isRepositoryBased() && item.getDepth() > 0) {
 
-                HippoBean deepestMenuBean = this.getBeanForResolvedSiteMapItem(request, item.resolveToSiteMapItem());
+                HippoBean aboutIndexPageBean = this.getBeanForResolvedSiteMapItem(request, item.resolveToSiteMapItem());
+                HippoBean aboutFolderBean = aboutIndexPageBean.getParentBean();
 
-                if (deepestMenuBean != null && deepestMenuBean.isHippoFolderBean()) {
+                EditableMenuItem aboutMenuItem = new RepoBasedMenuItem(((HippoFolderBean) aboutFolderBean), item, request, requestContext.getContentBean());
 
-                    for (HippoDocumentBean childDocumentItem : ((HippoFolderBean) deepestMenuBean).getDocuments()) {
-                        if (!childDocumentItem.getName().equals("index")) {
-                            EditableMenuItem childMenuItem = new RepoBasedMenuItem(childDocumentItem, item, request, requestContext.getContentBean());
-                            item.addChildMenuItem(childMenuItem);
-                        }
-                    }
-
-                    for (HippoFolderBean repoItem : ((HippoFolderBean) deepestMenuBean).getFolders()) {
-                        EditableMenuItem repoMenuItem = new RepoBasedMenuItem(repoItem, item, request, requestContext.getContentBean());
-                        item.addChildMenuItem(repoMenuItem);
-                    }
-
-                }
+                request.setAttribute("aboutMenuItem", aboutMenuItem);
             }
-            request.setAttribute("menuItems", editable.getMenuItems());
         }
 
     }

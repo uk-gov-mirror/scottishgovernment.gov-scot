@@ -7,6 +7,8 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.sitemenu.EditableMenuItem;
 import org.hippoecm.hst.core.sitemenu.EditableMenuItemImpl;
 
+import java.util.List;
+
 public class RepoBasedMenuItem extends EditableMenuItemImpl {
 
     public RepoBasedMenuItem(HippoDocumentBean repoItem, EditableMenuItem parentItem, HstRequest request,
@@ -18,7 +20,7 @@ public class RepoBasedMenuItem extends EditableMenuItemImpl {
 
         this.hstLink = request.getRequestContext().getHstLinkCreator().create(repoItem, request.getRequestContext());
 
-        if (currentContentBean!= null &&  repoItem.isSelf(currentContentBean)) {
+        if (currentContentBean!= null && repoItem.isSelf(currentContentBean)) {
             this.selected = true;
             this.getEditableMenu().setSelectedMenuItem(this);
         }
@@ -36,7 +38,7 @@ public class RepoBasedMenuItem extends EditableMenuItemImpl {
 
         this.hstLink = request.getRequestContext().getHstLinkCreator().create(repoItem, request.getRequestContext());
 
-        if (currentContentBean!= null &&  repoItem.isSelf(currentContentBean)) {
+        if (currentContentBean!= null && repoItem.isSelf(currentContentBean)) {
             this.selected = true;
             this.getEditableMenu().setSelectedMenuItem(this);
         }
@@ -44,10 +46,13 @@ public class RepoBasedMenuItem extends EditableMenuItemImpl {
         if (this.depth > 0) {
 
             for (HippoDocumentBean childDocumentItem : repoItem.getDocuments()) {
+                EditableMenuItem childMenuItem = new RepoBasedMenuItem(childDocumentItem, this, request, currentContentBean);
+
                 if (childDocumentItem.getName().equals("index")) {
+                    // don't add the item as a child if it is the 'index' item for that folder
                     this.name = childDocumentItem.getDisplayName();
+                    this.selected = childMenuItem.isSelected();
                 } else {
-                    EditableMenuItem childMenuItem = new RepoBasedMenuItem(childDocumentItem, this, request, currentContentBean);
                     this.addChildMenuItem(childMenuItem);
                 }
             }
