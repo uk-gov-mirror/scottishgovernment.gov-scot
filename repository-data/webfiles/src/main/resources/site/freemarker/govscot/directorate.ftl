@@ -6,6 +6,13 @@
 
     <article>
 
+        <h1>HERE</h1>
+    <#list policies as policy>
+        <p>
+        ${policy.title}
+        </p>
+    </#list>
+
         <h1 class="article-header">
             ${document.title}
         </h1>

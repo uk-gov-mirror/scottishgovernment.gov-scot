@@ -7,12 +7,14 @@ import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
+import org.hippoecm.hst.core.linking.HstLink;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.util.ContentBeanUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import scot.gov.www.beans.Directorate;
 import scot.gov.www.beans.Policy;
+import scot.gov.www.beans.SimpleContent;
 
 public class DirectorateComponent extends BaseHstComponent {
 
@@ -24,16 +26,23 @@ public class DirectorateComponent extends BaseHstComponent {
 
         HstRequestContext context = request.getRequestContext();
         Directorate document = context.getContentBean(Directorate.class);
+
+        if (document == null) {
+            response.setStatus(HstResponse.SC_NOT_FOUND);
+            return;
+        }
+
         request.setAttribute("document", document);
+        LOG.info("uuid of directorate is {}, path is {}", document.getIdentifier(), document.getPath());
 
         // find all policies that link to this Directorate
         try {
             HippoBean baseBean = context.getSiteContentBaseBean();
             HstQuery policyQuery = ContentBeanUtils.createIncomingBeansQuery(
-                    document, baseBean, "govscot:*/@hippo:docbase", Policy.class, false);
+                    document, baseBean, "govscot:responsibleDirectorate/@hippo:docbase", Policy.class, false);
             policyQuery.addOrderByDescending("govscot:title");
             HstQueryResult policies = policyQuery.execute();
-            request.setAttribute("policies", policies);
+            request.setAttribute("policies", policies.getHippoBeans());
         } catch (QueryException e) {
             LOG.warn("Unable to get Policies for directorate {}", document.getPath(), e);
         }
