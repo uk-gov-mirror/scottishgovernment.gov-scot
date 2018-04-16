@@ -153,12 +153,17 @@ public class FilteredResultsComponent extends EssentialsListComponent {
     }
 
     private void addPublicationTypeConstraint(List<Constraint> constraints, HstRequest request) {
-        List<String> typesParam = Arrays.asList(param(request, "publicationType").split("|"));
+//        List<String> typesParam = Arrays.asList(param(request, "publicationType").split("|"));
+
+        String typesParam = param(request, "publicationType");
+
+
         if (typesParam.isEmpty()) {
             return;
         }
+        String [] publicationTypesArray = typesParam.split("\\|");
 
-        for (String type : typesParam) {
+        for (String type : publicationTypesArray) {
             constraints.add(or(fieldConstraints(type)));
         }
     }
