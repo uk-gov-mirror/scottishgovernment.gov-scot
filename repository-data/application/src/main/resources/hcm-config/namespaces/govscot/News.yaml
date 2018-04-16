@@ -88,13 +88,21 @@ definitions:
           govscot:summary: ''
           govscot:title: ''
           jcr:mixinTypes: ['mix:referenceable']
+<<<<<<< HEAD
           jcr:uuid: 9d298ae2-5710-42ed-89c8-080629cc0b7f
+=======
+          jcr:uuid: c17fda64-200a-421c-979f-862ed2875194
+>>>>>>> Creating branch to deal with repository issues
           hippostdpubwf:lastModificationDate: 2018-01-26T13:27:12.677Z
           hippostdpubwf:creationDate: 2018-01-26T13:27:12.677Z
           govscot:updatedDate: 0001-01-01T12:00:00Z
           govscot:externalId: ''
+<<<<<<< HEAD
           govscot:policyTags: ['']
           govscot:publicationDate: 0001-01-01T12:00:00Z
+=======
+          govscot:policyTags: []
+>>>>>>> Creating branch to deal with repository issues
           /govscot:content:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
@@ -168,6 +176,8 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             type: hippostd:taggable
             wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
           /seoTitle:
             jcr:primaryType: frontend:plugin
             caption: SEO Title
