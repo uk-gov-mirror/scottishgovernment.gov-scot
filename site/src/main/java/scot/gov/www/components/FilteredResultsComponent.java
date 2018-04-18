@@ -4,6 +4,7 @@ import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.HstQueryResult;
 import org.hippoecm.hst.content.beans.query.builder.Constraint;
+import org.hippoecm.hst.content.beans.query.builder.ConstraintBuilder;
 import org.hippoecm.hst.content.beans.query.builder.HstQueryBuilder;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
@@ -60,19 +61,20 @@ public class FilteredResultsComponent extends EssentialsListComponent {
             if (path.contains("news")) {
                 hstQuery = HstQueryBuilder.create(bean)
                         .ofTypes(News.class)
-                        .where(constraints(request, false))
+                        .where(constraints(request, PUBLISHED_DATE))
                         .orderByDescending(PUBLISHED_DATE).build();
             } else if (path.contains("publications")) {
                 hstQuery = HstQueryBuilder.create(bean)
                         .ofTypes(Publication.class)
-                        .where(constraints(request, false))
+                        .where(constraints(request, PUBLICATION_DATE))
                         .orderByDescending(PUBLICATION_DATE).build();
             } else {
                 hstQuery = HstQueryBuilder.create(bean)
                         .ofTypes(Policy.class)
-                        .where(constraints(request, true))
+                        .where(constraints(request, null))
                         .orderByAscending("govscot:title").build();
             }
+
             HstQueryResult result = hstQuery.execute();
             request.setAttribute("result", result.getHippoBeans());
         } catch (RepositoryException e) {
@@ -85,17 +87,20 @@ public class FilteredResultsComponent extends EssentialsListComponent {
 
     }
 
-    private Constraint constraints(HstRequest request, boolean and) {
+    private Constraint constraints(HstRequest request, String searchField) {
 
         List<Constraint> constraints = new ArrayList<>();
         addTermConstraints(constraints, request);
         addTopicsConstraint(constraints, request);
-        addDateFilter(constraints, request);
         addPublicationTypeConstraint(constraints, request);
-        if (and) {
-            return and(constraints.toArray(new Constraint[constraints.size()]));
+        addDateConstraint(constraints, request, searchField);
+
+        Constraint[] constraints1 = new Constraint[constraints.size()];
+        for (int i = 0; i < constraints.size(); i++) {
+            constraints1[i] = constraints.get(i);
         }
-        return or(constraints.toArray(new Constraint[constraints.size()]));
+
+        return and(constraints1);
     }
 
     private void addTermConstraints(List<Constraint> constraints, HstRequest request) {
@@ -121,11 +126,14 @@ public class FilteredResultsComponent extends EssentialsListComponent {
             return;
         }
 
+        List<Constraint> constraintList = new ArrayList<Constraint>();
+
         for (String topicId : topicIds) {
-            // is this the right constraint?
-            System.out.println("HERE " + topicId);
-            constraints.add(constraint("govscot:topics/@hippo:docbase").equalTo(topicId));
+            constraintList.add(or(constraint("govscot:topics/@hippo:docbase").equalTo(topicId)));
         }
+
+        Constraint orConstraint = ConstraintBuilder.or(constraintList.toArray(new Constraint[constraintList.size()]));
+        constraints.add(orConstraint);
     }
 
     private List<String> topicIds(HstRequest request) {
@@ -153,18 +161,7 @@ public class FilteredResultsComponent extends EssentialsListComponent {
     }
 
     private void addPublicationTypeConstraint(List<Constraint> constraints, HstRequest request) {
-
-        String typesParam = param(request, "publicationType");
-
-
-        if (typesParam == null || typesParam.isEmpty()) {
-            return;
-        }
-        String [] publicationTypesArray = typesParam.split("\\;");
-
-        for (String type : publicationTypesArray) {
-            constraints.add(or(fieldConstraints(type)));
-        }
+        // TODO: once we know how hte publication types are to be structured in the CMS
     }
 
     private String param(HstRequest request, String param) {
@@ -192,34 +189,58 @@ public class FilteredResultsComponent extends EssentialsListComponent {
         return titleProperty.getString();
     }
 
-    private void addDateFilter(List<Constraint> constraints, HstRequest request) {
-        if (request.getParameterMap().containsKey("begin")) {
-            List<String> begin = Arrays.asList(param(request, "begin").split("-"));
-            if (begin.isEmpty()) {
-                return;
-            }
-
-            Calendar calendar = new GregorianCalendar(
-                    Integer.parseInt(begin.get(0)),
-                    Integer.parseInt(begin.get(1))-1,
-                    Integer.parseInt(begin.get(2)));
-            constraints.add(and(constraint(PUBLICATION_DATE).greaterOrEqualThan(calendar, DateTools.Resolution.DAY)));
-            constraints.add(and(constraint(PUBLISHED_DATE).greaterOrEqualThan(calendar, DateTools.Resolution.DAY)));
-
+    private void addDateConstraint(List<Constraint> constraints, HstRequest request, String searchField) {
+        if (searchField == null) {
+            return;
+        }
+        String begin = param(request, "begin");
+        String end = param(request, "end");
+        if (begin != null && end != null) {
+            Calendar beginCal = getCalendar(request, begin);
+            Calendar endCal = getCalendar(request, end);
+            constraints.add(and(constraint(searchField).between(beginCal, endCal, DateTools.Resolution.DAY)));
+            return;
         }
 
-        if (request.getParameterMap().containsKey("end")) {
-            List<String> end = Arrays.asList(param(request, "end").split("-"));
-            if (end.isEmpty()) {
-                return;
-            }
+        addBeginFilter(constraints, request, searchField, begin);
+        addEndFilter(constraints, request, searchField, end);
 
-            Calendar calendar = new GregorianCalendar(
-                    Integer.parseInt(end.get(0)),
-                    Integer.parseInt(end.get(1))-1,
-                    Integer.parseInt(end.get(2)));
-            constraints.add(and(constraint(PUBLICATION_DATE).lessOrEqualThan(calendar, DateTools.Resolution.DAY)));
-            constraints.add(and(constraint(PUBLISHED_DATE).lessOrEqualThan(calendar, DateTools.Resolution.DAY)));
-        }
     }
+
+    private void addBeginFilter(List<Constraint> constraints, HstRequest request, String searchField, String begin) {
+        if (searchField == null) {
+            return;
+        }
+
+        if (begin == null) {
+            return;
+        }
+        Calendar calendar = getCalendar(request, begin);
+        constraints.add(and(constraint(searchField).greaterOrEqualThan(calendar, DateTools.Resolution.DAY)));
+
+    }
+
+    private void addEndFilter(List<Constraint> constraints, HstRequest request, String searchField, String end) {
+        if (searchField == null) {
+            return;
+        }
+
+        if (end == null) {
+            return;
+        }
+
+        Calendar calendar = getCalendar(request, end);
+        constraints.add(and(constraint(searchField).lessOrEqualThan(calendar, DateTools.Resolution.DAY)));
+
+    }
+
+    private Calendar getCalendar(HstRequest request, String param) {
+
+        String[] splitDate = param.split("-");
+
+        return new GregorianCalendar(
+                Integer.parseInt(splitDate[0]),
+                Integer.parseInt(splitDate[1])-1, // 0-11 represent Jan-Dec
+                Integer.parseInt(splitDate[2]));
+}
 }
