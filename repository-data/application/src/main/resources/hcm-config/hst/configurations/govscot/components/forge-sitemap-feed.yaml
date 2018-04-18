@@ -1,0 +1,8 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/govscot/hst:components/forge-sitemap-feed:
+      jcr:primaryType: hst:component
+      hst:componentclassname: org.onehippo.forge.sitemap.components.SitemapFeed
+      hst:parameternames: [depth]
+      hst:parametervalues: ['5']
+      hst:template: forge-sitemap-feed.ftl

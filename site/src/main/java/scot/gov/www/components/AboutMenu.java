@@ -9,6 +9,7 @@ import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.core.sitemenu.EditableMenu;
 import org.hippoecm.hst.core.sitemenu.EditableMenuItem;
 import org.hippoecm.hst.core.sitemenu.HstSiteMenu;
+import org.onehippo.forge.sitemap.components.SitemapFeed;
 
 public class AboutMenu extends BaseHstComponent {
 
@@ -18,10 +19,9 @@ public class AboutMenu extends BaseHstComponent {
 
         final HstRequestContext requestContext = request.getRequestContext();
         HstSiteMenu menu = requestContext.getHstSiteMenus().getSiteMenu("about");
-
+        SitemapFeed f;
         String isMobile = this.getComponentLocalParameter("mobile");
         request.setAttribute("isMobile", isMobile);
-
         if (menu != null) {
             EditableMenu editable = menu.getEditableMenu();
             EditableMenuItem item = editable.getDeepestExpandedItem();
