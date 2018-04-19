@@ -24,6 +24,8 @@ public class FilteredResultsSideComponent extends BaseHstComponent {
 
     private static final Logger LOG = LoggerFactory.getLogger(FilteredResultsSideComponent.class);
 
+    private static final String TOPICS = "topics";
+
     @Override
     public void doBeforeRender(final HstRequest request,
                                final HstResponse response) {
@@ -42,13 +44,13 @@ public class FilteredResultsSideComponent extends BaseHstComponent {
 
             String path = bean.getNode().getPath();
             if (path.contains("news")) {
-                executeQueryLoggingException(query, request, "topics");
+                executeQueryLoggingException(query, request, TOPICS);
 
             } else if (path.contains("policies")) {
-                executeQueryLoggingException(query, request, "topics");
+                executeQueryLoggingException(query, request, TOPICS);
 
             } else if (path.contains("publications")) {
-                executeQueryLoggingException(query, request, "topics");
+                executeQueryLoggingException(query, request, TOPICS);
                 request.setAttribute("publicationTypes", publicationTypesValueList);
             }
 

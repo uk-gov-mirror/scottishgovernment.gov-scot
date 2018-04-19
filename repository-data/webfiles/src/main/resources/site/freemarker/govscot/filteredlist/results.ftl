@@ -34,8 +34,9 @@
 
     </ol>
 
-<#--<div id="pagination" class="search-results__pagination pagination"></div>-->
-<#--<#if cparam.showPagination>-->
-    <#--<#include "../../include/pagination.ftl">-->
-<#--</#if>-->
+<div id="pagination" class="search-results__pagination pagination">
+    <#if cparam.showPagination>
+        <#include "../../include/pagination.ftl">
+    </#if>
+</div>
 </section>

@@ -14,6 +14,7 @@ import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.hst.core.request.ComponentConfiguration;
 import org.hippoecm.hst.core.request.HstRequestContext;
+import org.hippoecm.hst.util.SearchInputParsingUtils;
 import org.hippoecm.repository.util.DateTools;
 import org.onehippo.cms7.essentials.components.EssentialsListComponent;
 import org.onehippo.cms7.essentials.components.info.EssentialsListComponentInfo;
@@ -44,7 +45,7 @@ public class FilteredResultsComponent extends EssentialsListComponent {
     private static String PUBLICATION_DATE = "govscot:publicationDate";
 
     @Override
-    public void init(ServletContext servletContext, ComponentConfiguration componentConfig) throws HstComponentException {
+    public void init(ServletContext servletContext, ComponentConfiguration componentConfig) {
         super.init(servletContext, componentConfig);
         Collections.addAll(FIELD_NAMES, "govscot:title", "govscot:summary", "govscot:content", "hippostd:tags", 
                 "govscot:incumbentTitle", "govscot:policyTags");
@@ -54,25 +55,45 @@ public class FilteredResultsComponent extends EssentialsListComponent {
     public void doBeforeRender(final HstRequest request,
                                final HstResponse response) {
 
+        final EssentialsListComponentInfo paramInfo = getComponentParametersInfo(request);
+
         HippoBean bean = request.getRequestContext().getContentBean();
+        int pageSize = paramInfo.getPageSize();
+        String offsetParam = param(request, "page");
+        int offset = 0;
+        if (offsetParam != null) {
+            offset = Integer.parseInt(offsetParam)-1;
+        }
+
         try {
             HstQuery hstQuery;
             String path = bean.getNode().getPath();
+
+
             if (path.contains("news")) {
                 hstQuery = HstQueryBuilder.create(bean)
                         .ofTypes(News.class)
                         .where(constraints(request, PUBLISHED_DATE))
-                        .orderByDescending(PUBLISHED_DATE).build();
+                        .orderByDescending(PUBLISHED_DATE)
+                        .limit(pageSize)
+                        .offset(pageSize*offset)
+                        .build();
             } else if (path.contains("publications")) {
                 hstQuery = HstQueryBuilder.create(bean)
                         .ofTypes(Publication.class)
                         .where(constraints(request, PUBLICATION_DATE))
-                        .orderByDescending(PUBLICATION_DATE).build();
+                        .orderByDescending(PUBLICATION_DATE)
+                        .limit(pageSize)
+                        .offset(pageSize*offset)
+                        .build();
             } else {
                 hstQuery = HstQueryBuilder.create(bean)
                         .ofTypes(Policy.class)
                         .where(constraints(request, null))
-                        .orderByAscending("govscot:title").build();
+                        .orderByAscending("govscot:title")
+                        .limit(pageSize)
+                        .offset(pageSize*offset)
+                        .build();
             }
 
             HstQueryResult result = hstQuery.execute();
@@ -105,10 +126,12 @@ public class FilteredResultsComponent extends EssentialsListComponent {
 
     private void addTermConstraints(List<Constraint> constraints, HstRequest request) {
         String term = param(request, "term");
+        String parsedTerm = SearchInputParsingUtils.parse(term, false);
+
         if (StringUtils.isBlank(term)) {
             return;
         }
-        constraints.add(or(fieldConstraints(term)));
+        constraints.add(or(fieldConstraints(parsedTerm)));
     }
 
     private Constraint [] fieldConstraints(String term) {
@@ -160,8 +183,9 @@ public class FilteredResultsComponent extends EssentialsListComponent {
         }
     }
 
+
     private void addPublicationTypeConstraint(List<Constraint> constraints, HstRequest request) {
-        // TODO: once we know how hte publication types are to be structured in the CMS
+        // TODO: once we know how the publication types are to be structured in the CMS
     }
 
     private String param(HstRequest request, String param) {
@@ -240,7 +264,8 @@ public class FilteredResultsComponent extends EssentialsListComponent {
 
         return new GregorianCalendar(
                 Integer.parseInt(splitDate[0]),
-                Integer.parseInt(splitDate[1])-1, // 0-11 represent Jan-Dec
+                // 0-11 represent Jan-Dec
+                Integer.parseInt(splitDate[1])-1,
                 Integer.parseInt(splitDate[2]));
 }
 }
