@@ -13,11 +13,6 @@
         <@hst.manageContent hippobean=item/>
         <@hst.link var="link" hippobean=item/>
         <article class="listed-content-item__article listed-content-item__article--top-border">
-            <#if item.publishedDate??>
-                <p class="listed-content-item__date">
-                    <@fmt.formatDate value=item.publishedDate.time type="both" dateStyle="medium" timeStyle="short"/>
-                </p>
-            </#if>
             <#if item.publicationDate??>
                 <p class="listed-content-item__date">
                     <@fmt.formatDate value=item.publicationDate.time type="both" dateStyle="medium" timeStyle="short"/>
