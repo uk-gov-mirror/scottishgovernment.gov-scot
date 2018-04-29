@@ -1,0 +1,50 @@
+/content/documents/administration/robots:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['mix:referenceable']
+  jcr:uuid: a25f566d-f88e-4370-8a77-454d622263f9
+  /robots[1]:
+    jcr:primaryType: robotstxt:robotstxt
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 6ac08ee5-ff6c-4e78-8585-716192a6a296
+    hippo:availability: [preview]
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2018-04-29T19:44:54.245+01:00
+    hippostdpubwf:lastModificationDate: 2018-04-29T19:46:57.035+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    robotstxt:sitemap: [sitemap.xml]
+    /robotstxt:section:
+      jcr:primaryType: robotstxt:section
+      robotstxt:disallow: [/search/]
+      robotstxt:useragent: '*'
+  /robots[2]:
+    jcr:primaryType: robotstxt:robotstxt
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: bf57088b-911b-4717-9110-a119f2e99aba
+    hippo:availability: []
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2018-04-29T19:44:54.245+01:00
+    hippostdpubwf:lastModificationDate: 2018-04-29T19:46:23.702+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    robotstxt:sitemap: [sitemap.xml]
+    /robotstxt:section:
+      jcr:primaryType: robotstxt:section
+      robotstxt:disallow: [/search/]
+      robotstxt:useragent: '*'
+  /robots[3]:
+    jcr:primaryType: robotstxt:robotstxt
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: fe451ea8-5a70-47bc-b3eb-906fcb781b87
+    hippo:availability: [live]
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2018-04-29T19:44:54.245+01:00
+    hippostdpubwf:lastModificationDate: 2018-04-29T19:46:57.035+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2018-04-29T19:46:59.230+01:00
+    robotstxt:sitemap: [sitemap.xml]
+    /robotstxt:section:
+      jcr:primaryType: robotstxt:section
+      robotstxt:disallow: [/search/]
+      robotstxt:useragent: '*'

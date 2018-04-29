@@ -10,7 +10,7 @@
   <title>404 error</title>
 </head>
 <body>
-<h1>Page not found</h1>
+<h1>Page not found!!!</h1>
 <p>The page you requested was not found in this site.</p>
 </body>
 </html>
