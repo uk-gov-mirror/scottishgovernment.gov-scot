@@ -157,3 +157,11 @@ definitions:
               jcr:primaryType: hst:sitemapitem
               hst:componentconfigurationid: hst:pages/publicationsubpage
               hst:relativecontentpath: ${parent)/${1}
+      /isbn:
+        jcr:primaryType: hst:sitemapitem
+        hst:componentconfigurationid: hst:pages/filteredlistpage
+        hst:relativecontentpath: isbn
+        /_default_:
+          jcr:primaryType: hst:sitemapitem
+          hst:componentconfigurationid: hst:pages/isbnpage
+          hst:relativecontentpath: ${parent}/${1}
