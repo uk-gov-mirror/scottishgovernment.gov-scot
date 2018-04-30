@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 212ac5f3-d458-44f0-9818-98303699cd2f
+          jcr:uuid: 52f8b0dd-436f-45b1-bc3d-6dcc4de2fea9
           hipposysedit:node: true
           hipposysedit:supertype: ['govscot:AttributableContent', 'hippostd:relaxed',
             'hippotranslation:translated']
@@ -73,6 +73,14 @@ definitions:
             hipposysedit:path: govscot:policyTags
             hipposysedit:primary: false
             hipposysedit:type: String
+          /prglooslug:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: govscot:prglooslug
+            hipposysedit:primary: false
+            hipposysedit:type: String
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -88,13 +96,14 @@ definitions:
           govscot:summary: ''
           govscot:title: ''
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 9d298ae2-5710-42ed-89c8-080629cc0b7f
+          jcr:uuid: 74bc4f8b-8685-4e39-b177-dfa2beaffbac
           hippostdpubwf:lastModificationDate: 2018-01-26T13:27:12.677Z
           hippostdpubwf:creationDate: 2018-01-26T13:27:12.677Z
           govscot:updatedDate: 0001-01-01T12:00:00Z
           govscot:externalId: ''
           govscot:policyTags: []
           govscot:publicationDate: 0001-01-01T12:00:00Z
+          govscot:prglooslug: ''
           /govscot:content:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
@@ -262,5 +271,14 @@ definitions:
             hint: Tags used to link news items to Policy Latest pages.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /prglooslug:
+            jcr:primaryType: frontend:plugin
+            caption: PRGloo slug
+            field: prglooslug
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
