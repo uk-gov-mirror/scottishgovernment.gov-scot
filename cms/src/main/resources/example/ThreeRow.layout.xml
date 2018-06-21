@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <pad name="primary" orientation="horizontal" />
+    <pad name="secondary" orientation="horizontal" />
+    <pad name="tertiary" orientation="horizontal" />
+
+    <transition name="primary-secondary down" source="primary" target="secondary"/>
+    <transition name="secondary-primary up" source="secondary" target="primary"/>
+    <transition name="secondary-tertiary down" source="secondary" target="tertiary"/>
+    <transition name="tertiary-secondary up" source="tertiary" target="secondary"/>
+</layout>

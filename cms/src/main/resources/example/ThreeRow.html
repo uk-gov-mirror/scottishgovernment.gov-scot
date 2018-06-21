@@ -1,0 +1,122 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+    <link rel="stylesheet" type="text/css" href="skin/ThreeRow.css" />
+</wicket:head>
+<wicket:panel>
+
+    <script>
+    'use strict';
+
+var Expandable = {
+  init: function() {
+
+    var that = this;
+
+    that.expandable = $('.editor-plugin-template .expandable');
+    
+    
+    
+    that.expandable.on('click', 'button', function (event) {
+      var expandButton = $(this);
+      
+      expandButton.toggleClass('open');
+      
+      if (expandButton.hasClass('open')) {
+        expandButton.text('Close all');
+        that.expandable.find('.expandable-item').addClass('expandable-item--open') 
+      that.expandable.find('.expandable-item__body').show()
+      } else {
+        expandButton.text('Expand all');
+        that.expandable.find('.expandable-item').removeClass('expandable-item--open') 
+        that.expandable.find('.expandable-item__body').hide()
+      }
+    });
+    
+    
+
+    //Handle changing display on panel headers when open
+    that.expandable.on('click', '.js-toggle-expand', function(event) {
+      event.preventDefault();
+
+      var expandableItem = $(this).closest('.expandable-item');
+
+      if (expandableItem.hasClass('expandable-item--open')) {
+        that.closeExpandableItem(expandableItem);
+
+      } else {
+        if (that.expandable.hasClass('expandable--single')) {
+          that.closeExpandableItem(expandableItem.siblings('.expandable-item'));
+        }
+        that.openExpandableItem(expandableItem);
+      }
+    });
+  },
+
+  openExpandableItem: function(expandableItem) {
+    var expandableItemBody = expandableItem.find('.expandable-item__body');
+
+    expandableItemBody.attr('aria-expanded', 'true');
+    expandableItem.addClass('expandable-item--open');
+    expandableItemBody.slideDown(200, function() {
+      // hacky IE8 fix to force redraw of changed inline-block element
+      expandableItem.closest('.grid__item').toggleClass('foo');
+      expandableItem.closest('.grid__item').toggleClass('foo');
+    });
+  },
+
+  closeExpandableItem: function(expandableItem) {
+    var expandableItemBody = expandableItem.find('.expandable-item__body');
+
+    expandableItemBody.attr('aria-expanded', 'false');
+    expandableItem.removeClass('expandable-item--open');
+    expandableItemBody.slideUp(200, function() {
+      // hacky IE8 fix to force redraw of changed inline-block element
+      expandableItem.closest('.grid__item').toggleClass('foo');
+      expandableItem.closest('.grid__item').toggleClass('foo');
+    });
+  },
+
+  showAllExpandableItems: function() {
+    var expandableItems = this.expandable.find('.expandable-item');
+
+    for (var i = 0, il = expandableItems.length; i < il; i++) {
+      this.openExpandableItem($(expandableItems[i]));
+    }
+  }
+};
+
+// initialize
+window.setTimeout(function () {Expandable.init();}, 1000);
+    </script>
+
+    <div class="group group--primary" wicket:id="extension.primary">primary</div>
+
+    <div class="expandable">
+        <div class="expandable-item">
+            <a class="expandable-item__header  js-toggle-expand" role="tab" id="search-panel-heading"
+                href="#search-panel" data-toggle="collapse" aria-expanded="false" aria-controls="search-panel">
+                <h3 class="expandable-item__title  gamma">
+                    <span class="link-text">Search</span><span class="expandable-item__icon"></span>
+                </h3>
+            </a>
+            <div class="expandable-item__body" id="search-panel" role="tabpanel" aria-expanded="false" aria-labelledby="search-panel-heading">
+                <div class="group group--secondary" wicket:id="extension.secondary">secondary</div>
+            </div>
+        </div>
+
+        <div class="expandable-item">
+            <a class="expandable-item__header  js-toggle-expand" role="tab" id="notes-panel-heading"
+                href="#notes-panel" data-toggle="collapse" aria-expanded="false" aria-controls="notes-panel">
+                <h3 class="expandable-item__title  gamma">
+                    <span class="link-text">Notes</span><span class="expandable-item__icon"></span>
+                </h3>
+            </a>
+            <div class="expandable-item__body" id="notes-panel" role="tabpanel" aria-expanded="false" aria-labelledby="notes-panel-heading">
+                <div class="group group--tertiary" wicket:id="extension.tertiary">tertiary</div>
+            </div>
+        </div>
+    </div>
+    
+    
+</wicket:panel>
+</html>

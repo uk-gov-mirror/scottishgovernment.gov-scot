@@ -1,0 +1,147 @@
+/*------------------------------------*\
+    $EXPANDABLE
+    Used for accordion-like panels
+\*------------------------------------*/
+.editor-plugin-template>.expandable h2 {
+  margin-bottom: 20px;
+  line-height: 28px;
+}
+
+.editor-plugin-template>.expandable .expandable-item {
+  background-color: transparent;
+  border: 1px solid #e3e3e3;
+  border-width: 1px 0;
+  margin: 0 -15px;
+}
+.editor-plugin-template>.expandable .expandable-item + .expandable-item {
+  margin-top: -1px;
+}
+.editor-plugin-template>.expandable .expandable-item + h2 {
+  margin-top: 47px;
+}
+.editor-plugin-template>.expandable .expandable-item--init-open .expandable-item__body {
+  display: block;
+}
+.editor-plugin-template>.expandable .expandable-item__header {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: table;
+  height: 55px;
+  min-height: 55px;
+  outline: none !important;
+  padding: 0 15px;
+  position: relative;
+  text-decoration: none;
+  transition: background 0.2s;
+  width: 100%;
+}
+.editor-plugin-template>.expandable .expandable-item__header:hover {
+  background-color: #f8f8f8;
+  color: #00437e;
+  text-decoration: none;
+}
+.editor-plugin-template>.expandable .expandable-item__header:hover .expandable-item__icon {
+  background-color: transparent;
+  transition: background 0.2s;
+}
+.editor-plugin-template>.expandable .expandable-item__header:focus {
+  background-color: #f8f8f8;
+}
+.editor-plugin-template>.expandable .expandable-item__header:active {
+  background-color: #d9effc !important;
+}
+.editor-plugin-template>.expandable .expandable-item__title {
+  color: inherit;
+  display: table-cell;
+  font-size: inherit;
+  line-height: 21px;
+  padding: 6px 42px 7px 0;
+  text-align: left;
+  vertical-align: middle;
+  width: 100%;
+}
+.editor-plugin-template>.expandable .expandable-item__title--right {
+  display: block;
+  margin-bottom: 0;
+  padding: 6px 0 7px 42px;
+  text-align: right;
+}
+.editor-plugin-template>.expandable .expandable-item__icon {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDgyQjY4ODRBRUZDMTFFNkIwMTFFNDhDRkUzMTY1QzAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDgyQjY4ODVBRUZDMTFFNkIwMTFFNDhDRkUzMTY1QzAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowODJCNjg4MkFFRkMxMUU2QjAxMUU0OENGRTMxNjVDMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowODJCNjg4M0FFRkMxMUU2QjAxMUU0OENGRTMxNjVDMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkgtuQQAAAD6SURBVHjaYvz//z/DYAGMo44ZdcyoY0YdM+qYUceMOgYPADkGHwYBpbxVDUDsQI75IH0g/cTYRTBklPNXgxyxH8qdAMSN9yaFfSDCEQJAqh6IC6BCjncnhh7Ap4eJCM/NR2KDDD5PKJSg8ueRHIJuDlbAQoRjEqEGKUD5IHo/0MINIDnkUIKGBkhtAJoZD6DmMFAUMkDLQEFrCI0iZACy8D7QAQFQh4D5WBwC0mcINYey3MTIyIge/MihhOxzbGKJyI4gZBcTKTkDTygpkBsaZIcMlkSKHkoYoYFejFAtZAiEElmhMVodjDpm1DGjjhl1zKhjBrNjAAIMAN1Z1XEvWVsyAAAAAElFTkSuQmCC')
+              no-repeat center transparent;
+  border-radius: 100%;
+  height: 35px;
+  margin-top: -18px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  width: 35px;
+  transition: background 1s;
+}
+.editor-plugin-template>.expandable .expandable-item__body {
+  background-color: transparent;
+  display: none;
+  overflow: hidden;
+  padding: 21px 15px 27px;
+  position: relative;
+}
+.editor-plugin-template>.expandable .expandable-item__body p.headerforlink {
+  margin: 28px 0 7px;
+}
+.editor-plugin-template>.expandable .expandable-item__body p.headerforlink:first-child {
+  margin-top: 0;
+}
+
+
+.editor-plugin-template>.expandable .expandable-item--open .expandable-item__header {
+  background-color: #e5f0f8;
+  color: #333333;
+}
+.editor-plugin-template>.expandable .expandable-item--open .expandable-item__header .expandable-item__icon {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALRJREFUeNpiYBgFo2AUjIJRMAoGF2CkRLNS3ioBIFUPxAVAPAGIG+9NCvtAd8cAHeIApOYDsQKS8AMgTgQ66ABdHIMWGrgAWaHESIXQgIUINjGSQomRwtD4ALVwA1BNANShAuSGEiMFobEB6pAPaI4GqQ0gJ5SIccx9UhMprsQN1KOIzy4mImIpES3IDQn5ECpvCFWPzRyKypMGqG/JKgJA+keL9FEwCkbBKBgFo2A4AYAAAwAnqEnCx4SsYwAAAABJRU5ErkJggg==')
+              no-repeat center transparent;
+}
+
+.editor-plugin-template>.expandable .expandable-item--open .expandable-item__header .expandable-item__icon:hover {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALRJREFUeNpiYBgFo2AUjIJRMAoGF2CkRLNS3ioBIFUPxAVAPAGIG+9NCvtAd8cAHeIApOYDsQKS8AMgTgQ66ABdHIMWGrgAWaHESIXQgIUINjGSQomRwtD4ALVwA1BNANShAuSGEiMFobEB6pAPaI4GqQ0gJ5SIccx9UhMprsQN1KOIzy4mImIpES3IDQn5ECpvCFWPzRyKypMGqG/JKgJA+keL9FEwCkbBKBgFo2A4AYAAAwAnqEnCx4SsYwAAAABJRU5ErkJggg==')
+              no-repeat center transparent;
+}
+
+.editor-plugin-template>.expandable .expandable-item:last-child .expandable-item__body:after {
+  content: none;
+}
+
+/* EXPANDABLE MODIFICATIONS FOR CMS */
+.editor-plugin-template>.expandable .expandable-item {
+  margin: 0 -32px;
+}
+
+.editor-plugin-template>.expandable .expandable-item__header {
+  font-size: 18px;
+  padding: 0 32px;
+  width: calc(100% - 64px);
+}
+
+.editor-plugin-template>.expandable .expandable-item__body {
+  background: #fcfcfc;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.hippo-preview-document-wrapper .expandable-item {
+  margin: 5em 0;
+}
+
+.hippo-preview-document-wrapper .expandable-item__header {
+  color: #22272f;
+  font-size: 22px;
+  display: inline-block;
+  margin-bottom: 1em;
+  pointer-events: none;
+  border-bottom: 2px solid currentColor;
+}
+
+.hippo-preview-document-wrapper .expandable-item__header h3 {
+  font-weight: normal;
+}
