@@ -79,7 +79,7 @@ public class PublicationLinkProcessor extends HstLinkProcessorTemplate {
             link.setPath(newPath);
             return link;
         } catch (RepositoryException e) {
-            LOG.warn("Exception trying to process link: {}", link.getPath(), e);
+            LOG.warn("Exception trying to imageprocessing link: {}", link.getPath(), e);
             return link;
         }
     }
