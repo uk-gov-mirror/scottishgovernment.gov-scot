@@ -3,7 +3,6 @@ package scot.gov.www.linkprocessors;
 import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.core.linking.HstLink;
-import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.linking.HstLinkProcessorTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,14 +10,14 @@ import org.slf4j.LoggerFactory;
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
-import javax.jcr.query.Query;
-import javax.jcr.query.QueryResult;
 
 public class NewsLinkProcessor extends HstLinkProcessorTemplate {
 
     private static final Logger LOG = LoggerFactory.getLogger(NewsLinkProcessor.class);
 
     public static final String NEWS = "news/";
+
+    UrlLookup urlLookup = new UrlLookup("news");
 
     @Override
     protected HstLink doPostProcess(HstLink link) {
@@ -49,8 +48,9 @@ public class NewsLinkProcessor extends HstLinkProcessorTemplate {
     private HstLink preProcessNewsLink(HstLink link) {
         try {
             String slug = link.getPathElements()[link.getPathElements().length - 1];
-            Node handle = getHandleBySlug(slug);
 
+            Session session = RequestContextProvider.get().getSession();
+            Node handle = urlLookup.lookupNodeForSlug(session, slug);
             if (handle == null) {
                 return link;
             }
@@ -62,17 +62,4 @@ public class NewsLinkProcessor extends HstLinkProcessorTemplate {
             return link;
         }
     }
-
-    private Node getHandleBySlug(String slug) throws RepositoryException {
-        HstRequestContext req = RequestContextProvider.get();
-        Session session = req.getSession();
-        String newsPath = "/content/documents/govscot/news/";
-        String sql = String.format("SELECT * FROM govscot:News WHERE jcr:path LIKE '%s%%/%s'", newsPath, slug);
-        QueryResult result = session.getWorkspace().getQueryManager().createQuery(sql, Query.SQL).execute();
-        if (result.getNodes().getSize() == 0) {
-            return null;
-        }
-        return result.getNodes().nextNode().getParent();
-    }
-
 }
