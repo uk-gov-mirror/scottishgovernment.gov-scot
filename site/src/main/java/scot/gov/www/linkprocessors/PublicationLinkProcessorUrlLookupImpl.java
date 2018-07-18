@@ -1,5 +1,8 @@
 package scot.gov.www.linkprocessors;
 
+import com.codahale.metrics.ConsoleReporter;
+import com.codahale.metrics.MetricRegistry;
+import com.codahale.metrics.Timer;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.container.RequestContextProvider;
@@ -12,13 +15,27 @@ import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
-public class PublicationLinkProcessor extends HstLinkProcessorTemplate {
+import static java.util.concurrent.TimeUnit.*;
 
-    private static final Logger LOG = LoggerFactory.getLogger(PublicationLinkProcessor.class);
+public class PublicationLinkProcessorUrlLookupImpl extends HstLinkProcessorTemplate {
+
+    private static final Logger LOG = LoggerFactory.getLogger(PublicationLinkProcessorUrlLookupImpl.class);
 
     public static final String PUBLICATIONS = "publications/";
 
-    UrlLookup urlLookup = new UrlLookup("publications");
+    private UrlLookup urlLookup = new UrlLookup("publications");
+
+    private static final MetricRegistry metrics = new MetricRegistry();
+
+    private final Timer times = metrics.timer("linktimes");
+
+    static {
+        ConsoleReporter reporter = ConsoleReporter.forRegistry(metrics)
+                .convertRatesTo(SECONDS)
+                .convertDurationsTo(MILLISECONDS)
+                .build();
+        reporter.start(30, SECONDS);
+    }
 
     @Override
     protected HstLink doPostProcess(HstLink link) {
@@ -45,7 +62,10 @@ public class PublicationLinkProcessor extends HstLinkProcessorTemplate {
     @Override
     protected HstLink doPreProcess(HstLink link) {
         if (isPublicationsSlugLink(link)) {
-            return preProcessPublicationsLink(link);
+            final Timer.Context context = times.time();
+            HstLink newlink = preProcessPublicationsLink(link);
+            context.stop();
+            return newlink;
         }
         return link;
     }

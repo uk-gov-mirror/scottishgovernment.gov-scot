@@ -12,6 +12,8 @@ import javax.jcr.Session;
  */
 public class UrlLookup {
 
+    private static final Logger LOG = LoggerFactory.getLogger(UrlLookup.class);
+
     private final String lookupBasePath;
 
     public UrlLookup(String type) {
@@ -20,10 +22,13 @@ public class UrlLookup {
 
     public Node lookupNodeForSlug(Session session, String slug) throws RepositoryException {
         String path = pathForSlug(slug);
-        if (session.nodeExists(path)) {
+
+        try {
             Node lookup = session.getNode(path);
-            return session.getNode(lookup.getProperty("path").getString());
-        } else {
+            String lookupPath = lookup.getProperty("path").getString();
+            return session.getNode(lookupPath);
+        } catch (RepositoryException e) {
+            LOG.warn("No url lookup for {}", slug, e);
             return null;
         }
     }
