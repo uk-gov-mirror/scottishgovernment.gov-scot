@@ -11,6 +11,7 @@
                 <bean class="scot.gov.www.linkprocessors.TopicLinkProcessor" />
                 <bean class="scot.gov.www.linkprocessors.PublicationLinkProcessorUrlLookupImpl" />
                 <!--<bean class="scot.gov.www.linkprocessors.PublicationLinkProcessorQueryImpl" />-->
+                <!--<bean class="scot.gov.www.linkprocessors.PublicationLinkProcessorQueryByNameImpl" />-->
                 <bean class="scot.gov.www.linkprocessors.TrailingSlashLinkProcessor" />
             </list>
         </property>
