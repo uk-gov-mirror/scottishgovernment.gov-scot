@@ -2,6 +2,8 @@ package scot.gov.www.linkprocessors;
 
 import com.codahale.metrics.ConsoleReporter;
 import com.codahale.metrics.MetricRegistry;
+import com.codahale.metrics.ScheduledReporter;
+import com.codahale.metrics.Slf4jReporter;
 import com.codahale.metrics.Timer;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -19,6 +21,8 @@ import javax.jcr.Session;
 import javax.jcr.query.Query;
 import javax.jcr.query.QueryResult;
 
+import java.util.concurrent.TimeUnit;
+
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
@@ -33,9 +37,10 @@ public class PublicationLinkProcessorQueryImpl extends HstLinkProcessorTemplate 
     private final Timer times = metrics.timer("linktimes");
 
     static {
-        ConsoleReporter reporter = ConsoleReporter.forRegistry(metrics)
-                .convertRatesTo(SECONDS)
-                .convertDurationsTo(MILLISECONDS)
+        ScheduledReporter reporter = Slf4jReporter.forRegistry(metrics)
+                .outputTo(LoggerFactory.getLogger("scot.gov.www.linkprocessors.PublicationLinkProcessorQueryImpl"))
+                .convertRatesTo(TimeUnit.SECONDS)
+                .convertDurationsTo(TimeUnit.MILLISECONDS)
                 .build();
         reporter.start(30, SECONDS);
     }
