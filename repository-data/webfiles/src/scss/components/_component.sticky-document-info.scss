@@ -142,20 +142,15 @@
 }
 
 @include media-query(large) {
-
-  .sticky-document-info {
-
-    /**
-     * 1. Ellipsis requires fixed pixel width
-     */
-    &__title {
-      font-size: 21px;
-      font-weight: 300;
-      line-height: 35px;
-      width: 535px; /* [1] */
-    }
+  /**
+   * 1. Ellipsis requires fixed pixel width
+   */
+  .sticky-document-info__title {
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 35px;
+    width: 535px; /* [1] */
   }
-
 }
 
 

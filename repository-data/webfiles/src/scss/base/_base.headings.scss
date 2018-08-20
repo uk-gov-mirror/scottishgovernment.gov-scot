@@ -103,17 +103,6 @@ h4, .delta {
       margin-bottom: 27px;
     }
   }
-
-  &--overline {
-    border-top: 1px solid $color__black;
-    margin-top: 48px;
-    padding-top: 17px;
-
-    &--heavy {
-      border-top: 4px solid $color__blue--base;
-      margin-top: 45px;
-    }
-  }
 }
 
 
@@ -125,50 +114,6 @@ h1, h2, h3, h4, h4 {
     text-decoration: none;
   }
 }
-
-
-/*------------------------------------*\
-    SECTION HEADER
-\*------------------------------------*/
-/**
- * Welcome header are used on the homepage at the top of each section.
- */
-
-h2.section-header {
-  font-weight: 300;
-  font-size: 24px;
-  margin-bottom: 32px;
-
-  a {
-    font-weight: inherit;
-  }
-  a:link, a:visited {
-    color: inherit;
-  }
-  a:hover, a:active {
-    color: $color__link--hover;
-    border-bottom: 2px solid $color__link--hover;
-  }
-}
-
-@include media-query(medium) {
-  h2.section-header {
-    margin-bottom: 24px; /* Reverse mobile change. */
-  }
-}
-
-@include media-query(large) {
-  h2.section-header {
-    font-size: 32px;
-  }
-}
-
-@include media-query(xlarge) {
-  h2.section-header {
-    font-size: 40px;
-  }
-}
-
 
 
 /*------------------------------------*\
