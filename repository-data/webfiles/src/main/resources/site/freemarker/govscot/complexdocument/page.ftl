@@ -380,7 +380,10 @@
 </#if>
 
 <@hst.headContribution category="footerScripts">
-<script src="<@hst.webfile path="/assets/scripts/complex-document.js"/>" type="text/javascript"></script>
+    <script src="<@hst.webfile path="/assets/scripts/complex-document.js"/>" type="text/javascript"></script>
+</@hst.headContribution>
+<@hst.headContribution>
+    <link rel="stylesheet" type="text/css" href="<@hst.webfile path="/assets/css/complex-document.css"/>"/>
 </@hst.headContribution>
 
 <#if document??>

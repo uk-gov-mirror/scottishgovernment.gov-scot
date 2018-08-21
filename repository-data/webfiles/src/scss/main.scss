@@ -2,42 +2,28 @@
 
 /*------------------------------------*\
     #GOV.SCOT
+    Core site styling
 \*------------------------------------*/
 
 
 
 
- $base-line-height: 7px;
- $base-font-size: 16px;
+$base-line-height: 7px;
+$base-font-size: 16px;
 
 
 
 
- /**
-  * GRID/LAYOUT
-  */
+/**
+ * GRID/LAYOUT
+ */
 
- // CSS Wizardry grids settings
+// CSS Wizardry grids settings
 $gutter: 30px;
 $pull: true;
 $push: true;
 
-// same breakpoints as mygov.scot
-$breakpoints: (
-    'small' '(min-width: 480px)',
-    'medium' '(min-width: 768px)',
-    'large' '(min-width: 992px)',
-    'xlarge' '(min-width: 1200px)',
-    'small-down' '(max-width: 479px)',
-    'medium-down' '(max-width: 767px)',
-    'large-down' '(max-width: 991px)',
-    'small-to-medium' '(min-width: 480px) and (max-width: 767px)',
-    'medium-to-large' '(min-width: 768px) and (max-width: 991px)',
-    'large-to-xlarge' '(min-width: 992px) and (max-width: 1199px)',
-    'xlarge-up' '(min-width: 1200px)' );
-$breakpoint-has-widths: ('small', 'medium', 'large', 'xlarge');
-$breakpoint-has-push: ('small', 'medium', 'large', 'xlarge');
-$breakpoint-has-pull: ('small', 'medium', 'large', 'xlarge');
+@import "settings/settings.breakpoints";
 @import "utilities/csswizardry-grids.scss";
 
 // some overrides for csswizardry grids
@@ -118,7 +104,6 @@ $external-link__excluded-sites: ('.gov.scot', '.scotland.gov.uk');
 @import "base/base.headings";
 @import "base/base.icons";
 @import "base/base.lists";
-
 @import "../../node_modules/@scottish-government/mygov-assets/scss/base/base.rules";
 $table__border-color--header: $color__grey--light;
 @import "../../node_modules/@scottish-government/mygov-assets/scss/base/base.tables";
@@ -133,18 +118,18 @@ $table__border-color--header: $color__grey--light;
 
 
 
+
 /* FORMS */
 @import "../../node_modules/@scottish-government/mygov-assets/scss/components/forms/forms.radio-buttons";
+
 
 
 
 /**
  * OBJECTS
  */
-@import "objects/object.column-list";
 @import "objects/object.containers";
 @import "objects/object.layers";
-@import "objects/object.narrow";
 @import "objects/object.overflows";
 @import "objects/object.scrollable";
 @import "objects/object.svg-icon";
@@ -164,9 +149,7 @@ $table__border-color--header: $color__grey--light;
 /**
  * COMPONENTS
  */
-@import "components/component.aps-publication";
 @import "components/component.article";
-@import "components/component.article-footer";
 @import "components/component.article-header";
 @import "components/component.article-external-link";
 @import "components/component.az-list";
@@ -177,15 +160,9 @@ $breadcrumbs__margin: 0 0 28px;
 $breadcrumbs__margin--medium: -3px 0 4px;
 $breadcrumbs__margin--large: $breadcrumbs__margin--medium;
 @import "../../node_modules/@scottish-government/mygov-assets/scss/components/component.breadcrumbs";
-@import "components/component.carousel";
 @import "components/component.contact-information";
 @import "components/component.content-data";
-@import "components/component.contents-list";
-@import "components/component.crossbar-header";
-@import "components/component.directorate-list";
 @import "../../node_modules/@scottish-government/mygov-assets/scss/components/component.document-info";
-@import "components/component.document-nav";
-@import "../../node_modules/@scottish-government/mygov-assets/scss/components/component.document-section";
 @import '../../node_modules/@scottish-government/mygov-assets/scss/components/component.expand';
 $expandable__title-size: 16px;
 @import '../../node_modules/@scottish-government/mygov-assets/scss/components/component.expandable';
@@ -193,9 +170,6 @@ $expandable__title-size: 16px;
 @import "components/component.feedback";
 @import "../../node_modules/@scottish-government/mygov-assets/scss/components/component.file-icon";
 @import "../../node_modules/@scottish-government/mygov-assets/scss/components/component.informational-notes";
-@import "components/component.issue-callout";
-@import "components/component.issue-sidebar-block";
-@import "components/component.list-controls";
 @import "components/component.listed-content-item";
 @import "components/component.main-nav";
 @import "components/component.multipage-nav";
@@ -205,8 +179,6 @@ $expandable__title-size: 16px;
 @import "components/component.pagination";
 @import "../../node_modules/@scottish-government/mygov-assets/scss/components/component.person";
 @import "components/component.person-grid";
-@import "components/component.policy-list";
-@import "components/component.publication-info";
 $search-box__border-radius: 0;
 $search-box__background-color: $color__grey--lighter;
 $search-box__font-size: 16px;
@@ -216,23 +188,14 @@ $search-box__size: 56px;
 $search-box__size--medium: $search-box__size;
 @import "../../node_modules/@scottish-government/mygov-assets/scss/components/component.search-box";
 @import "components/component.search-results";
-@import "components/component.section-marker";
-@import "components/component.see-all-button";
 @import "components/component.sidebar-block";
 @import "components/component.site-brand";
 @import "components/component.site-footer";
 @import "components/component.site-header";
 @import "../../node_modules/@scottish-government/mygov-assets/scss/components/component.skip-links";
-@import "components/component.social-channels";
 @import "components/component.stat-box";
 @import "components/component.sticky-back-to-top";
-@import "components/component.sticky-document-info";
-@import "components/component.supporting-files";
 @import "components/component.topic";
-@import "components/component.topic-block";
-@import "components/component.topic-header";
-@import "components/component.utility-link";
-@import "components/component.welcome";
 @import "components/homepage/component.homepage-about";
 @import "components/homepage/component.homepage-block";
 @import "components/homepage/component.homepage-news";
@@ -244,7 +207,6 @@ $search-box__size--medium: $search-box__size;
 /**
  * TRUMPS
  */
-@import "trumps/trump.contents-expandable";
 @import "trumps/trump.display-toggle";
 @import "trumps/trump.external-links.govscot";
 @import "trumps/trump.fancy-radio";
@@ -255,4 +217,3 @@ $search-box__size--medium: $search-box__size;
 @import "trumps/trump.pikaday";
 @import "trumps/trump.person.govscot";
 @import "trumps/trump.search-box.govscot";
-@import "trumps/trump.topic-expandable";

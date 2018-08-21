@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/*------------------------------------*\
+    #GOV.SCOT
+    Publications styling
+\*------------------------------------*/
+
+
+
+
+/**
+ * SETTINGS
+ */
+@import "settings/settings.breakpoints";
+@import "../../node_modules/@scottish-government/mygov-assets/scss/settings/settings.colors";
+@import "../../node_modules/@scottish-government/mygov-assets/scss/settings/settings.transition";
+
+
+
+
+/**
+ * TOOLS
+ */
+@import "../../node_modules/@scottish-government/mygov-assets/scss/tools/tools.mixins";
+@import "tools/tools.placeholder-selectors";
+
+
+
+
+/**
+ * COMPONENTS
+ */
+@import "components/component.aps-publication";
+@import "../../node_modules/@scottish-government/mygov-assets/scss/components/component.document-section";
+@import "components/component.publication-info";
+@import "components/component.sticky-document-info";
+@import "components/component.supporting-files";

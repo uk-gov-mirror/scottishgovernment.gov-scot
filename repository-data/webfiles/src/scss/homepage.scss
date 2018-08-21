@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/*------------------------------------*\
+    #GOV.SCOT
+    Homepage styles
+\*------------------------------------*/
+
+
+
+
+$base-line-height: 7px;
+
+
+
+
+/**
+ * SETTINGS
+ */
+@import "settings/settings.breakpoints";
+@import "../../node_modules/@scottish-government/mygov-assets/scss/settings/settings.colors";
+@import "../../node_modules/@scottish-government/mygov-assets/scss/settings/settings.transition";
+
+
+
+
+/**
+ * TOOLS
+ */
+@import "../../node_modules/@scottish-government/mygov-assets/scss/tools/tools.mixins";
+@import "tools/tools.placeholder-selectors";
+
+
+
+
+/**
+ * OBJECTS
+ */
+@import "objects/object.narrow";
+ 
+
+
+
+/**
+ * COMPONENTS
+ */
+@import "components/component.carousel";
+@import "components/component.social-channels";
+@import "components/component.utility-link";
+@import "components/component.welcome";

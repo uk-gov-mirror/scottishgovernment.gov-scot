@@ -55,3 +55,7 @@
      --></div>
     </div>
 </div>
+
+<@hst.headContribution>
+<link rel="stylesheet" type="text/css" href="<@hst.webfile path="/assets/css/publication.css"/>"/>
+</@hst.headContribution>

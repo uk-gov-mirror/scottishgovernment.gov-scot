@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/*------------------------------------*\
+    #GOV.SCOT
+    Topic page styles
+\*------------------------------------*/
+
+
+
+
+/**
+ * SETTINGS
+ */
+@import "settings/settings.breakpoints";
+@import "../../node_modules/@scottish-government/mygov-assets/scss/settings/settings.colors";
+
+
+
+
+/**
+ * TOOLS
+ */
+@import "../../node_modules/@scottish-government/mygov-assets/scss/tools/tools.mixins";
+
+
+
+
+/**
+ * OBJECTS
+ */
+@import "objects/object.column-list";
+
+
+
+
+/**
+ * COMPONENTS
+ */
+@import "components/component.directorate-list";
+@import "components/component.policy-list";
+@import "components/component.topic-block";
+@import "components/component.topic-header";
+
+
+
+
+/**
+ * TRUMPS
+ */
+@import "trumps/trump.topic-expandable";

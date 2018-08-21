@@ -310,6 +310,9 @@
 <@hst.headContribution category="footerScripts">
     <script src="<@hst.webfile path="/assets/scripts/topic.js"/>" type="text/javascript"></script>
 </@hst.headContribution>
+<@hst.headContribution>
+    <link rel="stylesheet" type="text/css" href="<@hst.webfile path="/assets/css/topic.css"/>"/>
+</@hst.headContribution>
 
 <#if document??>
     <@hst.headContribution category="pageTitle"><title>${document.title} - gov.scot</title></@hst.headContribution>

@@ -30,6 +30,9 @@
 <@hst.headContribution category="footerScripts">
     <script src="<@hst.webfile path="/assets/scripts/filtered-list-page.js"/>" type="text/javascript"></script>
 </@hst.headContribution>
+<@hst.headContribution>
+    <link rel="stylesheet" type="text/css" href="<@hst.webfile path="/assets/css/filters.css"/>"/>
+</@hst.headContribution>
 
 <#if index??>
     <@hst.headContribution category="pageTitle"><title>${index.title} - gov.scot</title></@hst.headContribution>

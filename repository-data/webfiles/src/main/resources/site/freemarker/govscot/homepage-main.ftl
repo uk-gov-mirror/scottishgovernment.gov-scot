@@ -425,6 +425,13 @@
 </div>
 </div>
 
+<@hst.headContribution>
+<link rel="stylesheet" type="text/css" href="<@hst.webfile path="/assets/css/homepage.css"/>"/>
+</@hst.headContribution>
+<@hst.headContribution>
+<link rel="stylesheet" type="text/css" href="<@hst.webfile path="/assets/css/filters.css"/>"/>
+</@hst.headContribution>
+
 <@hst.headContribution category="footerScripts">
 <script src="<@hst.webfile path="/assets/scripts/home.js"/>" type="text/javascript"></script>
 </@hst.headContribution>

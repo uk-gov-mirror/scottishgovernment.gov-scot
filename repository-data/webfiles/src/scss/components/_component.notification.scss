@@ -88,7 +88,6 @@ $notification_padding: 14px;
   }
 
   &--gold,
-  &--green,
   &--light {
     color: $color__grey--dark;
     background-color: $color__gold--base;
@@ -138,8 +137,7 @@ $notification_padding: 14px;
   }
 
   &--gold .notification__beta-box,
-  &--light .notification__beta-box,
-  &--green .notification__staging-box {
+  &--light .notification__beta-box {
     display: inline-block;
     background: $color__grey--dark;
     color: $color__gold--base;
@@ -174,39 +172,6 @@ $notification_padding: 14px;
     }
   }
 
-  &--green {
-    background-color: $color__green--base;
-
-    .notification__staging-box {
-      $iconWidth: 25px;
-
-      background: none;
-      color: $color__white;
-      margin-left: 25px;
-
-      &:after {
-        content: '';
-        display: inline-block;
-        position: absolute;
-        height: $iconWidth;
-        width: $iconWidth;
-        top: 9px;
-        left: 0;
-        background: url(../../../../assets/images/icons/fact_check_tick_25px.png) no-repeat 0 0 transparent;
-        @include image-2x('../../../../assets/images/icons/fact_check_tick_25px_@2x.png', 25px, 25px);
-      }
-    }
-
-    .notification__extra-content {
-      border-top: 1px solid rgba(255, 255, 255, 0.5);
-
-      p {
-        color: $color__white;
-        font-size: 14px;
-      }
-    }
-  }
-
   &--light {
     background-color: $color__grey--light;
 
@@ -234,7 +199,6 @@ $notification_padding: 14px;
 @include media-query(medium) {
   .notification {
     &--gold,
-    &--green,
     &--light {
       .wrapper {
         padding: 0 10px;
@@ -261,8 +225,7 @@ $notification_padding: 14px;
     }
 
     &--gold .notification__beta-box,
-    &--light .notification__beta-box,
-    &--green .notification__staging-box {
+    &--light .notification__beta-box {
       float: left;
       margin: 10.5px 0;
       padding: 6px 10px;
@@ -286,40 +249,9 @@ $notification_padding: 14px;
       }
     }
 
-    &--green {
-      .notification__staging-box {
-        $iconWidth: 30px;
-
-        margin: 25px 5px 0 45px;
-
-        &:after {
-          height: $iconWidth;
-          width: $iconWidth;
-          top: auto;
-          left: 18px;
-          background: url(../../../../assets/images/icons/fact_check_tick_30px.png) no-repeat 0 0 transparent;
-          @include image-2x('../../../../assets/images/icons/fact_check_tick_30px_@2x.png', 30px, 30px);
-        }
-      }
-
-      .notification__extra-content {
-        border-top: 0;
-      }
-    }
-
     &--dark {
       .notification__close {
         right: 10px;
-      }
-    }
-  }
-}
-
-@include media-query(large) {
-  .notification {
-    &--green {
-      .notification__staging-box {
-        margin-top: 10.5px;
       }
     }
   }
