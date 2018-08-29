@@ -49,6 +49,7 @@ public class PublicationsRedirectComponent extends BaseHstComponent {
         if (bean != null) {
             HstRequestContext context = request.getRequestContext();
             final HstLink link = context.getHstLinkCreator().create(bean, context);
+            LOG.info("Redirecting govscot publicaiton url {} to {}", request.getPathInfo(), link.getPath());
             HstResponseUtils.sendPermanentRedirect(request, response, link.getPath());
             return;
         }

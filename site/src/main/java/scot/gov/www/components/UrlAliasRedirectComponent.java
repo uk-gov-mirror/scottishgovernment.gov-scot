@@ -29,6 +29,7 @@ public class UrlAliasRedirectComponent extends BaseHstComponent {
         // check if this url is a known url alias
         String url = findAlias(request);
         if (url != null) {
+            LOG.info("Redirecting to url alias {} -> {}", request.getPathInfo(), url);
             HstResponseUtils.sendPermanentRedirect(request, response, url);
             return;
         }

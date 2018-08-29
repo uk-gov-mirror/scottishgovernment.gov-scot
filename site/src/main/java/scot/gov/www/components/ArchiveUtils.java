@@ -24,7 +24,7 @@ public class ArchiveUtils {
 
     public static void sendArchiveRedirect(String path, HstRequest request, HstResponse response) {
         String archiveUrl = String.format(ARCHIVE_TEMPLATE, path);
-        LOG.info("Redirecting publication path {} to archive: {}", path, archiveUrl);
+        LOG.info("Redirecting to archive {} -> {}", path, archiveUrl);
         if (PERMANENT_ARCHIVE) {
             HstResponseUtils.sendPermanentRedirect(request, response, archiveUrl);
         } else {

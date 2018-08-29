@@ -44,6 +44,7 @@ public class PublicationsIsbnRedirectComponent extends BaseHstComponent {
 
         if (bean != null) {
             final HstLink link = context.getHstLinkCreator().create(bean, context);
+            LOG.info("Redirecting to ISBN {} -> {}", isbn, link.getPath());
             HstResponseUtils.sendPermanentRedirect(request, response, link.getPath());
             return;
         }
@@ -56,6 +57,7 @@ public class PublicationsIsbnRedirectComponent extends BaseHstComponent {
         }
 
         // we were not able to resolve the isbn, send a 404
+        // TODO: is this right? perhaps this component should not exist ...what if we have another redirect in place?
         try {
             response.setStatus(404);
             response.forward("/pagenotfound");
