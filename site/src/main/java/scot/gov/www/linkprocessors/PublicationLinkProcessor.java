@@ -103,33 +103,26 @@ public class PublicationLinkProcessor extends HstLinkProcessorTemplate {
     private Node getHandleBySlug(String slug) throws RepositoryException {
         HstRequestContext req = RequestContextProvider.get();
         Session session = req.getSession();
-        String sql = String.format(
-                "SELECT * FROM hippostd:folder " +
-                "WHERE jcr:name LIKE '%s' " +
-                "AND jcr:path LIKE '/content/documents/govscot/publications/%%'", slug);
-        QueryResult result = session.getWorkspace().getQueryManager().createQuery(sql, Query.SQL).execute();
+
+
+        String template =
+                "/jcr:root/content/documents/govscot/publications//element(%s, hippostd:folder)" +
+                "/element(*, hippo:handle)/element(*, govscot:Publication)";
+        String sql = String.format(template, slug);
+        QueryResult result = session.getWorkspace().getQueryManager().createQuery(sql, Query.XPATH).execute();
         if (result.getNodes().getSize() == 0) {
             return null;
         }
 
-        if (result.getNodes().getSize() > 1) {
-            LOG.warn("More than one publication has the slug {}, will use the first", slug);
-            return null;
-        }
-
-        return findPublicationInFolder(result.getNodes().nextNode(), session);
-    }
-
-
-    private Node findPublicationInFolder(Node folder, Session session) throws RepositoryException {
-        String sql = String.format("SELECT * FROM govscot:SimpleContent WHERE jcr:path LIKE '%s/%%'", folder.getPath());
-        QueryResult result = session.getWorkspace().getQueryManager().createQuery(sql, Query.SQL).execute();
+        // find the index in the results folder
         return findPublication(result.getNodes());
     }
 
     private Node findPublication(NodeIterator nodeIterator) throws RepositoryException {
+
         Node publishedNode = null;
         Node lastNode = null;
+
         while (nodeIterator.hasNext()) {
             Node node = nodeIterator.nextNode();
             lastNode = node.getParent();
