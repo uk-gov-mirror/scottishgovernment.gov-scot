@@ -85,6 +85,11 @@ public class HomeComponent extends BaseHstComponent {
                         )
                 )
                 .build();
+        try {
+            LOG.error("Publications: {}", query.getQueryAsString(false));
+        } catch (QueryException ex) {
+            LOG.error("Error building query", ex);
+        }
         executeQueryLoggingException(query, request, "publications");
     }
 
