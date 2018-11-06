@@ -3,3 +3,9 @@ definitions:
     /hst:hst/hst:configurations/hst:default/hst:templates/contentpage-main:
       jcr:primaryType: hst:template
       hst:renderpath: webfile:/freemarker/hstdefault/contentpage-main.ftl
+    /hst:hst/hst:configurations/hst:default/hst:templates/browserconfigxml.ftl:
+      jcr:primaryType: hst:template
+      hst:script: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<browserconfig>\r\
+        \n    <msapplication>\r\n        <tile>\r\n            <square150x150logo\
+        \ src=\"/mstile-150x150.png\"/>\r\n            <TileColor>#0065bd</TileColor>\r\
+        \n        </tile>\r\n    </msapplication>\r\n</browserconfig>"

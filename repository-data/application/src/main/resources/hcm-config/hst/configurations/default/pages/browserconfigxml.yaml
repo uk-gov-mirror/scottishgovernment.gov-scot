@@ -1,0 +1,5 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/hst:default/hst:pages/browserconfigxml:
+      jcr:primaryType: hst:component
+      hst:template: browserconfigxml.ftl
