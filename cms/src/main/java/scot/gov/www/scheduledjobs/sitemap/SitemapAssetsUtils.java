@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.zip.GZIPInputStream;
 
 import static java.lang.String.format;
 
@@ -70,8 +71,9 @@ public class SitemapAssetsUtils {
         return bytes;
     }
 
-    private static Binary bytesToBinary(Session session, byte[] bytes) throws RepositoryException {
+    private static Binary bytesToBinary(Session session, byte[] bytes) throws RepositoryException, IOException {
         InputStream in = new ByteArrayInputStream(bytes);
+        //GZIPInputStream gzipStream = new GZIPInputStream(in);
         return session.getValueFactory().createBinary(in);
     }
 
