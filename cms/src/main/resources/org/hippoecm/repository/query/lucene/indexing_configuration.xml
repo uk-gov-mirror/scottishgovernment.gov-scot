@@ -30,7 +30,7 @@
         <property boost="0.5">govscot:summary</property>
         <property boost="0.5">hippostd:tags</property>
         <property boost="0.5">govscot:metaDescription</property>
-        <property isRegexp="true" nodeScopeIndex="false">.*:.*</property>
+        <property isRegexp="true">.*:.*</property>
     </index-rule>
 
     <!-- Custom Index Rule in order to exclude hippostd:html nodes under govscot:PublicationPage node. -->
