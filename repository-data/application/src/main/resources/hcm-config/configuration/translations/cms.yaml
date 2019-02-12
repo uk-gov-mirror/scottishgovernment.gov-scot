@@ -4,3 +4,4 @@ definitions:
       non-empty: A mandatory field is empty
       publication-slug: This publication URL is already in use. Please choose another.
       foiNumber: 'FOI/EIR numbers must match the format: FOI/XX/XXXXX'
+      publication-slug: This publication URL is already in use. Please choose another.
