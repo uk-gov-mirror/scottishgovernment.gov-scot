@@ -10,12 +10,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.jcr.Node;
+import javax.jcr.NodeIterator;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
+import java.util.*;
 
 /**
- * Event listener to set the available actions available to new publication month folders depending on the type
- * of publication.
+ * Maintain certain folders in sorted or
  */
 public class FolderTypesDaemonModule implements DaemonModule {
 
@@ -47,32 +48,89 @@ public class FolderTypesDaemonModule implements DaemonModule {
 
         try {
             HippoNode newFolder = (HippoNode) session.getNode(event.result());
-            if (!FolderUtils.hasFolderType(newFolder, "new-publication-folder")) {
+            if (!FolderUtils.hasFolderType(newFolder.getParent(), "new-publication-folder")) {
                 return;
             }
 
-            // if the type is minutes, speech / statement or FOI then alter the folder type
-            Node typeFolder = newFolder.getParent().getParent();
-            if ("minutes".equals(typeFolder.getName())) {
-                setFolderType(newFolder, "new-minutes-folder");
-            }
-
-            if ("speech---statement".equals(typeFolder.getName())) {
-                setFolderType(newFolder, "new-speech-or-statement-folder");
-            }
-
-            if ("foi-eir-release".equals(typeFolder.getName())) {
-                setFolderType(newFolder, "new-foi-folder");
-            }
-
+            // sort the parent folder
+            Node monthFolder = newFolder.getParent();
+            sortChildren(monthFolder);
+            session.save();
         } catch (RepositoryException e) {
             LOG.error("Unexpected exception while doing simple JCR read operations", e);
         }
     }
 
-    private void setFolderType(Node node, String type) throws RepositoryException {
-        node.setProperty("hippostd:foldertype", new String []{ type });
-        session.save();
+    // descide on sort order depending on the parent folder.....
+    //    new publication      -> sort month ascending
+    //    new month            -> sort year descending
+    //    new year             -> sort type descending
+    //    policy, group, topic -> sort partent ascending
+
+
+    public void sortChildren(Node node) throws RepositoryException {
+        List<String> sortedNames = sortedNames(node.getNodes());
+        LOG.info("order: {}", sortedNames);
+        for (int i = sortedNames.size() - 1; i >= 0; i--) {
+            String before = sortedNames.get(i);
+            String after = i < sortedNames.size() - 1 ? sortedNames.get(i + 1) : null;
+            node.orderBefore(before, after);
+        }
+    }
+
+    /**
+     * Sort the nodes in an iterator, Folders in alphabetical order first then other documents in alphabetical order.
+     */
+    List<String> sortedNames(NodeIterator it) throws RepositoryException {
+
+        // for each node work out what name we want to sort by and
+        // partition them into folders and 'others'
+        Map<String, String> nameMap = new HashMap<>();
+        List<String> folders = new ArrayList<>();
+        List<String> others = new ArrayList<>();
+        apply(it, node -> {
+            nameMap.put(node.getName(), name(node));
+            if (isHippoFolder(node)) {
+                folders.add(node.getName());
+            } else {
+                others.add(node.getName());
+            }
+        });
+
+        folders.sort(compareNodeNames(nameMap));
+        others.sort(compareNodeNames(nameMap));
+
+        List<String> names = new ArrayList<>();
+        names.addAll(folders);
+        names.addAll(others);
+        return names;
+    }
+
+    String name(Node node) throws RepositoryException {
+        if (node.hasProperty("hippo:name")) {
+            return node.getProperty("hippo:name").getString();
+        } else {
+            return node.getName();
+        }
+    }
+
+    Comparator<String> compareNodeNames(Map<String, String> nameMap) {
+        return (l, r) -> String.CASE_INSENSITIVE_ORDER.compare(nameMap.get(l), nameMap.get(r));
+    }
+
+    void apply(NodeIterator it, ThrowingConsumer consumer) throws RepositoryException {
+        while (it.hasNext()) {
+            consumer.accept(it.nextNode());
+        }
+    }
+
+    @FunctionalInterface
+    public interface ThrowingConsumer {
+        void accept(Node t) throws RepositoryException;
+    }
+
+    boolean isHippoFolder(Node node) throws RepositoryException {
+        return "hippostd:folder".equals(node.getPrimaryNodeType().getName());
     }
 
 }
