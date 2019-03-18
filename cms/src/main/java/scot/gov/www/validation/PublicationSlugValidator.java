@@ -22,10 +22,6 @@ import java.util.Set;
 /**
  * Validate that the govscot:slug is unique.
  *
- * See for docs on how to configure this etc.
- * https://www.onehippo.org/library/enterprise/enterprise-features/enterprise-forms/validation-rules.html
- *
- * Above is for forms, use this:
  * https://www.onehippo.org/library/concepts/plugins/create-a-custom-field-validator.html
  *
  */
@@ -55,7 +51,6 @@ public class PublicationSlugValidator extends AbstractCmsValidator {
             IModel childModel)
                 throws ValidationException {
 
-        // childModel.getObject()
         Node node = model.getNode();
 
         Set<Violation> violations = new HashSet<>();
@@ -71,7 +66,8 @@ public class PublicationSlugValidator extends AbstractCmsValidator {
     }
 
     /**
-     * The slug is valid if no other nodes share this slug (with the exception of ones that share the same handle)
+     * The slug is valid if no other nodes share this slug
+     * (with the exception of ones that share the same handle).
      */
     private boolean isValid(String candidateSlug, Node node) throws RepositoryException {
         Session session = UserSession.get().getJcrSession();
@@ -79,7 +75,7 @@ public class PublicationSlugValidator extends AbstractCmsValidator {
         Query query = session.getWorkspace().getQueryManager().createQuery(sql, Query.SQL);
         QueryResult result = query.execute();
 
-        // if any of the reuslts do not belong to the same handle then this slug is already used elsewhere
+        // if any of the results do not belong to the same handle then this slug is already used elsewhere
         NodeIterator it = result.getNodes();
         while (it.hasNext()) {
             Node next = it.nextNode();

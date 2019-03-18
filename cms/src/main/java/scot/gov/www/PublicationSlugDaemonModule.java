@@ -98,7 +98,6 @@ public class PublicationSlugDaemonModule implements DaemonModule {
 
         if (!slugAlreadyExists(candidate)) {
             // Base case: we have found a unique slug.
-            LOG.info("disambiguated slug: {}", candidate);
             return candidate;
         }
 
@@ -117,7 +116,7 @@ public class PublicationSlugDaemonModule implements DaemonModule {
     }
 
     /**
-     * Is this evetn a new publicaiton folder being added
+     * Is this event a new publication folder being added?
      */
     private boolean isNewPublicationFolder(HippoWorkflowEvent event) {
         return isFolderAddEvent(event) && isPublicationPath(event.returnValue());
@@ -134,10 +133,12 @@ public class PublicationSlugDaemonModule implements DaemonModule {
     }
 
     /**
-     * Is this a publicaiton path?
-     *  Publications path look like: /content/documents/govscot/publications/correspondence/2018/12/test
+     * Is this a publication path?
      *
-     * They start with the publication folder and have a type, year, month and publicaiton subfolder
+     * Publications path look like:
+     * /content/documents/govscot/publications/correspondence/2018/12/test
+     *
+     * They start with the publication folder and have a type, year, month and publication subfolder
      */
     private boolean isPublicationPath(String path) {
         // the length should be 9 (the leading slash means the first entry is the empty string)

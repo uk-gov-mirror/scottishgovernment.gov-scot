@@ -59,9 +59,9 @@ public class PublicationLinkProcessor extends HstLinkProcessorTemplate {
                 String.format("/content/documents/govscot/%s",
                 Arrays.stream(Arrays.copyOf(link.getPathElements(), 5)).collect(Collectors.joining("/")));
         try {
-            Node publicaitonNode = publicationNode(path);
-            LOG.info("pubNode is {}", publicaitonNode.getPath());
-            return publicaitonNode.getProperty("govscot:slug").getString();
+            Node publicationNode = publicationNode(path);
+            LOG.info("pubNode is {}", publicationNode.getPath());
+            return publicationNode.getProperty("govscot:slug").getString();
         } catch (RepositoryException e) {
             LOG.error("Unable to get the publication slug", e);
             return link.getPathElements()[4];
@@ -166,7 +166,6 @@ public class PublicationLinkProcessor extends HstLinkProcessorTemplate {
         Node lastNode = null;
         while (nodeIterator.hasNext()) {
             Node node = nodeIterator.nextNode();
-            LOG.info("testinf {}", node.getPath());
             lastNode = node;
             if ("published".equals(node.getProperty("hippostd:state").getString())) {
                 publishedNode = node;

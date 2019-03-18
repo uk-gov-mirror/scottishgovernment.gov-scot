@@ -146,9 +146,8 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Slug
             field: slug
-            hint: "This is used to determine the url of this publications.  It must\r\
-              \n+              be unique and should be a short url friendly version\
-              \ of the title."
+            hint: This is used to determine the URL of this publication.  It must
+              be unique and should be a short, URL friendly version of the title.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:

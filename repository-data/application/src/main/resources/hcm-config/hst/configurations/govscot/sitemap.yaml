@@ -264,39 +264,14 @@ definitions:
                 /_default_:
                   jcr:primaryType: hst:sitemapitem
                   hst:componentconfigurationid: hst:pages/publicationpage
-                  hst:relativecontentpath: publications/${1}/${2}/${3}/${4}
+                  hst:relativecontentpath: publications/${1}/${2}/${3}/${4}/${5}
+                  hst:componentconfigurationmappingvalues: ['hst:pages/complexdocumentpage']
+                  hst:componentconfigurationmappingnames: ['govscot:ComplexDocument']
                   hst:sitemapitemhandlerids: [trailing-slash]
                   /_default_:
                     jcr:primaryType: hst:sitemapitem
-                    hst:componentconfigurationid: hst:pages/publicationpage
-                    hst:relativecontentpath: publications/${1}/${2}/${3}/${4}/${5}
-                    hst:sitemapitemhandlerids: [trailing-slash]
-                    hst:componentconfigurationmappingvalues: ['hst:pages/complexdocumentpage']
-                    hst:componentconfigurationmappingnames: ['govscot:ComplexDocument']
-                    /_default_:
-                      jcr:primaryType: hst:sitemapitem
-                      hst:componentconfigurationid: hst:pages/complexdocumentpage
-                      hst:relativecontentpath: publications/${1}/${2}/${3}/${4}/chapters/${5}/${6}
-                      hst:sitemapitemhandlerids: [trailing-slash]
-                  /pages:
-                    jcr:primaryType: hst:sitemapitem
-                    hst:componentconfigurationid: hst:pages/publicationpage
-                    hst:relativecontentpath: publications/${1}/${2}/${3}/${4}
-                    hst:sitemapitemhandlerids: [trailing-slash]
-                    /_default_:
-                      jcr:primaryType: hst:sitemapitem
-                      hst:componentconfigurationid: hst:pages/publicationpage
-                      hst:relativecontentpath: publications/${1}/${2}/${3}/${4}/pages/${5}
-                      hst:sitemapitemhandlerids: [trailing-slash]
-                  /about:
-                    jcr:primaryType: hst:sitemapitem
                     hst:componentconfigurationid: hst:pages/complexdocumentpage
-                    hst:relativecontentpath: publications/${1}/${2}/${3}/${4}
-                    hst:sitemapitemhandlerids: [trailing-slash]
-                  /documents:
-                    jcr:primaryType: hst:sitemapitem
-                    hst:componentconfigurationid: hst:pages/complexdocumentpage
-                    hst:relativecontentpath: publications/${1}/${2}/${3}/${4}
+                    hst:relativecontentpath: publications/${1}/${2}/${3}/${4}/chapters/${5}/${6}
                     hst:sitemapitemhandlerids: [trailing-slash]
                 /about:
                   jcr:primaryType: hst:sitemapitem
@@ -307,6 +282,13 @@ definitions:
                   jcr:primaryType: hst:sitemapitem
                   hst:componentconfigurationid: hst:pages/complexdocumentpage
                   hst:relativecontentpath: ${parent}
+                  hst:sitemapitemhandlerids: [trailing-slash]
+                /downloads:
+                  jcr:primaryType: hst:sitemapitem
+                  hst:componentconfigurationid: hst:pages/publicationpage
+                  hst:componentconfigurationmappingnames: ['govscot:ComplexDocument']
+                  hst:componentconfigurationmappingvalues: ['hst:pages/complexdocumentpage']
+                  hst:relativecontentpath: publications/${1}/${2}/${3}/${4}/index
                   hst:sitemapitemhandlerids: [trailing-slash]
         /_index_:
           jcr:primaryType: hst:sitemapitem
