@@ -20,7 +20,7 @@ import static java.util.function.Function.identity;
 import static java.util.stream.Collectors.toMap;
 
 
-@Path("/urls/")
+@Path("/internal/urls/")
 public class UrlResource extends AbstractResource {
 
     private static final Logger LOG = LoggerFactory.getLogger(UrlResource.class);
