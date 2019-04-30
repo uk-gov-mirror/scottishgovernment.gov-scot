@@ -26,6 +26,8 @@
                                 --><div class="grid__item"><h1 class="article-header__title">${document.title}</h1></div><!--
 
                                 --><div class="grid__item large--four-twelfths">
+                                    Part of collections:
+                                    <#list collections as collection><a href="<@hst.link hippobean=collection/>">${collection.title}</a><#sep>, </#sep></#list>
                                     <#include 'metadata.ftl'/>
                                 </div><!--
                                 </#if>

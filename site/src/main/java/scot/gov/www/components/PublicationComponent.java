@@ -1,6 +1,9 @@
 package scot.gov.www.components;
 
 import org.hippoecm.hst.component.support.bean.BaseHstComponent;
+import org.hippoecm.hst.content.beans.query.HstQuery;
+import org.hippoecm.hst.content.beans.query.HstQueryResult;
+import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoDocumentBean;
 import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
@@ -8,8 +11,12 @@ import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.request.HstRequestContext;
+import org.hippoecm.hst.util.ContentBeanUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import scot.gov.www.beans.Collection;
+import scot.gov.www.beans.Policy;
+import scot.gov.www.beans.Publication;
 import scot.gov.www.beans.PublicationPage;
 
 import java.io.IOException;
@@ -55,6 +62,17 @@ public class PublicationComponent extends BaseHstComponent {
             }  catch (IOException e) {
                 throw new HstComponentException("Forward failed", e);
             }
+        }
+
+        // find all collections that link to this Publication
+        try {
+            HippoBean baseBean = context.getSiteContentBaseBean();
+            Publication pub = context.getContentBean(Publication.class);
+            HstQuery collectionsQuery = ContentBeanUtils.createIncomingBeansQuery(pub, baseBean, "*/*/@hippo:docbase", Collection.class, false);
+            HstQueryResult collections = collectionsQuery.execute();
+            request.setAttribute("collections", collections.getHippoBeans());
+        } catch (QueryException e) {
+            LOG.warn("Unable to get Collections for publication {}", document.getPath(), e);
         }
     }
 
