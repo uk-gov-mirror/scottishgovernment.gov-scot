@@ -109,7 +109,7 @@ definitions:
                 : { \"span\": { \"attributes\": \"class\", classes: \"*\" } }}"
           /groups:
             jcr:primaryType: frontend:plugin
-            caption: Collection items
+            caption: Collection groups
             field: groups
             hint: One or more sets of collection items.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin

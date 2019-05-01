@@ -29,4 +29,10 @@ public class CollectionGroup extends HippoCompound {
     public List<HippoBean> getCollectionItems() {
         return getLinkedBeans("govscot:collectionItems", HippoBean.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "govscot:limelight")
+    public Boolean getLimelight() {
+        return getProperty("govscot:limelight");
+    }
+
 }

@@ -16,14 +16,18 @@ ${document.title}
     <@hst.html hippohtml=group.groupContent/>
 
     <#if group.order?? && group.order != 'none'>
-        <#assign collectionItems = group.collectionItems?sort_by(group.order)/>
+        <#if group.order == 'publicationDate'>
+            <#assign collectionItems = group.collectionItems?sort_by(group.order)?reverse/>
+        <#else>
+            <#assign collectionItems = group.collectionItems?sort_by(group.order)/>
+        </#if>
     <#else>
         <#assign collectionItems = group.collectionItems/>
     </#if>
 
     <ul class="no-bullets">
     <#list collectionItems as item>
-        <li>
+        <li <#if group.limelight == true && item?index == 0>style="background-color: lightblue;"</#if>>
             <a href="<@hst.link hippobean=item/>" class="listed-content-item__link" title="${item.title}">
                 <article class="listed-content-item__article ">
                     <header class="listed-content-item__header">

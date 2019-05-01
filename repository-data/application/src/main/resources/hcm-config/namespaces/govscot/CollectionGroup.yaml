@@ -47,6 +47,14 @@ definitions:
             hipposysedit:path: govscot:order
             hipposysedit:primary: false
             hipposysedit:type: StaticDropdown
+          /limelight:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: govscot:limelight
+            hipposysedit:primary: false
+            hipposysedit:type: selection:BooleanRadioGroup
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -64,18 +72,18 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /groupTitle:
             jcr:primaryType: frontend:plugin
-            caption: Title
+            caption: Heading
             field: groupTitle
-            hint: Enter the title for this group of collection items
+            hint: Enter the title for this group of collection items.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /groupContent:
             jcr:primaryType: frontend:plugin
-            caption: Content
+            caption: Introduction
             field: groupContent
-            hint: Enter content that appears before the list of collection items.
+            hint: Enter introductory content that appears before the list of grouped items.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
@@ -96,9 +104,9 @@ definitions:
                 , classes: \"*\" } }}"
           /collectionItems:
             jcr:primaryType: frontend:plugin
-            caption: Collection items
+            caption: Group documents
             field: collectionItems
-            hint: Add all content items related to the collection.
+            hint: Add all items related to the collection.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
@@ -107,12 +115,23 @@ definitions:
               last.visited.enabled: 'false'
           /order:
             jcr:primaryType: frontend:plugin
-            caption: Order by
+            caption: 'Order by:'
             field: order
-            hint: ''
+            hint: 'Choose how the documents should be ordered.'
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               selectable.options: none=None (manual ordering),publicationDate=Publication
                 date,label=Content type
+          /limelight:
+            jcr:primaryType: frontend:plugin
+            caption: Limelight first item?
+            field: limelight
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              falseLabel: 'No'
+              trueLabel: 'Yes'
