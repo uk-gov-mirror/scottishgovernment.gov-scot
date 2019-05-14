@@ -9,6 +9,7 @@ $base-h1-size: 35px; // 2.1875em;
 $base-h2-size: 22px; // 1.375em;
 $base-h3-size: 18px; // 1.125em;
 $base-h4-size: 15px; // 0.9375em
+$base-h5-size: $base-h4-size;
 $base-leader-size: 19px; // 1.1875em;
 $base-line-height: $base-line-height;
 
@@ -19,7 +20,7 @@ $medium-h1-size: 56px;
 $medium-h2-size: 28px;
 $medium-h3-size: 21px;
 $medium-h4-size: $medium-font-size - 1;
-$medium-h5-size: 14px;
+$medium-h5-size: $medium-h4-size;
 $medium-note-size: 14px;
 $medium-leader-size: 22px;
 

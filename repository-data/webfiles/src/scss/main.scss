@@ -115,6 +115,7 @@ $button__padding: 7px 20px;
 @import "base/base.govscot-buttons";
 $external-link__excluded-sites: ('.gov.scot', '.scotland.gov.uk');
 @import "../../node_modules/@scottish-government/mygov-assets/scss/base/base.external-links";
+@import "base/base.figure";
 @import "base/base.forms";
 @import "base/base.headings";
 @import "base/base.icons";
