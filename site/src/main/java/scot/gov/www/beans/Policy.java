@@ -1,10 +1,11 @@
 package scot.gov.www.beans;
 
-import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
-import org.hippoecm.hst.content.beans.standard.HippoHtml;
-import java.util.List;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.content.beans.standard.HippoHtml;
+import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
+
+import java.util.List;
 
 @HippoEssentialsGenerated(internalName = "govscot:Policy")
 @Node(jcrType = "govscot:Policy")
@@ -73,6 +74,9 @@ public class Policy extends AttributableContent {
     public HippoHtml getNotes() {
         return getHippoHtml("govscot:notes");
     }
+
+    @HippoEssentialsGenerated(internalName = "govscot:newsTags")
+    public String[] getNewsTags() { return getProperty("govscot:newsTags"); }
 
     public String getLabel() { return "policy"; }
 }
