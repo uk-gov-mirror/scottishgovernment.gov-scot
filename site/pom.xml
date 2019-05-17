@@ -156,6 +156,20 @@
            javax.annotation.security package. -->
       <scope>compile</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.forge</groupId>
+      <artifactId>feed-hst</artifactId>
+      <version>${forge.feed.version}</version>
+      <type>jar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>rome</groupId>
+      <artifactId>rome</artifactId>
+      <version>1.0</version>
+    </dependency>
+
   </dependencies>
   <build>
 

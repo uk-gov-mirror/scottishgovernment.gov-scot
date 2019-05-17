@@ -1,9 +1,14 @@
 package scot.gov.www.beans;
 
-import org.hippoecm.hst.content.beans.standard.HippoBean;
-import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
+import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
+import org.onehippo.forge.feed.api.FeedType;
+import org.onehippo.forge.feed.api.annot.SyndicationElement;
+import org.onehippo.forge.feed.api.annot.SyndicationRefs;
+import org.onehippo.forge.feed.api.transform.CalendarToDateConverter;
+
 import java.util.Calendar;
 import java.util.List;
 
@@ -11,11 +16,14 @@ import java.util.List;
 @Node(jcrType = "govscot:News")
 public class News extends SimpleContent {
     @HippoEssentialsGenerated(internalName = "govscot:title")
+    @SyndicationRefs({@SyndicationElement(type = FeedType.RSS, name = "title")})
     public String getTitle() {
         return getProperty("govscot:title");
     }
 
     @HippoEssentialsGenerated(internalName = "govscot:summary")
+//    @SyndicationElement(type = FeedType.RSS, name = "description")
+    @SyndicationRefs({@SyndicationElement(type = FeedType.RSS, name = "description")})
     public String getSummary() {
         return getProperty("govscot:summary");
     }
@@ -46,11 +54,14 @@ public class News extends SimpleContent {
     }
 
     @HippoEssentialsGenerated(internalName = "govscot:publicationDate")
+    @SyndicationElement(type = FeedType.RSS, name = "pubDate", converter = CalendarToDateConverter.class)
     public Calendar getPublicationDate() {
         return getProperty("govscot:publicationDate");
     }
 
     @HippoEssentialsGenerated(internalName = "govscot:externalId")
+//    @SyndicationElement(type = FeedType.RSS, name = "guid")
+    @SyndicationRefs({@SyndicationElement(type = FeedType.RSS, name = "guid")})
     public String getExternalId() {
         return getProperty("govscot:externalId");
     }
@@ -96,4 +107,9 @@ public class News extends SimpleContent {
     }
 
     public String getLabel() { return "news"; }
+
+    @SyndicationElement(type = FeedType.RSS, name = "link")
+    public String getURL() {
+        return "https://www.gov.scot/news/".concat(getProperty("govscot:prglooslug"));
+    }
 }
