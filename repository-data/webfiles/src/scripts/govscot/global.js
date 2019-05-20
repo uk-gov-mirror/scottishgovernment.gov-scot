@@ -24,7 +24,7 @@ const global = {
 
             $('a[href^="#"]:not(.js-display-toggle)').on('click', function () {
                 window.setTimeout(function () {
-                    window.scrollTo(window.pageXOffset, window.pageYOffset - 100);
+                    window.scrollTo(window.pageXOffset, parseInt($(window.location.hash).offset().top, 10) - 100);
                 }, 10);
             });
         }

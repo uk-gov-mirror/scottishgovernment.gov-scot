@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    #TARGET
+    highlight for active page fragments
+\*------------------------------------*/
+
+
+
+
+:target {
+	background: $color__blue--lighter;
+	outline: 3px solid $color__blue--lighter;
+}

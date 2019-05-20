@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #LINKED NUMBERED LIST
+    e.g. footnotes in a publication
+\*------------------------------------*/
+
+
+
+
+.linked-numbered-list {
+    list-style-type: none;
+}
+
+.linked-numbered-list li:before {
+    content: none;
+}
+
+.linked-numbered-list__link {
+    position: absolute;
+    left: -40px;
+    font-weight: 500
+}
+
+.linked-numbered-list__link:before {
+    content: counter(li) ".";
+    counter-increment: li;
+}

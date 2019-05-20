@@ -75,8 +75,10 @@
                 <#if parameters['publicationTypes']??>
                     of type
                     <#list parameters['publicationTypes'] as nested>
-                        <b>${publicationTypes[nested]}</b>
-                        <#sep>or</#sep>
+                        <#if publicationTypes[nested]>
+                            <b>${publicationTypes[nested]}</b>
+                            <#sep>or</#sep>
+                        </#if>
                     </#list>
                 </#if>
 

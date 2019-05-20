@@ -63,13 +63,14 @@ $base-h1-size: 35px; // 2.1875em;
 $base-h2-size: 22px; // 1.375em;
 $base-h3-size: 18px; // 1.125em;
 $base-h4-size: 15px; // 0.9375em
+$base-h5-size: $base-h4-size;
 $medium-font-size: 18px;
 //$medium-milli-size: 16px;
 $medium-h1-size: 56px;
 $medium-h2-size: 28px;
 $medium-h3-size: 21px;
 $medium-h4-size: $medium-font-size - 1;
-$medium-h5-size: 14px;
+$medium-h5-size: $medium-h4-size;
 $large-h2-size: 32px;
 @import "../../node_modules/@scottish-government/mygov-assets/scss/settings/settings.type";
 
@@ -125,6 +126,7 @@ $external-link__excluded-sites: ('.gov.scot', '.scotland.gov.uk');
 @import "../../node_modules/@scottish-government/mygov-assets/scss/base/base.rules";
 $table__border-color--header: $color__grey--light;
 @import "../../node_modules/@scottish-government/mygov-assets/scss/base/base.tables";
+@import "base/base.targeted";
 @import "base/base.type";
 
 
@@ -205,6 +207,7 @@ $expandable__title-size: 16px;
 @import "components/component.issue-callout";
 @import "components/component.issue-sidebar-block";
 @import "components/component.item-link";
+@import "components/component.linked-numbered-list";
 @import "components/component.list-controls";
 @import "components/component.listed-content-item";
 @import "components/component.main-nav";
