@@ -20,6 +20,7 @@ publicationPage.init = function() {
     this.initAsyncNavigation();
     this.initStickyInfoInteractivity();
     this.initSidebarHeight();
+    this.initFootnotes();
     displayToggle.init();
     pgroup = pageGroup.init();
 };
@@ -54,6 +55,34 @@ publicationPage.setSidebarHeight = function () {
     }
 
     publicationBody.css({minHeight: targetHeight});
+};
+
+publicationPage.initFootnotes = function () {
+
+
+
+function foo() {
+
+    const list = document.querySelector('li[id^=footnote-]').parentNode;
+
+    // if (list.classList.contains('linked-numbered-list')) {
+    //     return;
+    // }
+
+    list.classList.add('linked-numbered-list');
+
+    const listItems = list.querySelectorAll('li');
+    listItems.forEach(function (listItem, index) {
+        const link = document.createElement('a');
+        link.classList.add('linked-numbered-list__link');
+        link.innerHTML = `<span class="hidden">Go to footnote ${index}</span>`;
+        const page = listItem.dataset.page;
+        link.href = `${window.location.href.substring(0, window.location.href.indexOf(/pages/))}/pages/${page}/#${listItem.id}`;
+        listItem.insertBefore(link, listItem.firstChild);
+    });
+}
+
+foo();
 };
 
 publicationPage.initStickyInfoInteractivity = function() {
@@ -246,6 +275,8 @@ publicationPage.loadSubPageHtml = function (url, updateHistory) {
                     'pageTitle': 'updated page title'
                 },'', url);
             }
+
+            publicationPage.initFootnotes();
         })
         .fail(function () {
             deferred.reject();
