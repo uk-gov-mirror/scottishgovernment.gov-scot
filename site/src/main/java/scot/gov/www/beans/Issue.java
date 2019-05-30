@@ -46,11 +46,6 @@ public class Issue extends SimpleContent {
         return getProperty("govscot:showOnTopicsLandingPage");
     }
 
-    @HippoEssentialsGenerated(internalName = "govscot:issueTag")
-    public String getIssueTag() {
-        return getProperty("govscot:issueTag");
-    }
-
     @HippoEssentialsGenerated(internalName = "govscot:featureDateSummary")
     public String getFeatureDateSummary() {
         return getProperty("govscot:featureDateSummary");

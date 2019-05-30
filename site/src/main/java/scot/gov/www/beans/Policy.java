@@ -60,11 +60,6 @@ public class Policy extends AttributableContent {
         return getHippoHtml("govscot:actions");
     }
 
-    @HippoEssentialsGenerated(internalName = "govscot:policyTags")
-    public String[] getPolicyTags() {
-        return getProperty("govscot:policyTags");
-    }
-
     @HippoEssentialsGenerated(internalName = "govscot:relatedItems")
     public List<HippoBean> getRelatedItems() {
         return getLinkedBeans("govscot:relatedItems", HippoBean.class);

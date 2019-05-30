@@ -479,6 +479,7 @@ definitions:
             selectlist.maxrows: '8'
             valuelist.provider: service.valuelist.default
             wicket.id: ${cluster.id}.field
+            hint: Select the tags associated with this issue
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/govscot/valuelists/topicTags
