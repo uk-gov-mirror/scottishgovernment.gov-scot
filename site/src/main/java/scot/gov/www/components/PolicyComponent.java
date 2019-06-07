@@ -122,7 +122,7 @@ public class PolicyComponent extends BaseHstComponent {
     private Constraint[] tagConstraints(Policy policy) {
         ArrayList<Constraint> tagConstraints = new ArrayList<>();
         for (String tag : policy.getNewsTags()) {
-            tagConstraints.add(constraint("govscot:newsTags").equalToCaseInsensitive(tag));
+            tagConstraints.add(constraint("govscot:policyTags").equalToCaseInsensitive(tag));
         }
         return tagConstraints.toArray(new Constraint[tagConstraints.size()]);
     }
