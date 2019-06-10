@@ -1,5 +1,6 @@
 package scot.gov.www;
 
+import org.onehippo.cms7.services.eventbus.HippoEventListenerRegistry;
 import scot.gov.www.exif.Exif;
 import scot.gov.www.thumbnails.FileType;
 import scot.gov.www.thumbnails.ThumbnailsProvider;
@@ -40,12 +41,12 @@ public class ThumbnailsDaemonModule implements DaemonModule {
     @Override
     public void initialize(final Session session) throws RepositoryException {
         this.session = session;
-        HippoServiceRegistry.registerService(this, HippoEventBus.class);
+        HippoEventListenerRegistry.get().register(this);
     }
 
     @Override
     public void shutdown() {
-        HippoServiceRegistry.unregisterService(this, HippoEventBus.class);
+        HippoEventListenerRegistry.get().unregister(this);
     }
 
     @Subscribe

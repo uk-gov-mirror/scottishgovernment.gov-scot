@@ -65,6 +65,12 @@ definitions:
                   hst:ismapped: false
                   hst:namedpipeline: JaxrsRestPlainPipeline
                   hst:types: [rest]
+            /cms:
+                jcr:primaryType: hst:virtualhost
+                /hst:root:
+                  jcr:primaryType: hst:mount
+                  hst:ismapped: false
+                  hst:namedpipeline: WebApplicationInvokingPipeline
       /blu:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: 5caac298-8d0c-428e-871d-19485e750b9e

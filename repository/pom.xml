@@ -21,7 +21,7 @@
 
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
-      <artifactId>hippo-package-app-dependencies</artifactId>
+      <artifactId>hippo-package-site-dependencies</artifactId>
       <type>pom</type>
       <exclusions>
         <exclusion>

@@ -2,6 +2,7 @@ package scot.gov.www;
 
 import org.onehippo.cms7.services.HippoServiceRegistry;
 import org.onehippo.cms7.services.eventbus.HippoEventBus;
+import org.onehippo.cms7.services.eventbus.HippoEventListenerRegistry;
 import org.onehippo.cms7.services.eventbus.Subscribe;
 import org.onehippo.repository.events.HippoWorkflowEvent;
 import org.onehippo.repository.modules.DaemonModule;
@@ -41,12 +42,12 @@ public class PublicationTypeDaemonModule implements DaemonModule {
     @Override
     public void initialize(Session session) throws RepositoryException {
         this.session = session;
-        HippoServiceRegistry.registerService(this, HippoEventBus.class);
+        HippoEventListenerRegistry.get().register(this);
     }
 
     @Override
     public void shutdown() {
-        HippoServiceRegistry.unregisterService(this, HippoEventBus.class);
+        HippoEventListenerRegistry.get().unregister(this);
     }
 
     @Subscribe
