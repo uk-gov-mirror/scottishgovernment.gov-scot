@@ -4,12 +4,10 @@ definitions:
       jcr:primaryType: hst:virtualhosts
       jcr:uuid: 939ceba7-dcb1-4e91-8065-2cb682252934
       hst:cacheable: true
-      hst:defaultcontextpath: /site
       hst:locale: en_GB
       /dev-localhost:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: 906a7602-5e7a-40b7-b8dc-f49fa705022f
-        hst:cmslocation: http://localhost:8080/cms
         hst:defaultport: 8080
         /localhost:
           jcr:primaryType: hst:virtualhost
@@ -30,7 +28,6 @@ definitions:
       /www:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: d33f10c9-a0fd-441c-a69e-e01854859852
-        hst:cmslocation: https://publishing.gov.scot
         /scot:
           jcr:primaryType: hst:virtualhost
           jcr:uuid: 5c095b27-16e2-4f45-a39d-3bae34f4b3de
@@ -65,16 +62,18 @@ definitions:
                   hst:ismapped: false
                   hst:namedpipeline: JaxrsRestPlainPipeline
                   hst:types: [rest]
-            /cms:
-                jcr:primaryType: hst:virtualhost
-                /hst:root:
-                  jcr:primaryType: hst:mount
-                  hst:ismapped: false
-                  hst:namedpipeline: WebApplicationInvokingPipeline
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /hst:root:
+                jcr:primaryType: hst:mount
+                hst:ismapped: false
+                hst:namedpipeline: WebApplicationInvokingPipeline
+                hst:scheme: https
+                hst:showcontextpath: false
+                hst:showport: false
       /blu:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: 5caac298-8d0c-428e-871d-19485e750b9e
-        hst:cmslocation: https://blu.publishing.gov.scot
         /scot:
           jcr:primaryType: hst:virtualhost
           jcr:uuid: 905d6ada-423b-4237-b301-a3fd724e0b09
@@ -115,10 +114,18 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /hst:root:
+                jcr:primaryType: hst:mount
+                hst:ismapped: false
+                hst:namedpipeline: WebApplicationInvokingPipeline
+                hst:scheme: https
+                hst:showcontextpath: false
+                hst:showport: false
       /dev:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: f7b6c86f-9563-425f-8ee4-7178e2f9bb88
-        hst:cmslocation: https://dev.publishing.gov.scot
         /scot:
           jcr:primaryType: hst:virtualhost
           jcr:uuid: 24a87058-8bbb-4d0a-b14e-d7a85de9c0bd
@@ -159,10 +166,18 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /hst:root:
+                jcr:primaryType: hst:mount
+                hst:ismapped: false
+                hst:namedpipeline: WebApplicationInvokingPipeline
+                hst:scheme: https
+                hst:showcontextpath: false
+                hst:showport: false
       /exp:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: ffe7fea6-a812-43da-ad2d-42696cb231ef
-        hst:cmslocation: https://exp.publishing.gov.scot
         /scot:
           jcr:primaryType: hst:virtualhost
           jcr:uuid: b5323a7b-2bbb-45a2-bbec-02c8117473e4
@@ -203,10 +218,18 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /hst:root:
+                jcr:primaryType: hst:mount
+                hst:ismapped: false
+                hst:namedpipeline: WebApplicationInvokingPipeline
+                hst:scheme: https
+                hst:showcontextpath: false
+                hst:showport: false
       /grn:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: 89ec4560-1b8e-44cc-91b5-22a688900f43
-        hst:cmslocation: https://grn.publishing.gov.scot
         /scot:
           jcr:primaryType: hst:virtualhost
           jcr:uuid: fc1a0f0b-7afa-41e9-8654-6adf3f7814d9
@@ -247,10 +270,18 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /hst:root:
+                jcr:primaryType: hst:mount
+                hst:ismapped: false
+                hst:namedpipeline: WebApplicationInvokingPipeline
+                hst:scheme: https
+                hst:showcontextpath: false
+                hst:showport: false
       /int:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: 0521f988-3aac-4cb6-a7ea-7a9aa57be9cc
-        hst:cmslocation: https://int.publishing.gov.scot
         /scot:
           jcr:primaryType: hst:virtualhost
           jcr:uuid: 010521a3-f126-4b25-9f5a-fc10c5b3333d
@@ -291,10 +322,18 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /hst:root:
+                jcr:primaryType: hst:mount
+                hst:ismapped: false
+                hst:namedpipeline: WebApplicationInvokingPipeline
+                hst:scheme: https
+                hst:showcontextpath: false
+                hst:showport: false
       /lcl:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: 544c5ec1-ab0a-4679-97c3-f31733622081
-        hst:cmslocation: https://lcl.publishing.gov.scot
         /scot:
           jcr:primaryType: hst:virtualhost
           jcr:uuid: 009b714f-86ca-4410-b85b-ea24b9f2206d
@@ -335,10 +374,18 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /hst:root:
+                jcr:primaryType: hst:mount
+                hst:ismapped: false
+                hst:namedpipeline: WebApplicationInvokingPipeline
+                hst:scheme: https
+                hst:showcontextpath: false
+                hst:showport: false
       /per:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: da91618e-3baf-4b3a-a626-5d6c8cf19ac3
-        hst:cmslocation: https://per.publishing.gov.scot
         /scot:
           jcr:primaryType: hst:virtualhost
           jcr:uuid: 36051d8d-9400-40e7-a27b-17e0a592d5a4
@@ -379,10 +426,18 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /hst:root:
+                jcr:primaryType: hst:mount
+                hst:ismapped: false
+                hst:namedpipeline: WebApplicationInvokingPipeline
+                hst:scheme: https
+                hst:showcontextpath: false
+                hst:showport: false
       /tst:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: 3ae553dc-bdfa-4031-b000-1ba35c40252d
-        hst:cmslocation: https://tst.publishing.gov.scot
         /scot:
           jcr:primaryType: hst:virtualhost
           jcr:uuid: 231932f4-d5dc-45ce-a4ed-e140dff52317
@@ -423,10 +478,18 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /hst:root:
+                jcr:primaryType: hst:mount
+                hst:ismapped: false
+                hst:namedpipeline: WebApplicationInvokingPipeline
+                hst:scheme: https
+                hst:showcontextpath: false
+                hst:showport: false
       /uat:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: abdd297c-3e6b-45e1-8a2a-cee80c6fd01d
-        hst:cmslocation: https://uat.publishing.gov.scot
         /scot:
           jcr:primaryType: hst:virtualhost
           jcr:uuid: cd0aa18a-a928-45ba-97ff-371fe565c340
@@ -467,3 +530,12 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /hst:root:
+                jcr:primaryType: hst:mount
+                hst:ismapped: false
+                hst:namedpipeline: WebApplicationInvokingPipeline
+                hst:scheme: https
+                hst:showcontextpath: false
+                hst:showport: false
