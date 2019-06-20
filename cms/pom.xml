@@ -23,6 +23,12 @@
 
   <dependencies>
 
+    <!--
+        "In case your platform web application does not include the CMS,
+        replace hippo-package-cms-dependencies with hippo-package-platform-dependencies."
+
+        If this is replaced by platform dependencies, many imports are missing (e.g. wicket).
+    -->
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-package-cms-dependencies</artifactId>
@@ -118,6 +124,19 @@
   <build>
 
     <finalName>cms</finalName>
+
+    <!--
+        Isn't listed as necessary, but read posts from people saying
+        the properties file isn't recognised - might this help?
+    -->
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+    </resources>
 
     <plugins>
 

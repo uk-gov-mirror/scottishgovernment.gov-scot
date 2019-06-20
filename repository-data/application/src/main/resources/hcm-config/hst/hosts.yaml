@@ -18,6 +18,8 @@ definitions:
             jcr:uuid: b284f3b2-400c-48bb-851b-84c1808848c8
             hst:homepage: root
             hst:mountpoint: /hst:hst/hst:sites/govscot
+            hst:ismapped: false
+            hst:namedpipeline: WebApplicationInvokingPipeline
             /rest:
               jcr:primaryType: hst:mount
               jcr:uuid: 846ae82f-1007-4d8c-926d-30d9e12f4a46
@@ -62,15 +64,6 @@ definitions:
                   hst:ismapped: false
                   hst:namedpipeline: JaxrsRestPlainPipeline
                   hst:types: [rest]
-            /publishing:
-              jcr:primaryType: hst:virtualhost
-              /hst:root:
-                jcr:primaryType: hst:mount
-                hst:ismapped: false
-                hst:namedpipeline: WebApplicationInvokingPipeline
-                hst:scheme: https
-                hst:showcontextpath: false
-                hst:showport: false
       /blu:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: 5caac298-8d0c-428e-871d-19485e750b9e
@@ -114,15 +107,6 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
-            /publishing:
-              jcr:primaryType: hst:virtualhost
-              /hst:root:
-                jcr:primaryType: hst:mount
-                hst:ismapped: false
-                hst:namedpipeline: WebApplicationInvokingPipeline
-                hst:scheme: https
-                hst:showcontextpath: false
-                hst:showport: false
       /dev:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: f7b6c86f-9563-425f-8ee4-7178e2f9bb88
@@ -166,15 +150,6 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
-            /publishing:
-              jcr:primaryType: hst:virtualhost
-              /hst:root:
-                jcr:primaryType: hst:mount
-                hst:ismapped: false
-                hst:namedpipeline: WebApplicationInvokingPipeline
-                hst:scheme: https
-                hst:showcontextpath: false
-                hst:showport: false
       /exp:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: ffe7fea6-a812-43da-ad2d-42696cb231ef
@@ -218,15 +193,6 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
-            /publishing:
-              jcr:primaryType: hst:virtualhost
-              /hst:root:
-                jcr:primaryType: hst:mount
-                hst:ismapped: false
-                hst:namedpipeline: WebApplicationInvokingPipeline
-                hst:scheme: https
-                hst:showcontextpath: false
-                hst:showport: false
       /grn:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: 89ec4560-1b8e-44cc-91b5-22a688900f43
@@ -270,15 +236,6 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
-            /publishing:
-              jcr:primaryType: hst:virtualhost
-              /hst:root:
-                jcr:primaryType: hst:mount
-                hst:ismapped: false
-                hst:namedpipeline: WebApplicationInvokingPipeline
-                hst:scheme: https
-                hst:showcontextpath: false
-                hst:showport: false
       /int:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: 0521f988-3aac-4cb6-a7ea-7a9aa57be9cc
@@ -322,15 +279,6 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
-            /publishing:
-              jcr:primaryType: hst:virtualhost
-              /hst:root:
-                jcr:primaryType: hst:mount
-                hst:ismapped: false
-                hst:namedpipeline: WebApplicationInvokingPipeline
-                hst:scheme: https
-                hst:showcontextpath: false
-                hst:showport: false
       /lcl:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: 544c5ec1-ab0a-4679-97c3-f31733622081
@@ -374,15 +322,6 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
-            /publishing:
-              jcr:primaryType: hst:virtualhost
-              /hst:root:
-                jcr:primaryType: hst:mount
-                hst:ismapped: false
-                hst:namedpipeline: WebApplicationInvokingPipeline
-                hst:scheme: https
-                hst:showcontextpath: false
-                hst:showport: false
       /per:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: da91618e-3baf-4b3a-a626-5d6c8cf19ac3
@@ -426,15 +365,6 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
-            /publishing:
-              jcr:primaryType: hst:virtualhost
-              /hst:root:
-                jcr:primaryType: hst:mount
-                hst:ismapped: false
-                hst:namedpipeline: WebApplicationInvokingPipeline
-                hst:scheme: https
-                hst:showcontextpath: false
-                hst:showport: false
       /tst:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: 3ae553dc-bdfa-4031-b000-1ba35c40252d
@@ -478,15 +408,6 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
-            /publishing:
-              jcr:primaryType: hst:virtualhost
-              /hst:root:
-                jcr:primaryType: hst:mount
-                hst:ismapped: false
-                hst:namedpipeline: WebApplicationInvokingPipeline
-                hst:scheme: https
-                hst:showcontextpath: false
-                hst:showport: false
       /uat:
         jcr:primaryType: hst:virtualhostgroup
         jcr:uuid: abdd297c-3e6b-45e1-8a2a-cee80c6fd01d
@@ -530,12 +451,173 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
+    /hst:platform/hst-hosts/www:
+      jcr:primaryType: hst:virtualhostgroup
+      /scot:
+        jcr:primaryType: hst:virtualhost
+        hst:scheme: https
+        hst:showport: false
+        hst:showcontextpath: false
+        /gov:
+          jcr:primaryType: hst:virtualhost
+          /publishing:
+            jcr:primaryType: hst:virtualhost
+            /www:
+              jcr:primaryType: hst:virtualhost
+                /hst:root:
+                  jcr:primaryType: hst:mount
+                  hst:ismapped: false
+                  hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst-hosts/blu:
+        jcr:primaryType: hst:virtualhostgroup
+        /scot:
+          jcr:primaryType: hst:virtualhost
+          hst:scheme: https
+          hst:showport: false
+          hst:showcontextpath: false
+          /gov:
+            jcr:primaryType: hst:virtualhost
             /publishing:
               jcr:primaryType: hst:virtualhost
-              /hst:root:
-                jcr:primaryType: hst:mount
-                hst:ismapped: false
-                hst:namedpipeline: WebApplicationInvokingPipeline
-                hst:scheme: https
-                hst:showcontextpath: false
-                hst:showport: false
+              /blu:
+                jcr:primaryType: hst:virtualhost
+                  /hst:root:
+                    jcr:primaryType: hst:mount
+                    hst:ismapped: false
+                    hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst-hosts/dev:
+        jcr:primaryType: hst:virtualhostgroup
+        /scot:
+          jcr:primaryType: hst:virtualhost
+          hst:scheme: https
+          hst:showport: false
+          hst:showcontextpath: false
+          /gov:
+            jcr:primaryType: hst:virtualhost
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /dev:
+                jcr:primaryType: hst:virtualhost
+                  /hst:root:
+                    jcr:primaryType: hst:mount
+                    hst:ismapped: false
+                    hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst-hosts/exp:
+        jcr:primaryType: hst:virtualhostgroup
+        /scot:
+          jcr:primaryType: hst:virtualhost
+          hst:scheme: https
+          hst:showport: false
+          hst:showcontextpath: false
+          /gov:
+            jcr:primaryType: hst:virtualhost
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /exp:
+                jcr:primaryType: hst:virtualhost
+                  /hst:root:
+                    jcr:primaryType: hst:mount
+                    hst:ismapped: false
+                    hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst-hosts/grn:
+        jcr:primaryType: hst:virtualhostgroup
+        /scot:
+          jcr:primaryType: hst:virtualhost
+          hst:scheme: https
+          hst:showport: false
+          hst:showcontextpath: false
+          /gov:
+            jcr:primaryType: hst:virtualhost
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /grn:
+                jcr:primaryType: hst:virtualhost
+                  /hst:root:
+                    jcr:primaryType: hst:mount
+                    hst:ismapped: false
+                    hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst-hosts/int:
+        jcr:primaryType: hst:virtualhostgroup
+        /scot:
+          jcr:primaryType: hst:virtualhost
+          hst:scheme: https
+          hst:showport: false
+          hst:showcontextpath: false
+          /gov:
+            jcr:primaryType: hst:virtualhost
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /int:
+                jcr:primaryType: hst:virtualhost
+                  /hst:root:
+                    jcr:primaryType: hst:mount
+                    hst:ismapped: false
+                    hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst-hosts/lcl:
+        jcr:primaryType: hst:virtualhostgroup
+        /scot:
+          jcr:primaryType: hst:virtualhost
+          hst:scheme: https
+          hst:showport: false
+          hst:showcontextpath: false
+          /gov:
+            jcr:primaryType: hst:virtualhost
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /lcl:
+                jcr:primaryType: hst:virtualhost
+                  /hst:root:
+                    jcr:primaryType: hst:mount
+                    hst:ismapped: false
+                    hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst-hosts/per:
+        jcr:primaryType: hst:virtualhostgroup
+        /scot:
+          jcr:primaryType: hst:virtualhost
+          hst:scheme: https
+          hst:showport: false
+          hst:showcontextpath: false
+          /gov:
+            jcr:primaryType: hst:virtualhost
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /per:
+                jcr:primaryType: hst:virtualhost
+                  /hst:root:
+                    jcr:primaryType: hst:mount
+                    hst:ismapped: false
+                    hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst-hosts/tst:
+        jcr:primaryType: hst:virtualhostgroup
+        /scot:
+          jcr:primaryType: hst:virtualhost
+          hst:scheme: https
+          hst:showport: false
+          hst:showcontextpath: false
+          /gov:
+            jcr:primaryType: hst:virtualhost
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /tst:
+                jcr:primaryType: hst:virtualhost
+                  /hst:root:
+                    jcr:primaryType: hst:mount
+                    hst:ismapped: false
+                    hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst-hosts/uat:
+        jcr:primaryType: hst:virtualhostgroup
+        /scot:
+          jcr:primaryType: hst:virtualhost
+          hst:scheme: https
+          hst:showport: false
+          hst:showcontextpath: false
+          /gov:
+            jcr:primaryType: hst:virtualhost
+            /publishing:
+              jcr:primaryType: hst:virtualhost
+              /uat:
+                jcr:primaryType: hst:virtualhost
+                  /hst:root:
+                    jcr:primaryType: hst:mount
+                    hst:ismapped: false
+                    hst:namedpipeline: WebApplicationInvokingPipeline
