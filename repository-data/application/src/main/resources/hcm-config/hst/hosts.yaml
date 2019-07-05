@@ -451,7 +451,7 @@ definitions:
                     hst:ismapped: false
                     hst:namedpipeline: JaxrsRestPlainPipeline
                     hst:types: [rest]
-    /hst:platform/hst-hosts/www:
+    /hst:platform/hst:hosts/www:
       jcr:primaryType: hst:virtualhostgroup
       /scot:
         jcr:primaryType: hst:virtualhost
@@ -464,11 +464,11 @@ definitions:
             jcr:primaryType: hst:virtualhost
             /www:
               jcr:primaryType: hst:virtualhost
-                /hst:root:
-                  jcr:primaryType: hst:mount
-                  hst:ismapped: false
-                  hst:namedpipeline: WebApplicationInvokingPipeline
-    /hst:platform/hst-hosts/blu:
+              /hst:root:
+                jcr:primaryType: hst:mount
+                hst:ismapped: false
+                hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst:hosts/blu:
         jcr:primaryType: hst:virtualhostgroup
         /scot:
           jcr:primaryType: hst:virtualhost
@@ -481,11 +481,11 @@ definitions:
               jcr:primaryType: hst:virtualhost
               /blu:
                 jcr:primaryType: hst:virtualhost
-                  /hst:root:
-                    jcr:primaryType: hst:mount
-                    hst:ismapped: false
-                    hst:namedpipeline: WebApplicationInvokingPipeline
-    /hst:platform/hst-hosts/dev:
+                /hst:root:
+                  jcr:primaryType: hst:mount
+                  hst:ismapped: false
+                  hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst:hosts/dev:
         jcr:primaryType: hst:virtualhostgroup
         /scot:
           jcr:primaryType: hst:virtualhost
@@ -498,11 +498,11 @@ definitions:
               jcr:primaryType: hst:virtualhost
               /dev:
                 jcr:primaryType: hst:virtualhost
-                  /hst:root:
-                    jcr:primaryType: hst:mount
-                    hst:ismapped: false
-                    hst:namedpipeline: WebApplicationInvokingPipeline
-    /hst:platform/hst-hosts/exp:
+                /hst:root:
+                  jcr:primaryType: hst:mount
+                  hst:ismapped: false
+                  hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst:hosts/exp:
         jcr:primaryType: hst:virtualhostgroup
         /scot:
           jcr:primaryType: hst:virtualhost
@@ -515,11 +515,11 @@ definitions:
               jcr:primaryType: hst:virtualhost
               /exp:
                 jcr:primaryType: hst:virtualhost
-                  /hst:root:
-                    jcr:primaryType: hst:mount
-                    hst:ismapped: false
-                    hst:namedpipeline: WebApplicationInvokingPipeline
-    /hst:platform/hst-hosts/grn:
+                /hst:root:
+                  jcr:primaryType: hst:mount
+                  hst:ismapped: false
+                  hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst:hosts/grn:
         jcr:primaryType: hst:virtualhostgroup
         /scot:
           jcr:primaryType: hst:virtualhost
@@ -532,11 +532,11 @@ definitions:
               jcr:primaryType: hst:virtualhost
               /grn:
                 jcr:primaryType: hst:virtualhost
-                  /hst:root:
-                    jcr:primaryType: hst:mount
-                    hst:ismapped: false
-                    hst:namedpipeline: WebApplicationInvokingPipeline
-    /hst:platform/hst-hosts/int:
+                /hst:root:
+                  jcr:primaryType: hst:mount
+                  hst:ismapped: false
+                  hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst:hosts/int:
         jcr:primaryType: hst:virtualhostgroup
         /scot:
           jcr:primaryType: hst:virtualhost
@@ -549,11 +549,11 @@ definitions:
               jcr:primaryType: hst:virtualhost
               /int:
                 jcr:primaryType: hst:virtualhost
-                  /hst:root:
-                    jcr:primaryType: hst:mount
-                    hst:ismapped: false
-                    hst:namedpipeline: WebApplicationInvokingPipeline
-    /hst:platform/hst-hosts/lcl:
+                /hst:root:
+                  jcr:primaryType: hst:mount
+                  hst:ismapped: false
+                  hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst:hosts/lcl:
         jcr:primaryType: hst:virtualhostgroup
         /scot:
           jcr:primaryType: hst:virtualhost
@@ -566,11 +566,11 @@ definitions:
               jcr:primaryType: hst:virtualhost
               /lcl:
                 jcr:primaryType: hst:virtualhost
-                  /hst:root:
-                    jcr:primaryType: hst:mount
-                    hst:ismapped: false
-                    hst:namedpipeline: WebApplicationInvokingPipeline
-    /hst:platform/hst-hosts/per:
+                /hst:root:
+                  jcr:primaryType: hst:mount
+                  hst:ismapped: false
+                  hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst:hosts/per:
         jcr:primaryType: hst:virtualhostgroup
         /scot:
           jcr:primaryType: hst:virtualhost
@@ -583,11 +583,11 @@ definitions:
               jcr:primaryType: hst:virtualhost
               /per:
                 jcr:primaryType: hst:virtualhost
-                  /hst:root:
-                    jcr:primaryType: hst:mount
-                    hst:ismapped: false
-                    hst:namedpipeline: WebApplicationInvokingPipeline
-    /hst:platform/hst-hosts/tst:
+                /hst:root:
+                  jcr:primaryType: hst:mount
+                  hst:ismapped: false
+                  hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst:hosts/tst:
         jcr:primaryType: hst:virtualhostgroup
         /scot:
           jcr:primaryType: hst:virtualhost
@@ -600,11 +600,11 @@ definitions:
               jcr:primaryType: hst:virtualhost
               /tst:
                 jcr:primaryType: hst:virtualhost
-                  /hst:root:
-                    jcr:primaryType: hst:mount
-                    hst:ismapped: false
-                    hst:namedpipeline: WebApplicationInvokingPipeline
-    /hst:platform/hst-hosts/uat:
+                /hst:root:
+                  jcr:primaryType: hst:mount
+                  hst:ismapped: false
+                  hst:namedpipeline: WebApplicationInvokingPipeline
+    /hst:platform/hst:hosts/uat:
         jcr:primaryType: hst:virtualhostgroup
         /scot:
           jcr:primaryType: hst:virtualhost
@@ -617,7 +617,7 @@ definitions:
               jcr:primaryType: hst:virtualhost
               /uat:
                 jcr:primaryType: hst:virtualhost
-                  /hst:root:
-                    jcr:primaryType: hst:mount
-                    hst:ismapped: false
-                    hst:namedpipeline: WebApplicationInvokingPipeline
+                /hst:root:
+                  jcr:primaryType: hst:mount
+                  hst:ismapped: false
+                  hst:namedpipeline: WebApplicationInvokingPipeline

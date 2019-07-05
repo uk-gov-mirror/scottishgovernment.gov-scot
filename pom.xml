@@ -88,6 +88,11 @@
     </dependency>
 
     <dependency>
+      <groupId>org.onehippo.cms7.hst</groupId>
+      <artifactId>hst-api</artifactId>
+    </dependency>
+
+    <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jta_1.1_spec</artifactId>
     </dependency>
@@ -100,6 +105,12 @@
     <dependency>
       <groupId>javax.mail</groupId>
       <artifactId>mail</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <!--<scope>provided</scope>-->
     </dependency>
 
   </dependencies>
@@ -493,6 +504,11 @@
                   <dependency>
                     <groupId>org.onehippo.cms7</groupId>
                     <artifactId>hippo-repository-builtin</artifactId>
+                    <classpath>shared</classpath>
+                  </dependency>
+                  <dependency>
+                    <groupId>org.onehippo.cms7.hst</groupId>
+                    <artifactId>hst-api</artifactId>
                     <classpath>shared</classpath>
                   </dependency>
                 </dependencies>
