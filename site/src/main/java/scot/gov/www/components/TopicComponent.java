@@ -4,6 +4,7 @@ import org.hippoecm.hst.component.support.bean.BaseHstComponent;
 
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.HstQueryResult;
+import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.query.filter.BaseFilter;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
@@ -16,6 +17,8 @@ import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.util.ContentBeanUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import aj.org.objectweb.asm.Type;
 import scot.gov.www.beans.*;
 
 import java.io.IOException;
@@ -32,22 +35,23 @@ public class TopicComponent extends BaseHstComponent {
 
     private static final String PUBLICATIONTYPE = "govscot:publicationType";
 
+    private String[] types;
+
     @Override
-    public void doBeforeRender(final HstRequest request,
-                               final HstResponse response) {
+    public void doBeforeRender(final HstRequest request, final HstResponse response) {
         HstRequestContext context = request.getRequestContext();
         HippoBean base = context.getSiteContentBaseBean();
         Topic topic;
 
         try {
             topic = context.getContentBean(Topic.class);
-            if(topic == null) {
+            if (topic == null) {
                 response.setStatus(404);
                 response.forward("/pagenotfound");
                 return;
             }
             request.setAttribute("document", topic);
-        }  catch (IOException e) {
+        } catch (IOException e) {
             throw new HstComponentException("forward failed", e);
         }
 
@@ -55,15 +59,13 @@ public class TopicComponent extends BaseHstComponent {
         populateNews(base, topic, request);
         populateConsultations(base, topic, request);
         populatePublications(base, topic, request);
+        populateStatsAndResearch(base, topic, request);
+
     }
 
     private void populatePoliciesAndDirectorates(HippoBean base, Topic topic, HstRequest request) {
         try {
-            HstQuery query = ContentBeanUtils.createIncomingBeansQuery(
-                    topic,
-                    base,
-                    "*/@hippo:docbase",
-                    Policy.class,
+            HstQuery query = ContentBeanUtils.createIncomingBeansQuery(topic, base, "*/@hippo:docbase", Policy.class,
                     false);
             query.addOrderByAscending("govscot:title");
             HippoBeanIterator policies = executeQueryLoggingException(query, request, "policies");
@@ -74,12 +76,14 @@ public class TopicComponent extends BaseHstComponent {
     }
 
     private void populateDirectorates(HippoBeanIterator policies, HstRequest request) {
-        // populate the directorates responsible for policies into a map - this will remove any duplicates
+        // populate the directorates responsible for policies into a map - this will
+        // remove any duplicates
         Map<String, HippoBean> directoratesById = new HashMap<>();
         while (policies.hasNext()) {
             Policy policy = (Policy) policies.nextHippoBean();
             if (policy.getResponsibleDirectorate() != null) {
-                directoratesById.put(policy.getResponsibleDirectorate().getIdentifier(), policy.getResponsibleDirectorate());
+                directoratesById.put(policy.getResponsibleDirectorate().getIdentifier(),
+                        policy.getResponsibleDirectorate());
             }
             for (HippoBean directorate : policy.getSecondaryResponsibleDirectorate()) {
                 directoratesById.put(directorate.getIdentifier(), directorate);
@@ -87,10 +91,8 @@ public class TopicComponent extends BaseHstComponent {
         }
 
         // now add them to a list and sort them by name
-        List<HippoBean> directorates = directoratesById.values()
-                .stream()
-                .sorted(comparing(bean -> bean.getProperty("govscot:title")))
-                .collect(toList());
+        List<HippoBean> directorates = directoratesById.values().stream()
+                .sorted(comparing(bean -> bean.getProperty("govscot:title"))).collect(toList());
         request.setAttribute("directorates", directorates);
     }
 
@@ -143,6 +145,50 @@ public class TopicComponent extends BaseHstComponent {
         } catch (QueryException e) {
             LOG.error("Unable to get Publications for topic {}", topic.getPath(), e);
         }
+    }
+
+    private void populateStatsAndResearch(HippoBean base, Topic topic, HstRequest request) {
+
+        HstQuery query = topicLinkedBeansQuery(topic, base, Publication.class);
+        if (query == null) {
+            return;
+        }
+        try {
+            Filter typesFilter = equalsOneOfTheseTypesFilter(query, "statistics", "research-and-analysis");
+            BaseFilter topicFilter = query.getFilter();
+            query.setFilter(typesFilter);
+            typesFilter.addAndFilter(topicFilter);
+            executeQueryLoggingException(query, request, "statsAndResearch");
+        
+            } catch (QueryException e) {
+            
+                LOG.error("Unable to get Consultations for topic {}", topic.getPath(), e);
+            }
+
+        
+        /*            
+            Filter equalsOneOfTheseTypesFilter(HstQuery query, "statistics", "research-and-analysis") throws FilterException {
+
+                Filter typesFilter = query.createFilter(); 
+                
+                    for (String type : types) {
+                        Filter typeFiltler = query.createFilter();
+                            typeFiltler.addEqualTo(PUBLICATIONTYPE, type);
+                            typesFilter.addOrFilter(typesFilter);
+                }
+
+                return typesFilter;
+            }
+        */  
+        
+    }
+    
+
+    private void HstQuery(HstQuery query, String string, String string2) {
+    }
+
+    private Filter equalsOneOfTheseTypesFilter(HstQuery query, String string, String string2) {
+        return null;
     }
 
     private HstQuery topicLinkedBeansQuery(Topic topic, HippoBean base, Class linkedClass) {
