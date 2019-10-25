@@ -28,8 +28,12 @@ import java.util.Map;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
+import static org.hippoecm.hst.content.beans.query.builder.ConstraintBuilder.constraint;
+import static org.hippoecm.hst.content.beans.query.builder.ConstraintBuilder.or;
 
-public class TopicComponent extends BaseHstComponent {
+public class
+
+TopicComponent extends BaseHstComponent {
 
     private static final Logger LOG = LoggerFactory.getLogger(TopicComponent.class);
 
@@ -159,36 +163,23 @@ public class TopicComponent extends BaseHstComponent {
             query.setFilter(typesFilter);
             typesFilter.addAndFilter(topicFilter);
             executeQueryLoggingException(query, request, "statsAndResearch");
-        
-            } catch (QueryException e) {
-            
-                LOG.error("Unable to get Consultations for topic {}", topic.getPath(), e);
-            }
 
-        
-        /*            
-            Filter equalsOneOfTheseTypesFilter(HstQuery query, "statistics", "research-and-analysis") throws FilterException {
-
-                Filter typesFilter = query.createFilter(); 
-                
-                    for (String type : types) {
-                        Filter typeFiltler = query.createFilter();
-                            typeFiltler.addEqualTo(PUBLICATIONTYPE, type);
-                            typesFilter.addOrFilter(typesFilter);
-                }
-
-                return typesFilter;
-            }
-        */  
-        
-    }
-    
-
-    private void HstQuery(HstQuery query, String string, String string2) {
+        } catch (QueryException e) {
+            LOG.error("Unable to get Consultations for topic {}", topic.getPath(), e);
+        }
     }
 
-    private Filter equalsOneOfTheseTypesFilter(HstQuery query, String string, String string2) {
-        return null;
+    private Filter equalsOneOfTheseTypesFilter(HstQuery query, String ...types) throws FilterException {
+        Filter filter = query.createFilter();
+
+        Filter sub = query.createFilter();
+        for (String type : types) {
+            Filter typeFilter = query.createFilter();
+            typeFilter.addContains(PUBLICATIONTYPE, type);
+            sub.addOrFilter(typeFilter);
+        }
+        filter.addAndFilter(sub);
+        return filter;
     }
 
     private HstQuery topicLinkedBeansQuery(Topic topic, HippoBean base, Class linkedClass) {
