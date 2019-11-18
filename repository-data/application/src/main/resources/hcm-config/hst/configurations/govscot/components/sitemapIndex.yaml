@@ -1,0 +1,6 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/govscot/hst:components/sitemapIndex:
+      jcr:primaryType: hst:component
+      hst:componentclassname: scot.gov.www.sitemap3.SitemapIndexComponent
+      hst:template: sitemap.ftl

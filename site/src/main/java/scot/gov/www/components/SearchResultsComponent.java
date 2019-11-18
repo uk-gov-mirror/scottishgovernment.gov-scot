@@ -85,7 +85,7 @@ public class SearchResultsComponent extends EssentialsListComponent {
     }
 
     @Override
-    protected <T extends EssentialsListComponentInfo>
+    public <T extends EssentialsListComponentInfo>
     HstQuery buildQuery(final HstRequest request, final T paramInfo, final HippoBean scope) {
 
         final int pageSize = getPageSize(request, paramInfo);
