@@ -14,7 +14,6 @@ const Payment = {
     },
 
     init: function () {
-console.log("init");
         this.attachEventHandlers();
     },
 
@@ -22,7 +21,6 @@ console.log("init");
         const that = this;
         // validate on form submission
         $('#payment-form').on('submit', function (event) {
-            console.log("submitted!");
             event.preventDefault();
 
             // submit the payment request
@@ -50,7 +48,7 @@ console.log("init");
             window.location.href = data.paymentUrl;
 
         }, function(err, data) {
-            $('#error').text(data.error);
+            $('#error').text(err.responseJSON.error);
             $('#error').removeClass('hidden');
         });
     },
