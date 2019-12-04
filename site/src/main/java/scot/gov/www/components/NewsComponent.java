@@ -15,7 +15,6 @@ import org.onehippo.cms7.essentials.components.EssentialsContentComponent;
 import scot.gov.www.beans.News;
 import scot.gov.www.beans.Policy;
 
-import java.io.IOException;
 import java.util.*;
 
 import static java.util.stream.Collectors.*;
@@ -33,23 +32,10 @@ public class NewsComponent extends EssentialsContentComponent {
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        if (request.getRequestContext().getContentBean() == null) {
-            send404(response);
-            return;
-        }
         // find any policies that share a news tag with this news item.
         News news = (News) request.getRequestContext().getContentBean();
         HippoBean scope = request.getRequestContext().getSiteContentBaseBean();
         request.setAttribute("policies", policyNames(scope, news));
-    }
-
-    protected void send404(HstResponse response){
-        try {
-            response.setStatus(404);
-            response.forward("/pagenotfound");
-        }  catch (IOException e) {
-            throw new HstComponentException("Forward failed", e);
-        }
     }
 
     /**
