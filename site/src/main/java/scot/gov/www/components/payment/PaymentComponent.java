@@ -31,6 +31,7 @@ public class PaymentComponent extends BaseHstComponent {
         String[] parts = path.split("/");
         String result = parts[parts.length-1];
         LOG.info("Default locale is {}, available locales are {}",
+                Locale.getDefault(),
                 Arrays.stream(Locale.getAvailableLocales())
                         .map(Locale::toString)
                         .collect(Collectors.joining(", ")));
