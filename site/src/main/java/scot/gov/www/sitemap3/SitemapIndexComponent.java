@@ -49,8 +49,8 @@ public class SitemapIndexComponent extends BaseSitemapComponent {
         HstQuery query = allPagesQuery(request);
         HstQueryResult result = query.execute();
         SitemapIndex sitemapIndex = new SitemapIndex();
-        int sitemapCount = (result.getTotalSize() / MAX_SITEMAP_SIZE) + 1;
-        for (int i = 0; i < sitemapCount; i++) {
+        int count = (result.getTotalSize() / MAX_SITEMAP_SIZE) + 1;
+        for (int i = 0; i < count; i++) {
             sitemapIndex.getSitemap().add(tsitemap(request, i));
         }
         return sitemapIndex;
