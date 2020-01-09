@@ -47,7 +47,7 @@ public class SitemapComponent extends BaseSitemapComponent {
             LOG.info("Finished generating sitemap for {}, {} pages, took {} millis",
                     request.getPathInfo(), urlset.getUrls().size(), stopWatch.getTime());
         } catch (QueryException | RepositoryException e) {
-            LOG.error("Failed top generate sitemap", e);
+            LOG.error("Failed to generate sitemap", e);
             throw new HstComponentException(e);
         }
     }

@@ -50,7 +50,7 @@ public abstract class BaseSitemapComponent extends BaseHstComponent {
                 // exclude contents pages
                 propertyFalseIfPresent("govscot:contentsPage"),
 
-                // excelude those marked with exclude flag
+                // exclude those marked with exclude flag
                 propertyFalseIfPresent("govscot:excludeFromSearchIndex")
         );
     }
