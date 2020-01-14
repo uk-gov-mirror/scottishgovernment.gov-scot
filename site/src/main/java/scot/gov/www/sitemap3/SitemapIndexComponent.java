@@ -12,6 +12,7 @@ import org.onehippo.forge.sitemap.components.model.sitemapindex.TSitemap;
 import org.onehippo.forge.sitemap.generator.SitemapIndexGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import scot.gov.www.sitemap.BaseSitemapComponent;
 
 /**
  * Component that generates a sitemap index file for a site.

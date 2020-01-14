@@ -1,4 +1,4 @@
-package scot.gov.www.sitemap3;
+package scot.gov.www.sitemap;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.time.StopWatch;
@@ -31,7 +31,6 @@ import static org.apache.commons.lang.StringUtils.substringAfter;
 public class SitemapComponent extends BaseSitemapComponent {
 
     private static final Logger LOG = LoggerFactory.getLogger(SitemapComponent.class);
-
 
     @Override
     public void doBeforeRender(HstRequest request, HstResponse response) {

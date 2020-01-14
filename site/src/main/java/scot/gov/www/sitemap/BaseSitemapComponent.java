@@ -1,4 +1,4 @@
-package scot.gov.www.sitemap3;
+package scot.gov.www.sitemap;
 
 import org.hippoecm.hst.component.support.bean.BaseHstComponent;
 import org.hippoecm.hst.configuration.hosting.Mount;
