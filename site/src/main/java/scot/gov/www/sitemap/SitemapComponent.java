@@ -59,8 +59,13 @@ public class SitemapComponent extends BaseSitemapComponent {
     private HippoBeanIterator getPublishedNodesForRequest(HstRequest request) throws QueryException {
         int offset = getOffsetFromRequestPath(request.getPathInfo());
         HstQuery query = allPagesQuery(request, offset, MAX_SITEMAP_SIZE);
-        return  query.execute().getHippoBeans();
-    }
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start();
+
+        HippoBeanIterator it = query.execute().getHippoBeans();
+        LOG.info("query took {} millis", stopWatch.getTime());
+        return it;
+    }>
 
     private int getOffsetFromRequestPath(String path) {
         String stripped = StringUtils.substringBefore(substringAfter(path, "/sitemap_"), ".xml");
@@ -78,13 +83,15 @@ public class SitemapComponent extends BaseSitemapComponent {
         HstLinkCreator linkCreator = context.getHstLinkCreator();
         while (it.hasNext()) {
             HippoBean child = it.nextHippoBean();
-            String path = linkCreator.create(child, request.getRequestContext()).toUrlForm(context, true);
+            //String path = linkCreator.create(child, request.getRequestContext()).toUrlForm(context, true);
+            String path = child.getName();
             Url url = url(path, child);
             urlset.getUrls().add(url);
         }
         return urlset;
     }
 
+    // almost everything is publications or news, can we just hack the creation of these urls if it is faster?
     private static Url url(String path, HippoBean bean) throws RepositoryException {
         Url url = new Url();
         url.setLastmod(getLastModifiedDate(bean));
