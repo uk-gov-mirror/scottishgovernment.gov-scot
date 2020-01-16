@@ -18,7 +18,7 @@ import static org.hippoecm.hst.content.beans.query.builder.ConstraintBuilder.and
  */
 public abstract class BaseSitemapComponent extends BaseHstComponent {
 
-    static int MAX_SITEMAP_SIZE = 500;
+    static int MAX_SITEMAP_SIZE = 250;
 
     HstQuery allPagesQuery(HstRequest request) {
         return allPagesQuery(request, 0, 1);

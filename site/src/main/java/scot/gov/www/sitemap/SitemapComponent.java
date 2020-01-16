@@ -65,7 +65,7 @@ public class SitemapComponent extends BaseSitemapComponent {
         HippoBeanIterator it = query.execute().getHippoBeans();
         LOG.info("query took {} millis", stopWatch.getTime());
         return it;
-    }>
+    }
 
     private int getOffsetFromRequestPath(String path) {
         String stripped = StringUtils.substringBefore(substringAfter(path, "/sitemap_"), ".xml");
