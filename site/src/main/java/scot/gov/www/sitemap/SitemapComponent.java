@@ -95,8 +95,10 @@ public class SitemapComponent extends BaseSitemapComponent {
         while (it.hasNext()) {
             HippoBean child = it.nextHippoBean();
             String path = linkCreator.create(child, request.getRequestContext()).toUrlForm(context, true);
-            Url url = url(path, child);
-            urlset.getUrls().add(url);
+            if (!StringUtils.endsWith(path, "/pagenotfound")) {
+                Url url = url(path, child);
+                urlset.getUrls().add(url);
+            }
         }
         return urlset;
     }

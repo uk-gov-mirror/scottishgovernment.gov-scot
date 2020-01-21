@@ -7,11 +7,14 @@ import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
 import org.hippoecm.hst.core.component.HstRequest;
+import org.hippoecm.hst.core.linking.HstLink;
 import org.hippoecm.hst.core.linking.HstLinkCreator;
 import org.hippoecm.hst.core.request.HstRequestContext;
+import org.onehippo.forge.sitemap.components.model.Url;
 import org.onehippo.forge.sitemap.components.model.Urlset;
 
 import javax.jcr.RepositoryException;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
@@ -33,9 +36,11 @@ public class SitemapLatestComponent extends SitemapComponent {
         HippoBeanIterator it = getPublishedNodesForRequest(request);
         Urlset urlset = getUrlSetForResults(it, request);
         HstLinkCreator linkCreator = request.getRequestContext().getHstLinkCreator();
-        for (String url : MANUAl_URLS) {
-            linkCreator.create(url, request.getRequestContext().getResolvedMount().getMount());
-            urlset.getUrls().add(url(url, startOfToday()));
+        for (String path : MANUAl_URLS) {
+            HstLink link = linkCreator.create(path, request.getRequestContext().getResolvedMount().getMount());
+            String url = link.toUrlForm(request.getRequestContext(), true);
+            Url urlEntry = url(url, Calendar.getInstance());
+            urlset.getUrls().add(urlEntry);
         }
         return urlset;
     }
