@@ -23,6 +23,21 @@
     <url>http://stash.digital.gov.uk/projects/MGV/repos/gov-scot/</url>
   </scm>
 
+  <repositories>
+    <repository>
+      <id>hippo-forge</id>
+      <name>Bloomreach Forge maven 2 repository.</name>
+      <url>https://maven.onehippo.com/maven2-forge/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+
   <properties>
     <!-- Front end build -->
     <version.node>v6.12.3</version.node>
@@ -63,6 +78,8 @@
     <cargo.jvm.args/>
     <cargo.started.message>Press Ctrl-C to stop the Cargo container...</cargo.started.message>
     <javaagent />
+
+    <forge.feed.version>4.0.1</forge.feed.version>
   </properties>
 
   <dependencies>
