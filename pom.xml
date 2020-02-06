@@ -23,6 +23,14 @@
     <url>http://stash.digital.gov.uk/projects/MGV/repos/gov-scot/</url>
   </scm>
 
+  <repositories>
+    <repository>
+      <id>hippo-forge</id>
+      <name>Bloomreach Forge Maven 2 repository.</name>
+      <url>https://maven.onehippo.com/maven2-forge/</url>
+    </repository>
+  </repositories>
+
   <properties>
     <!-- Front end build -->
     <version.node>v6.12.3</version.node>
@@ -33,6 +41,7 @@
     <hippo.release.version>12.6.3</hippo.release.version>
     <hippo.maven.plugin.l10n>2.2.2</hippo.maven.plugin.l10n>
     <freemarker.version>2.3.24-incubating</freemarker.version>
+    <bloomreach.forge.feed.version>4.0.0</bloomreach.forge.feed.version>
 
     <essentials.version>4.6.3</essentials.version>
     <jsp-api.version>2.2</jsp-api.version>
