@@ -31,7 +31,7 @@
     <dependency>
       <groupId>org.onehippo.forge</groupId>
       <artifactId>feed-hst</artifactId>
-      <version>${bloomreach.forge.feed.version}</version>
+      <version>${forge.feed.version}</version>
     </dependency>
 
     <dependency>
