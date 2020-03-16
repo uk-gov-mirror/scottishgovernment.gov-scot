@@ -1,6 +1,6 @@
 'use strict';
 
-import storage from './storage';
+import cookie from './cookie';
 
 class Notification {
     constructor (notification) {
@@ -9,7 +9,7 @@ class Notification {
     }
 
     init() {
-        if (!storage.getCookie('importantNotice')) {
+        if (!cookie('importantNotice')) {
             this.notification.classList.remove('hidden');
         }
 
@@ -18,13 +18,7 @@ class Notification {
 
             this.notificationClose.addEventListener('click', () => {
                 this.notification.parentNode.removeChild(this.notification);
-
-                storage.setCookie(
-                    storage.categories.preferences,
-                    'importantNotice',
-                    true,
-                    1
-                );
+                cookie('importantNotice', 'true', 1);
             });
         }
     }
