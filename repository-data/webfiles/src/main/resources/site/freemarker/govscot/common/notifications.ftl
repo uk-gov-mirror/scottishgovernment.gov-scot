@@ -1,5 +1,6 @@
 <div class="notification-wrapper">
-    <@hst.include ref="mourning-banner"/>
+   <@hst.include ref="mourning-banner"/>
+   <@hst.include ref="important-banner"/>
 
     <div id="cookie-notice" class="notification  notification--dark  hidden">
         <div class="wrapper">
