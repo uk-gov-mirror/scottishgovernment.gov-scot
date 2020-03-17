@@ -2,7 +2,6 @@
 
 <div class="notification-wrapper">
     <@hst.include ref="mourning-banner"/>
-    <@hst.include ref="important-banner"/>
 
     <div id="cookie-notice" class="ds_notification  hidden  hidden--hard">
         <div class="wrapper">
@@ -19,4 +18,6 @@
             </div>
         </div>
     </div>
+
+    <@hst.include ref="important-banner"/>
 </div>
