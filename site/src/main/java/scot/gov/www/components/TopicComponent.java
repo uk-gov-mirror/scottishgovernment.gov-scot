@@ -35,6 +35,7 @@ public class TopicComponent extends BaseHstComponent {
     @Override
     public void doBeforeRender(final HstRequest request,
                                final HstResponse response) {
+        LOG.info("doBeforeRender");
         HstRequestContext context = request.getRequestContext();
         HippoBean base = context.getSiteContentBaseBean();
         Topic topic;
@@ -124,7 +125,8 @@ public class TopicComponent extends BaseHstComponent {
         }
     }
 
-    private void populatePublications(HippoBean base, Topic topic, HstRequest request) {
+    void populatePublications(HippoBean base, Topic topic, HstRequest request) {
+        LOG.info("HERE?");
         HstQuery query = topicLinkedBeansQuery(topic, base, Publication.class);
         if (query == null) {
             return;
