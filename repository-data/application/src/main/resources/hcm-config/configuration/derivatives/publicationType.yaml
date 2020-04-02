@@ -1,0 +1,17 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:derivatives/policy:
+      jcr:primaryType: hipposys:deriveddefinition
+      hipposys:classname: scot.gov.www.TestDerivedData
+      hipposys:nodetype: govscot:FOI
+      hipposys:serialver: 1
+      /hipposys:accessed:
+        jcr:primaryType: hipposys:propertyreferences
+        /publicationType:
+          jcr:primaryType: hipposys:resolvepropertyreference
+          hipposys:relPath: ../../../../../hippo:name
+      /hipposys:derived:
+        jcr:primaryType: hipposys:propertyreferences
+        /foiSubstring:
+          jcr:primaryType: hipposys:relativepropertyreference
+          hipposys:relPath: govscot:summary
