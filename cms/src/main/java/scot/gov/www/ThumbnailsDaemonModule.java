@@ -1,5 +1,6 @@
 package scot.gov.www;
 
+import org.apache.commons.lang.time.StopWatch;
 import scot.gov.www.exif.Exif;
 import scot.gov.www.thumbnails.FileType;
 import scot.gov.www.thumbnails.ThumbnailsProvider;
@@ -10,10 +11,7 @@ import org.onehippo.repository.events.HippoWorkflowEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jcr.Binary;
-import javax.jcr.Node;
-import javax.jcr.NodeIterator;
-import javax.jcr.RepositoryException;
+import javax.jcr.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,6 +20,8 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * Event listener to generate thumbnails whenever a document is edited.
@@ -30,26 +30,46 @@ public class ThumbnailsDaemonModule extends DaemonModuleBase {
 
     private static final Logger LOG = LoggerFactory.getLogger(ThumbnailsDaemonModule.class);
 
+    ExecutorService executor = Executors.newFixedThreadPool(3);
+
     public boolean canHandleEvent(HippoWorkflowEvent event) {
         return event.success();
     }
 
     public void doHandleEvent(HippoWorkflowEvent event) throws RepositoryException {
+        HippoNode subject = (HippoNode) session.getNodeByIdentifier(event.subjectId());
+        if (!"govscot:document".equals(subject.getName())) {
+            return;
+        }
+
+        executor.submit(() -> doRefreshThumbNails(event.subjectPath()));
+
+    }
+
+    // refresh the thumbnails for this document path, ensuring that we catch any repo exceptions
+    void doRefreshThumbNails(String path) {
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start();
 
         try {
-            HippoNode subject = (HippoNode) session.getNodeByIdentifier(event.subjectId());
+            refreshThumbNails(path);
+            LOG.info("refresh tyhumbnails for {} took {} millis", path, stopWatch.getTime());
+        } catch (RepositoryException e) {
+            LOG.error("Exception when calling session.refresh(false) while processing: " + path, e);
+        }
+    }
 
-            if (!"govscot:document".equals(subject.getName())) {
-                return;
-            }
-
-            deleteExistingThumbnails(subject);
-            createThumbnails(subject);
+    void refreshThumbNails(String path) throws RepositoryException {
+        try {
+            Node node = session.getNode(path);
+            deleteExistingThumbnails(node);
+            createThumbnails(node);
             session.save();
-        } catch (ThumbnailsProviderException e) {
-            LOG.error("Unexpected exception while generating thumbnail", e);
-        } catch (FileNotFoundException e) {
-            LOG.error("Unexpected exception reading thumbnail tmp file", e);
+        } catch (RepositoryException e) {
+            session.refresh(false);
+            LOG.error("Failed to generate thumbnail for: " + path, e);
+        } catch (ThumbnailsProviderException | FileNotFoundException e) {
+            LOG.error("Failed to generate thumbnail for: " + path, e);
         }
     }
 
@@ -70,7 +90,7 @@ public class ThumbnailsDaemonModule extends DaemonModuleBase {
         String filename = documentNode.getProperty("hippo:filename").getString();
 
         if (mimeType == null) {
-            LOG.warn("A document has been uploded with no mimetype: {}", documentNode.getPath());
+            LOG.warn("A document has been uploaded with no mimetype: {}", documentNode.getPath());
         }
 
         Map<Integer, File> thumbnails = ThumbnailsProvider.thumbnails(data.getStream(), mimeType);
