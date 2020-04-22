@@ -1,17 +1,18 @@
 definitions:
   config:
-    /hippo:configuration/hippo:derivatives/publicationType:
+    /hippo:configuration/hippo:derivatives/folderType:
       jcr:primaryType: hipposys:deriveddefinition
-      hipposys:classname: scot.gov.www.PublicationTypeDerivedData
-      hipposys:nodetype: govscot:Publication
+      hipposys:classname: scot.gov.www.FolderTypeDerivedData
+      hipposys:nodetype: hippostd:folder
       hipposys:serialver: 1
       /hipposys:accessed:
         jcr:primaryType: hipposys:propertyreferences
-        /publicationType:
+        /folderType:
           jcr:primaryType: hipposys:resolvepropertyreference
-          hipposys:relPath: ../../../../../govscot:publicationType
+          hipposys:relPath: ../../govscot:folderType
       /hipposys:derived:
         jcr:primaryType: hipposys:propertyreferences
-        /publicationType:
+        /folderType:
           jcr:primaryType: hipposys:relativepropertyreference
-          hipposys:relPath: govscot:publicationType
+#          relPath cannot be a hippostd property?
+          hipposys:relPath: hippostd:foldertype
