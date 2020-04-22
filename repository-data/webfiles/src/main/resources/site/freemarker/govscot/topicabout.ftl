@@ -1,4 +1,5 @@
 <#include "../include/imports.ftl">
+<@hst.webfile var="iconspath" path="/assets/images/icons/icons.stack.svg"/>
 
 <h1 class="article-header">${document.title}</h1>
 
@@ -7,7 +8,9 @@
             <p>${document.summary}</p>
     </#if>
 </div>
-    
+
+
+
 <header class="topic-header  <#if document.image??>topic-header--has-image</#if>" id="page-content">
         <#if document.image??>
             <img alt="" src="<@hst.link hippobean=document.image.bannerdesktop/>" class="topic-header__image">
@@ -15,9 +18,14 @@
 </header>
 
 <div class="body-content">
-    
-  <@hst.html hippohtml=document.content />
+    <#if document.content?has_content>
+        <@hst.html hippohtml=document.content />
+    </#if>
 
+    <#list document.additionalcontent as additionalcontent>
+        <@hst.html hippohtml=additionalcontent />
+    </#list>
+     
     <section id="latest-publications" class="topic-block">
                 <h2 class="emphasis  topic-block__title">
                 Statistics and research
@@ -25,12 +33,12 @@
         
         <div class="grid"><!--
 
-        --><div class="grid__item  medium--six-twelfths"><!-- 
+         --><div class="grid__item  medium--six-twelfths"><!-- 
 
-          --><div id="publications-container">
-                <#if publications?has_content>
-                    <#list publications as publication>
-                        <article class="homepage-publication">
+             --><div id="publications-container">
+                    <#if publications?has_content>
+                        <#list publications as publication>
+                            <article class="homepage-publication">
                             <h3 class="js-truncate  homepage-publication__title">
                                 <a href="<@hst.link hippobean=publication />" data-gtm="publications-${publication?index}" title="${publication.title}">${publication.title}</a>
                             </h3>
@@ -38,31 +46,28 @@
                                     <li>${publication.label}</li>
                             </ul>
                             <p class="homepage-publication__date"><@fmt.formatDate value=publication.publicationDate.time type="both" pattern="dd MMM yyyy"/></p>
-                        </article>
-                    </#list>
-                <#else>
-                    <p>There are no statistics and research relating to this topic.</p>
-                </#if>
-            </div>
+                            </article>
+                        </#list>
+                        <#else>
+                        <p>There are no statistics and research relating to this topic.</p>
+                    </#if>
+                </div>
 
-            <!-- if you're changing this link remember to also change the non-mobile equivalent below -->
-            <a class="button  button--tertiary  visible-xsmall  visible-xsmall--inline" href="<@hst.link path='/statisitics-and-research/?topics=${document.title}'/>"
-            data-gtm="all-pubs">
-                <svg class="svg-icon  mg-icon  mg-icon--medium  mg-icon--inline">
-                    <use xlink:href="${iconspath}#3x3grid"></use>
-                </svg>
-                See all Statistics and research
-            </a>
-</div>
-</div>
-    </section>
-
-  </div>  
-
-
-    <#if document.featuredItems?has_content>
-
-        <section id="featured-items" class="topic-block">
+                <!-- if you're changing this link remember to also change the non-mobile equivalent below -->
+                <a class="button  button--tertiary  visible-xsmall  visible-xsmall--inline" href="<@hst.link path='/statisitics-and-research/?topics=${document.title}'/>"
+                data-gtm="all-pubs">
+                    <svg class="svg-icon  mg-icon  mg-icon--medium  mg-icon--inline">
+                        <use xlink:href="${iconspath}#3x3grid"></use>
+                    </svg>
+                    See all Statistics and research
+                </a>
+            </div><!--
+      --></div><!--
+    --></section><!--
+--></div>  
+  
+<#if document.featuredItems?has_content><!--
+    --><section id="featured-items" class="topic-block">
             <h2 class="emphasis  topic-block__title">Featured</h2>
 
             <ul class="grid"><!--
@@ -116,14 +121,12 @@
                     </li><!--
                 </#list>
             --></ul>
-        </section>
-    </#if>
-
-
+        </section><!--
+--></#if>
 
 
 <div class="grid"><!--
     --><div class="grid__item  medium--nine-twelfths  large--seven-twelfths">
         <#include 'common/feedback-wrapper.ftl'>
-    </div><!--
+       </div><!--
 --></div>
