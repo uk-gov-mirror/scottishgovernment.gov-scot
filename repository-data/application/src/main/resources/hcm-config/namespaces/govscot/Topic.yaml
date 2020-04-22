@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 51f51f64-8b1e-48bb-9a26-9e843e72cb69
+          jcr:uuid: d155afe4-f2d0-4b2c-ac34-82312e2cb54a
           hipposysedit:node: true
           hipposysedit:supertype: ['govscot:SimpleContent', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.onehippo.org/govscot/nt/1.0
@@ -47,6 +47,60 @@ definitions:
             hipposysedit:path: govscot:sme
             hipposysedit:primary: false
             hipposysedit:type: Text
+          /AdditionalContent:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: govscot:AdditionalContent
+            hipposysedit:primary: false
+            hipposysedit:type: govscot:AdditionalContent
+        /hipposysedit:nodetype[2]:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 38bd3578-3d14-4fa1-9978-99ff83d4bf73
+          hipposysedit:node: true
+          hipposysedit:supertype: ['govscot:SimpleContent', 'hippostd:relaxed', 'hippotranslation:translated']
+          /responsibleRole:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: govscot:responsibleRole
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /featuredItems:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: govscot:featuredItems
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /image:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: govscot:image
+            hipposysedit:primary: false
+            hipposysedit:type: hippogallerypicker:imagelink
+          /sme:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: govscot:sme
+            hipposysedit:primary: false
+            hipposysedit:type: Text
+          /AdditionalContent:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: govscot:AdditionalContent
+            hipposysedit:primary: false
+            hipposysedit:type: govscot:AdditionalContent
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -62,9 +116,11 @@ definitions:
           govscot:summary: ''
           govscot:title: ''
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 196e6348-0644-4037-bdd2-8ada1424d029
+          jcr:uuid: 5b4cc1d5-eee5-44dc-b454-f2d18e2cfff1
           hippostdpubwf:lastModificationDate: 2018-01-26T11:27:44.600Z
           hippostdpubwf:creationDate: 2018-01-26T11:27:44.600Z
+          govscot:sme: ''
+          govscot:reportingTags: []
           /govscot:content:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
@@ -80,13 +136,21 @@ definitions:
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+          /govscot:AdditionalContent:
+            jcr:primaryType: govscot:AdditionalContent
+            govscot:title: ''
+            /govscot:body:
+              jcr:primaryType: hippostd:html
+              hippostd:content: ''
         /hipposysedit:prototype[2]:
           jcr:primaryType: nt:unstructured
           jcr:mixinTypes: ['hippostd:publishableSummary', 'hippostd:relaxed', 'hippostd:taggable',
             'hippostdpubwf:document', 'hippotranslation:translated', 'mix:referenceable']
-          jcr:uuid: 7bd0677c-11cb-4ff9-89ad-261a9261d81a
+          jcr:uuid: eadf8db6-d928-41f4-8259-bfabf1edb20f
           govscot:metaDescription: ''
+          govscot:reportingTags: []
           govscot:seoTitle: ''
+          govscot:sme: ''
           govscot:summary: ''
           govscot:title: ''
           hippostd:holder: holder
@@ -112,6 +176,12 @@ definitions:
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+          /govscot:AdditionalContent:
+            jcr:primaryType: govscot:AdditionalContent
+            govscot:title: ''
+            /govscot:body:
+              jcr:primaryType: hippostd:html
+              hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -256,3 +326,12 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/govscot/valuelists/reportingTags
+          /AdditionalContent:
+            jcr:primaryType: frontend:plugin
+            caption: Additional content
+            field: AdditionalContent
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig

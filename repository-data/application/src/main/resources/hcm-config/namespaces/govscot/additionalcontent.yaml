@@ -1,17 +1,17 @@
 definitions:
   config:
-    /hippo:namespaces/govscot/additionalcontent:
+    /hippo:namespaces/govscot/AdditionalContent:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 25c06a3a-da8b-4327-b560-6c618ff053f6
+      jcr:uuid: c952d490-ce10-4a11-821a-af0d1ee011df
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 501e22b1-bad7-474d-be62-d2db4f4c4ba0
+        jcr:uuid: a7752811-5be7-470f-a381-955e3acd2af6
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 852bda98-2ffa-4f4e-bd2b-476469f72e5b
+          jcr:uuid: ad7e1b8d-fd23-4fca-b32a-94dd8816b2d8
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.onehippo.org/govscot/nt/1.0
@@ -20,24 +20,23 @@ definitions:
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: govscot:actitle
+            hipposysedit:path: govscot:title
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [non-empty, required]
-          /AdditionalContent:
+          /body:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
-            hipposysedit:ordered: true
-            hipposysedit:path: govscot:accontent
+            hipposysedit:ordered: false
+            hipposysedit:path: govscot:body
             hipposysedit:primary: false
             hipposysedit:type: hippostd:html
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: govscot:additionalcontent
-          govscot:actitle: ''
-          /govscot:accontent:
+          jcr:primaryType: govscot:AdditionalContent
+          govscot:title: ''
+          /govscot:body:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
       /editor:templates:
@@ -51,22 +50,19 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /actitle:
+          /title:
             jcr:primaryType: frontend:plugin
             caption: Title
             field: title
-            hint: This is the main title for this content item.  The title needs to
-              be descriptive and concise.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /accontent:
+          /body:
             jcr:primaryType: frontend:plugin
-            caption: Additional content
-            field: AdditionalContent
-            hint: Option to provide a brief summary or highlight something specific
-              on the topic landing page.
+            caption: Body
+            field: body
+            hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:

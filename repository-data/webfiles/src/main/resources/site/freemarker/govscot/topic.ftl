@@ -15,6 +15,11 @@
 
     <input id="topicName" type="hidden" value="${document.title}"/>
 
+    <#list document.additionalContent as additionalContent>
+        <h2>${additionalContent.title}</h2>
+        <@hst.html hippohtml=additionalContent.body />
+    </#list>
+
     <div class="body-content  leader--first-para">
         <@hst.html hippohtml=document.content />
     </div>
@@ -313,7 +318,7 @@
                     See all news
                 </a>
             </div>
-        </div>    
+        </div>
 </div>
 
 
