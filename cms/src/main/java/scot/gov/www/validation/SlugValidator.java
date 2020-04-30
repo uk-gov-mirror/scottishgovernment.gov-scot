@@ -61,7 +61,7 @@ public class SlugValidator extends AbstractCmsValidator {
         try {
             String type = node.getPrimaryNodeType().getName();
             LOG.info("Content path: {}", type);
-            if (!isValid(candidateSlug, type, node)) {
+            if (!isValid(type, candidateSlug, node)) {
                 violations.add(fieldValidator.newValueViolation(childModel, getTranslation()));
             }
             return violations;
