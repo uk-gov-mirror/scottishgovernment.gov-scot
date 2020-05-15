@@ -29,7 +29,7 @@
     </section>    
     </#if>
     
-    <section id="latest-publications" class="topic-block">
+    <section id="latest-stats-research" class="topic-block">
                 <h2 class="emphasis  topic-block__title">
                 Statistics and research publications
                 </h2>
