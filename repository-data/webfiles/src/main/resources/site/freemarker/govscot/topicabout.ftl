@@ -9,11 +9,11 @@
     </#if>
 </div>
 
-<header class="topic-header  <#if document.image??>topic-header--has-image</#if>" id="page-content">
-        <#if document.image??>
+    <#if document.image??>
+        <header class="topic-header  <#if document.image??>topic-header--has-image</#if>" id="page-content">
             <img alt="" src="<@hst.link hippobean=document.image.bannerdesktop/>" class="topic-header__image">
-        </#if>
-</header>
+        </header>
+    </#if>
 
 <div class="body-content">
     <#if document.content?has_content>
