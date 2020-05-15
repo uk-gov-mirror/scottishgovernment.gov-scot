@@ -121,7 +121,6 @@
                 </svg>
                 See all news
             </a>
-
         </section>
     </div></#if><!--
 
@@ -245,7 +244,7 @@
                 </svg>
                 See all news
             </a>
-            </div></#if><<div class="grid__item medium--four-twelfths">
+            </div></#if><div class="grid__item medium--four-twelfths">
                 <!-- if you're changing this link remember to also change the mobile equivalent above -->
                 <a class="button  button--tertiary  tst-all-pubs" href="<@hst.link path='/publications/?topics=${document.title}'/>"
                 data-gtm="all-pubs">
