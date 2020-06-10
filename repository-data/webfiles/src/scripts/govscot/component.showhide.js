@@ -9,7 +9,6 @@
 export default {
     init: function () {
         const showHides = [].slice.call(document.querySelectorAll('.js-show-hide'));
-        console.log(showHides);
 
         showHides.forEach(function (showHide) {
             const trigger = showHide.querySelector('.js-trigger');
