@@ -1,4 +1,4 @@
-<div class="js-show-hide">
+<div class="js-show-hide" id="history">
     <div class="content-data__list">
         <span class="content-data__label">First published:</span>
         <span class="content-data__value"><strong><@fmt.formatDate value=document.publicationDate.time type="both" pattern="d MMM yyyy"/></strong></span>
