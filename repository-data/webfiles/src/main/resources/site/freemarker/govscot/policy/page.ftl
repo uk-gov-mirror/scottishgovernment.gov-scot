@@ -13,24 +13,34 @@
                     <section class="content-data">
                         <#include '../common/content-data.ftl'/>
                     </section>
+
+                    <#include "../common/metadata.ftl"/>
                 </header>
             </div><!--
      --></div>
+
+
+        <div class="grid"><!--
+        --><div class="grid__item medium--four-twelfths large--three-twelfths">
+                <#include 'side-menu.ftl'>
+            </div><!--
+
+        --><div class="grid__item medium--eight-twelfths large--seven-twelfths">
+                <#if latest??>
+                    <#include 'latest.ftl'/>
+                <#else>
+                    <#include 'content.ftl'/>
+                </#if>
+
+                <#if document.updateHistory?has_content>
+                    <div class="update-history">
+                        <#include '../common/update-history.ftl'/>
+                    </div>
+                </#if>
+            </div><!--
+    --></div>
+
     </article>
-
-    <div class="grid"><!--
-     --><div class="grid__item medium--four-twelfths large--three-twelfths">
-            <#include 'side-menu.ftl'>
-        </div><!--
-
-     --><div class="grid__item medium--eight-twelfths large--seven-twelfths">
-            <#if latest??>
-                <#include 'latest.ftl'/>
-            <#else>
-                <#include 'content.ftl'/>
-            </#if>
-        </div><!--
- --></div>
 
     <div class="grid"><!--
         --><div class="grid__item  push--medium--four-twelfths  push--large--three-twelfths  medium--eight-twelfths  large--seven-twelfths">

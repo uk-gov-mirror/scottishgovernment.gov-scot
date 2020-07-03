@@ -11,9 +11,9 @@
                 <@hst.include ref="content"/>
 
                 <#if document.updateHistory?has_content>
-                <div class="update-history">
-                    <#include '../common/update-history.ftl'/>
-                </div>
+                    <div class="update-history">
+                        <#include '../common/update-history.ftl'/>
+                    </div>
                 </#if>
             </div><!--
      --></div>

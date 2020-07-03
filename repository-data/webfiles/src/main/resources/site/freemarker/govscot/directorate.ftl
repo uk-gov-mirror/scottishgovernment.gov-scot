@@ -125,7 +125,9 @@
         </div>
 
         <#if document.updateHistory?has_content>
-            <#include 'common/update-history.ftl'/>
+            <div class="update-history">
+                <#include 'common/update-history.ftl'/>
+            </div>
         </#if>
 
     </article>

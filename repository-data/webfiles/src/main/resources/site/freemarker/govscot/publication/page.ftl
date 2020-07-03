@@ -138,10 +138,10 @@
                             </div><!--
                      --></div>
 
-                        <hr>
 
                         <@hst.html hippohtml=document.contact var="contact"/>
                         <#if contact?has_content>
+                            <hr>
                             <section class="publication-info__section publication-info__contact">
                                 <h3 class="emphasis">Contact</h3>
                                 ${contact}
@@ -149,9 +149,9 @@
                         </#if>
 
                         <#if document.updateHistory?has_content>
-                            <section>
+                            <div class="update-history">
                                 <#include '../common/update-history.ftl'/>
-                            </section>
+                            </div>
                         </#if>
 
                     </div><!--
@@ -259,7 +259,9 @@
                         </#if>
 
                         <#if document.updateHistory?has_content>
-                            <#include '../common/update-history.ftl'/>
+                            <div class="update-history">
+                                <#include '../common/update-history.ftl'/>
+                            </div>
                         </#if>
 
                     </div><!--

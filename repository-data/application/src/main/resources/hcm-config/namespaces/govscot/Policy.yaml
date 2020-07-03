@@ -346,6 +346,16 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               maxlength: '300'
+          /updateHistory:
+            jcr:primaryType: frontend:plugin
+            caption: UpdateHistory
+            field: UpdateHistory
+            hint: Details of the last updated date and a brief descriptions of the
+              content update
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
           /tags:
             jcr:primaryType: frontend:plugin
             plugin.class: org.hippoecm.frontend.editor.plugins.mixin.MixinLoaderPlugin
