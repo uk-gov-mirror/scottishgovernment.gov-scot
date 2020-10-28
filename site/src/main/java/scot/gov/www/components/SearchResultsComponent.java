@@ -29,6 +29,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 import java.util.Collection;
+import java.util.regex.Pattern;
 
 import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
@@ -39,9 +40,17 @@ import static scot.gov.www.components.FilteredResultsComponent.PUBLICATION_TYPES
 @ParametersInfo(type = EssentialsListComponentInfo.class)
 public class SearchResultsComponent extends EssentialsListComponent {
 
-    private static String PRIMARY_TYPE = "jcr:primaryType";
-    private static Collection<String> FIELD_NAMES = new ArrayList<>();
     private static final Logger LOG = LoggerFactory.getLogger(SearchResultsComponent.class);
+
+    private static String PRIMARY_TYPE = "jcr:primaryType";
+
+    private static Collection<String> FIELD_NAMES = new ArrayList<>();
+
+    // regular expression for postcodes.  Note this has no spaces and is uppercase.  Before matching the input
+    // is normalised
+    private static final String POSTCODE_REGEXP = "^[A-Z]{1,2}[0-9R][0-9A-Z]?[0-9][ABD-HJLNP-UW-Z]{2}$";
+
+    private static final Pattern postcodePattern = Pattern.compile(POSTCODE_REGEXP);
 
     @Override
     public void init(ServletContext servletContext, ComponentConfiguration componentConfig) {
@@ -72,6 +81,8 @@ public class SearchResultsComponent extends EssentialsListComponent {
 
         super.doBeforeRender(request, response);
 
+        setIsPostcode(request);
+
         Map<String, Set<String>> params = sanitiseParameterMap(request,
                 request.getRequestContext().getServletRequest().getParameterMap());
 
@@ -84,6 +95,13 @@ public class SearchResultsComponent extends EssentialsListComponent {
                 SelectionUtil.getValueListByIdentifier(PUBLICATION_TYPES, RequestContextProvider.get());
 
         request.setAttribute("publicationTypes", SelectionUtil.valueListAsMap(publicationValueList));
+    }
+
+    private void setIsPostcode(HstRequest request) {
+        String term = param(request, "q");
+        String normalisedTerm = term.replaceAll("\\s","").toUpperCase();
+        boolean isPostcode = postcodePattern.matcher(normalisedTerm).matches();
+        request.setAttribute("isPostcode", isPostcode);
     }
 
     @Override
