@@ -54,6 +54,10 @@ public class ResultsPageContentComponent extends BaseHstComponent {
         String normalisedTerm = term.replaceAll("\\s","").toUpperCase();
         boolean isPostcode = postcodePattern.matcher(normalisedTerm).matches();
         request.setAttribute("isPostcode", isPostcode);
+
+        if (isPostcode) {
+            request.setAttribute("normalisedPostcode", normalisedTerm);
+        }
     }
 
     private Map<String, Set<String>> sanitiseParameterMap(HstRequest request, Map<String, String[]> parameterMap) {

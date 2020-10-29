@@ -19,8 +19,9 @@
             <#if isPostcode??>
                 <div class="body-content  leader--first-para">
                     Searching for COVID protection levels in areas of Scotland?
-                    </br>
-                    <a href="/covid-restrictions-lookup">Use the COVID postcode checker.</a>
+                    <p>
+                    <a href="/covid-restrictions-lookup/#!/${normalisedPostcode}">Use the COVID postcode checker.</a>
+                    </p>
                 </div>
             <#else>
                 <div class="body-content  leader--first-para">
