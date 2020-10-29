@@ -15,9 +15,18 @@
     <div class="grid__item medium--nine-twelfths large--seven-twelfths">
         <#if index??>
             <h1 class="article-header">${index.title?html}</h1>
-            <div class="body-content  leader--first-para">
-                <@hst.html hippohtml=index.content/>
-            </div>
+
+            <#if isPostcode??>
+                <div class="body-content  leader--first-para">
+                    Searching for COVID protection levels in areas of Scotland?
+                    </br>
+                    <a href="/covid-restrictions-lookup">Use the COVID postcode checker.</a>
+                </div>
+            <#else>
+                <div class="body-content  leader--first-para">
+                    <@hst.html hippohtml=index.content/>
+                </div>
+            </#if>
 
             <div class="search-box search-box--large ">
                 <form id="filters" class="search-box__form" method="GET" action="<@hst.link path='/search/'/>">
