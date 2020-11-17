@@ -91,14 +91,6 @@ definitions:
             hipposysedit:type: String
             hipposysedit:validators: [required, govscot-slug, publication-slug-spaces,
               publication-slug-dots]
-          /updateHistory:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: govscot:updateHistory
-            hipposysedit:primary: false
-            hipposysedit:type: govscot:UpdateHistory
         /hipposysedit:nodetype[2]:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable']

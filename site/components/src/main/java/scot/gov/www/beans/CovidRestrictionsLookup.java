@@ -60,7 +60,7 @@ public class CovidRestrictionsLookup extends SimpleContent {
 
     @HippoEssentialsGenerated(internalName = "govscot:hintMessage")
     public String getHintMessage() {
-        return getProperty("govscot:hintMessage");
+        return getSingleProperty("govscot:hintMessage");
     }
 
     @HippoEssentialsGenerated(internalName = "govscot:updateHistory")
