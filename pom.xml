@@ -340,6 +340,7 @@
         <module>repository-deb</module>
         <module>site</module>
         <module>site-deb</module>
+        <module>gov-scot-libs</module>
         <module>publications-rest</module>
         <module>imageprocessing</module>
       </modules>
